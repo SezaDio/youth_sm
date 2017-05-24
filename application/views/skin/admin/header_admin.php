@@ -16,6 +16,16 @@
         
         
     </head>
+	<script src="<?php echo base_url('asset/js/instafeed.js-master/instafeed.min.js'); ?>" type="text/javascript"></script>
+    <script type="text/javascript">
+    var userFeed = new Instafeed({
+		get: 'user',
+		userId: '367806601',
+		clientId: '60e2f0527b724be4af2dc7215295ed9d',
+		accessToken: '367806601.60e2f05.51d0b11fa9b0411da4064bd86357f0dd'
+    });
+    userFeed.run();
+	</script>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">

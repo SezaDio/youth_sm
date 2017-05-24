@@ -15,7 +15,7 @@
                 <section class="content">
                     <div class="row">
                         <!-- left column -->
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <!-- general form elements -->
                             <div class="box box-primary">
                                 
@@ -32,7 +32,7 @@
 										<div class="form-group">
                                             <label for="exampleInputEmail1">Penulis   :</label>
                                             <input type="text" required name="penulis" class="form-control" id="exampleInputEmail1"
-											value="#"
+											value=""
 											>
 											<small>* Maksimal 50 Karakter</small>
                                         </div>

@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <!--
+                
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
                         
@@ -42,19 +42,24 @@
                                 <span>Jane Doe <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <img src="img/avatar3.png" class="img-circle" alt="User Image" />
-                                <p>
-                                    Jane Doe - Web Developer
-                                    <small>Last Login : Nov. 2012</small>
-                                </p>
+                                <!-- User image -->
+                                <li class="user-header bg-light-blue">
+                                    <img src="<?php echo base_url('asset/img/circle.png'); ?>" class="img-circle" alt="User Image">
+                                    <p>
+                                        Administrator
+                                        <small>Last login : <?php //$login= $result_last_login->fetch_object(); echo $login->login_terakhir;?></small>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-danger btn-sm">Log out</a>
+                                        <a href="logout.php" class="btn btn-danger btn-sm">Keluar</a>
                                     </div>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </div>-->
+                </div>
             </nav>
         </header>

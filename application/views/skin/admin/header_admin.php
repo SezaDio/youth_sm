@@ -54,7 +54,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="logout.php" class="btn btn-danger btn-sm">Keluar</a>
+                                        <a href="<?php echo site_url('account/logout'); ?>" class="btn btn-danger btn-sm"> Log Out </a>
                                     </div>
                                 </li>
                             </ul>

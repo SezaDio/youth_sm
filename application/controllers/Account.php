@@ -76,7 +76,7 @@ class Account extends CI_Controller
 			redirect(site_url('account'));
 		}
 
-		$this->load->view('account/success_page');
+		$this->load->view('skin/admin/welcome');
 	}
 
 	//Keluar dari sistem

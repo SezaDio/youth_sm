@@ -5,7 +5,7 @@
                     <ul class="sidebar-menu">
                         <li class="active">
                             <a href="index.php">
-                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                                 <i class="glyphicon glyphicon-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
 
@@ -33,7 +33,7 @@
 
                         <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-edit"></i> <span> Youth Shopping Control </span>
+                                <i  class="glyphicon glyphicon-shopping-cart"></i> <span> Youth Shopping Control </span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
@@ -66,7 +66,7 @@
 
                         <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-edit"></i> <span> Youth Update Control </span>
+                                <i class="glyphicon glyphicon-collapse-up"></i> <span> Youth Update Control </span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
@@ -74,13 +74,13 @@
                                 <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> ----</a></li>
                             </ul>
                         </li>
-
+                        
 						<li>
-                            <a href="overview_album.php"><i class="fa fa-image"></i> <span>Administrator Control</a></span>  
+                            <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Administrator Control</a></span>  
                         </li>
 
                         <li>
-                            <a href="overview_album.php"><i class="fa fa-image"></i> <span>Member Control</a></span>  
+                            <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Member Control</a></span>  
                         </li>
 						
                         

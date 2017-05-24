@@ -17,8 +17,6 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('url');
-		$this->load->view('skin/admin/header_admin');
-		$this->load->view('skin/admin/nav_kiri');
-		$this->load->view('skin/admin/footer_admin');
+		$this->load->view('skin/admin/welcome');
 	}
 }

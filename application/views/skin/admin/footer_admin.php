@@ -1,8 +1,8 @@
 	<!-- script tags
 		============================================================= -->
-		<script type="text/javascript" src="<?php echo base_url('asset/js/jquery-3.2.0.min.js'); ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url('asset/js/jquery-ui.min.js'); ?>"></script>
+		<script type="text/javascript" src="<?php echo base_url('asset/js/jquery.min.js'); ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('asset/bootstrap/js/bootstrap.min.js'); ?>"></script>
+		<script type="text/javascript" src="<?php echo base_url('asset/js/jquery-ui.min.js'); ?>"></script>
 		
         <!-- AdminLTE App -->
         <script src="<?php echo base_url('asset/js/app.js'); ?>" type="text/javascript"></script>

@@ -15,8 +15,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_event.php"><i class="fa fa-angle-double-right"></i> Tambah Kegiatan </a></li>
-                                <li><a href="event_editors.php"><i class="fa fa-angle-double-right"></i> Daftar Kegiatan</a></li>
+                                <li><a href="add_event.php"><i class="fa fa-angle-double-right"></i> Kelola Posting Karepmu	 </a></li>
+                                <li><a href="event_editors.php"><i class="fa fa-angle-double-right"></i> Kelola Stiker</a></li>
                             </ul>
                         </li>
 
@@ -26,8 +26,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Tambah Prestasi </a></li>
-                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Daftar Prestasi</a></li>
+                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Kelola News </a></li>
+                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Validasi News</a></li>
                             </ul>
                         </li>
 
@@ -37,8 +37,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Tambah Prestasi </a></li>
-                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Daftar Prestasi</a></li>
+                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Kelola Shopping </a></li>
+                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Validasi Shopping </a></li>
                             </ul>
                         </li>
 						
@@ -48,8 +48,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Tambah Prestasi </a></li>
-                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Daftar Prestasi</a></li>
+                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Kelola Wow </a></li>
                             </ul>
                         </li>
 
@@ -59,8 +58,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Tambah Prestasi </a></li>
-                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Daftar Prestasi</a></li>
+                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Kelola Kategori Coming Soon </a></li>
+                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Kelola Coming Soon</a></li>
+                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Validasi Coming Soon</a></li>
                             </ul>
                         </li>
 
@@ -70,8 +70,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Tambah Prestasi </a></li>
-                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> Daftar Prestasi</a></li>
+                                <li><a href="add_prestasi.php"><i class="fa fa-angle-double-right"></i> Kelola Update </a></li>
+                                <li><a href="prestasi_editor.php"><i class="fa fa-angle-double-right"></i> ----</a></li>
                             </ul>
                         </li>
 

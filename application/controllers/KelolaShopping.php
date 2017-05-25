@@ -16,11 +16,14 @@ class KelolaShopping extends CI_Controller {
 
 	public function index()
 	{
-		//$this->load->helper('url');
+		$this->load->model('shopping_models/ShoppingModels');
+		$data['listProduk'] = $this->ShoppingModels->get_data_produk();
+			
 		$this->load->view('skin/admin/header_admin');
 		$this->load->view('skin/admin/nav_kiri');
-		$this->load->view('content_admin/kelola_shopping');
+		$this->load->view('content_admin/kelola_shopping', $data);
 		$this->load->view('skin/admin/footer_admin');
-		
 	}
+
+	
 }

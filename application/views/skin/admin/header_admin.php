@@ -12,6 +12,9 @@
         
         <!-- Theme style -->
         <link href="<?php echo base_url('asset/css/style.css'); ?>" rel="stylesheet" type="text/css" />
+
+        <!-- DataTables CSS --> 
+        <link href="<?php echo base_url('asset/css/jquery.dataTables.css'); ?>" rel="stylesheet" type="text/css">
        
         
         

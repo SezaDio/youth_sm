@@ -5,7 +5,7 @@
                        Kelola Shopping
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i>Youth Shopping</a></li>
+                        <li><i class="fa fa-dashboard"></i>Youth Shopping</li>
                         <li class="active">Kelola Shopping</li>
                     </ol>
                 </section>
@@ -18,15 +18,44 @@
                             <!-- general form elements -->
                             <div class="box box-primary">
 
-                                    <!--Mulai Tampilkan Data Table-->
-                                    <div class="box-body">
-                                        <div class="form-group">
-                                            
-                                        </div>
-                                    </div><!-- /.box-body -->
+                                <!--Mulai Tampilkan Data Table-->
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <table class="table table-striped table-bordered table-hover" id="dataTables-list">
+                                            <thead>
+                                                <tr>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">No.</th>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Nama Produk</th>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Jenis Produk</th>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Deskripsi Produk</th>                                                        
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Harga Produk</th>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Posted By</th>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php 
+                                                    foreach($listProduk as $item)
+                                                    { ?>
+                                                        <tr>
+                                                            <td style="text-align: center;"><?php echo $item['id_produk'] ?></td>
+                                                            <td><?php echo $item['nama_produk'] ?></td>
+                                                            <td><?php echo $item['jenis_produk'] ?></td>
+                                                            <td><?php echo $item['deskripsi_produk'] ?></td>
+                                                            <td><?php echo "Rp ".$item['harga_produk'] ?></td>
+                                                            <td><?php echo $item['posted_by'] ?></td>
+                                                            <td><?php echo $item['tanggal_posting'] ?></td>
+                                                        </tr>
+                                                    <?php } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!-- /.box-body -->
 
                             </div><!-- /.box -->
                         </div><!--/.col (left) -->
                     </div>   <!-- /.row -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
+
+            

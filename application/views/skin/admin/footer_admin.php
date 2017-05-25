@@ -1,5 +1,4 @@
-	<!-- script tags
-		============================================================= -->
+	<!-- script tags ============================================================= -->
 		<script type="text/javascript" src="<?php echo base_url('asset/js/jquery.min.js'); ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('asset/bootstrap/js/bootstrap.min.js'); ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('asset/js/jquery-ui.min.js'); ?>"></script>
@@ -9,6 +8,18 @@
         
         <!-- Sparkline -->
         <script src="<?php echo base_url('asset/js/sparkline/jquery.sparkline.min.js'); ?>" type="text/javascript"></script>
+
+		<!-- DataTables --> 
+		<script src="<?php echo base_url('asset/js/jquery.dataTables.js'); ?>" type="text/javascript"></script>
+		<script>
+            $(document).ready( function () {
+                $('#dataTables-list').DataTable({
+                    "columnDefs":[
+                        {"orderable":false, "targets":4}
+                    ]
+                });
+            } );
+        </script>
 
 		<!-- Morris.js charts -->
         <script src="<?php echo base_url('asset/js/morris/morris.min.js'); ?>" type="text/javascript"></script>

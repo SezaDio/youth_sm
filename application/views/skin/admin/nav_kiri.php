@@ -37,7 +37,7 @@
                                 <i class="glyphicon glyphicon-menu-right pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_prestasi.php"><i class="glyphicon glyphicon-minus"></i> Kelola Shopping </a></li>
+                                <li><a href="<?php echo site_url('KelolaShopping/index'); ?>"><i class="glyphicon glyphicon-minus"></i> Kelola Shopping </a></li>
                                 <li><a href="prestasi_editor.php"><i class="glyphicon glyphicon-minus"></i> Validasi Shopping </a></li>
                             </ul>
                         </li>

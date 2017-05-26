@@ -36,6 +36,20 @@ class KelolaShopping extends CI_Controller {
 		$this->index();
 	}
 	
+	//Lihat detail produk
+	public function lihat_detail_produk($id_produk)
+	{
+		$this->load->model('shopping_models/ShoppingModels');
+
+		//Ambil id_agenda yang akan diedit
+		$data['id_produk'] = $this->ShoppingModels->select_by_id_shopping($id_produk)->row();
+
+		$this->load->view('skin/admin/header_admin');
+		$this->load->view('skin/admin/nav_kiri');
+		$this->load->view('content_admin/detail_produk_shopping', $data);
+		$this->load->view('skin/admin/footer_admin');
+	}
+
 	//Validasi Shopping
 	public function validasi_shopping()
 	{

@@ -55,4 +55,14 @@
 			$this->db->where('id_produk',$id_produk);
 			$this->db->delete('shopping');
 		}
+
+		//Select produk by id produk
+		function select_by_id_shopping($id_produk)
+		{
+			$this->db->select('*');
+			$this->db->from('shopping');
+			$this->db->where('id_produk',$id_produk);
+
+			return $this->db->get();
+		}
 	}

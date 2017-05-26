@@ -63,20 +63,22 @@ class KelolaShopping extends CI_Controller {
 	}
 	
 	//Setujui Shopping
-	public function setuju_produk($id_produk)
+	public function setuju_produk()
 	{
+		$id_produk = $_POST['id_produk'];
 		$this->load->model('shopping_models/ShoppingModels');
 		$this->ShoppingModels->setuju_produk($id_produk);
 
-		redirect(site_url('KelolaShopping/validasi_shopping'));
+		$this->validasi_shopping();
 	}
 	
 	//Tolak Data
-	public function tolak_produk($id_produk)
+	public function tolak_produk()
 	{
+		$id_produk = $_POST['id_produk'];
 		$this->load->model('shopping_models/ShoppingModels');
 		$this->ShoppingModels->delete_produk($id_produk);
 
-		redirect(site_url('KelolaShopping/validasi_shopping'));
+		$this->validasi_shopping();
 	}
 }

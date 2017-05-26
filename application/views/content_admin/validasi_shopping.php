@@ -51,13 +51,11 @@
                                                                 <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button>
 																
 																<!-- Tombol Setuju -->
-                                                                <a href="<?php echo site_url('KelolaShopping/setuju_produk/'.$item['id_produk']);?>">
-                                                                    <button id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
-                                                                </a>
+                                                                <button onclick="setuju_produk_ajax(<?php echo $item['id_produk']; ?>)" id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
+                                                                
                                                                 <!-- Tombol Hapus -->
-                                                                <a href="<?php echo site_url('KelolaShopping/tolak_produk/'.$item['id_produk']);?>">
-                                                                    <button id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
-                                                                </a>
+                                                                <button onclick="tolak_produk_ajax(<?php echo $item['id_produk']; ?>)" id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+                                                                
                                                             </td>
                                                         </tr>
                                                     <?php } ?>

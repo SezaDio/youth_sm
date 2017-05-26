@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2017 at 05:18 PM
+-- Generation Time: May 26, 2017 at 08:39 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -33,17 +33,26 @@ CREATE TABLE IF NOT EXISTS `shopping` (
   `deskripsi_produk` text NOT NULL,
   `harga_produk` bigint(200) NOT NULL,
   `posted_by` varchar(100) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
   `tanggal_posting` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `shopping`
 --
 
-INSERT INTO `shopping` (`id_produk`, `nama_produk`, `jenis_produk`, `deskripsi_produk`, `harga_produk`, `posted_by`, `tanggal_posting`) VALUES
-(1, 'Laptop DELL INSPIRON', 'Elektronik', 'Warna : Hitam\r\nKondisi : Mulus', 4000000, 'Seza Dio F.', '0000-00-00 00:00:00'),
-(2, 'Laptop DELL INSPIRON', 'Elektronik', 'Kondisi : Mulus\r\nWarna : Hitam', 4000000, 'Seza Dio F.', '2017-05-24 16:45:57'),
-(3, 'Flash Disk Kingston', 'Elektronik', 'Ukuran Simpan 32 Gb', 200000, 'Azies', '2017-05-25 08:46:36');
+INSERT INTO `shopping` (`id_produk`, `nama_produk`, `jenis_produk`, `deskripsi_produk`, `harga_produk`, `posted_by`, `phone_number`, `tanggal_posting`) VALUES
+(3, 'Flash Disk Kingston', 'Elektronik', 'Ukuran Simpan 32 Gb', 200000, 'Azies', '089076570989', '2017-05-25 16:00:51'),
+(4, 'Mouse DELUX', 'Elektronik', 'Warna : Putih Imut', 300000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(5, 'Kemeja Lengan Panjang', 'Fashion', 'Warna : Putih Imut', 300000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(6, 'Kemeja Lengan Pendek', 'Fashion', 'Warna : Putih Imut', 300000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(7, 'Celana Pendek', 'Fashion', 'Warna : Hitam', 30000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(8, 'Celana Panjang', 'Fashion', 'Warna : Hitam', 30000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(9, 'Sarung', 'Fashion', 'Warna : Hitam', 30000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(10, 'Kain Kafan', 'Fashion', 'Warna : Putih\r\n', 30000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(11, 'Kain Sutera', 'Fashion', 'Warna : Putih\r\n', 30000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(12, 'Kain Katun', 'Fashion', 'Warna : Putih\r\n', 30000, 'Seza', '085640367417', '2017-05-25 16:59:01'),
+(13, 'Benang Jahit', 'Fashion', 'Warna : Putih\r\n', 30000, 'Seza', '085640367417', '2017-05-25 16:59:01');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +72,7 @@ ALTER TABLE `shopping`
 -- AUTO_INCREMENT for table `shopping`
 --
 ALTER TABLE `shopping`
-MODIFY `id_produk` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id_produk` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

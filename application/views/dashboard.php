@@ -4,6 +4,7 @@
                     <h1>
                        Dashboard
                     </h1>
+					<!--<div id="instafeed"></div>-->
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i>Beranda</a></li>
                         <li><a href="#">Pengaturan Berita</a></li>

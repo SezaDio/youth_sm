@@ -26,12 +26,14 @@ class KelolaShopping extends CI_Controller {
 	}
 
 	//Delete Data
-	public function delete_produk($id_produk)
+	public function delete_produk()//$id_produk
 	{
+		$id_produk = $_POST['id_produk'];
 		$this->load->model('shopping_models/ShoppingModels');
 		$this->ShoppingModels->delete_produk($id_produk);
 
-		redirect(site_url('KelolaShopping'));
+
+		$this->index();
 	}
 	
 	//Validasi Shopping

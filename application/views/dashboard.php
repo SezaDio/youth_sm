@@ -4,7 +4,7 @@
                     <h1>
                        Dashboard
                     </h1>
-					<!--<div id="instafeed"></div>-->
+					<div id="instafeed"></div>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i>Beranda</a></li>
                         <li><a href="#">Pengaturan Berita</a></li>
@@ -16,7 +16,7 @@
                 <section class="content">
                     <div class="row">
                         <!-- left column -->
-                        <div class="col-md-12">
+                        <div class="col-md-8">
                             <!-- general form elements -->
                             <div class="box box-primary">
                                 
@@ -33,7 +33,7 @@
 										<div class="form-group">
                                             <label for="exampleInputEmail1">Penulis   :</label>
                                             <input type="text" required name="penulis" class="form-control" id="exampleInputEmail1"
-											value=""
+											value="#"
 											>
 											<small>* Maksimal 50 Karakter</small>
                                         </div>

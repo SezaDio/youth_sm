@@ -21,13 +21,12 @@
     </head>
 	<script src="<?php echo base_url('asset/js/instafeed.js-master/instafeed.min.js'); ?>" type="text/javascript"></script>
     <script type="text/javascript">
-    var userFeed = new Instafeed({
-		get: 'user',
-		userId: '367806601',
-		clientId: '60e2f0527b724be4af2dc7215295ed9d',
-		accessToken: '367806601.60e2f05.51d0b11fa9b0411da4064bd86357f0dd'
+    var feed = new Instafeed({
+		get: 'tagged',
+		tagName: 'awesome',
+		clientId: '60e2f0527b724be4af2dc7215295ed9d'
     });
-    userFeed.run();
+    feed.run();
 	</script>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
@@ -67,7 +66,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="<?php echo site_url('account/logout'); ?>" class="btn btn-danger btn-sm"> Log Out </a>
+                                        <a href="logout.php" class="btn btn-danger btn-sm">Keluar</a>
                                     </div>
                                 </li>
                             </ul>

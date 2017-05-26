@@ -27,10 +27,11 @@
                                                     <th class="title-center" style="font-size:1em; text-align:center;">No.</th>
                                                     <th class="title-center" style="font-size:1em; text-align:center;">Nama Produk</th>
                                                     <th class="title-center" style="font-size:1em; text-align:center;">Jenis Produk</th>
-                                                    <th class="title-center" style="font-size:1em; text-align:center;">Deskripsi Produk</th>                                                        
                                                     <th class="title-center" style="font-size:1em; text-align:center;">Harga Produk</th>
                                                     <th class="title-center" style="font-size:1em; text-align:center;">Posted By</th>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Telephone</th>
                                                     <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Aksi</th>                                                        
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -41,10 +42,19 @@
                                                             <td style="text-align: center;"><?php echo $item['id_produk'] ?></td>
                                                             <td><?php echo $item['nama_produk'] ?></td>
                                                             <td><?php echo $item['jenis_produk'] ?></td>
-                                                            <td><?php echo $item['deskripsi_produk'] ?></td>
                                                             <td><?php echo "Rp ".$item['harga_produk'] ?></td>
                                                             <td><?php echo $item['posted_by'] ?></td>
+                                                            <td><?php echo $item['phone_number'] ?></td>
                                                             <td><?php echo $item['tanggal_posting'] ?></td>
+                                                            <td align="center">
+                                                                <!-- Tombol lihat detail -->
+                                                                <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button>
+
+                                                                <!-- Tombol Hapus -->
+                                                                <a href="<?php echo site_url('KelolaShopping/delete_produk/'.$item['id_produk']);?>">
+                                                                    <button id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                     <?php } ?>
                                             </tbody>
@@ -57,5 +67,6 @@
                     </div>   <!-- /.row -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
+
 
             

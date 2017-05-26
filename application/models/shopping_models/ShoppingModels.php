@@ -23,4 +23,10 @@
 			return $result;
 		}
 
+		//Menghapus data  produk shopping
+		function delete_produk($id_produk)
+		{
+			$this->db->where('id_produk',$id_produk);
+			$this->db->delete('shopping');
+		}
 	}

@@ -68,7 +68,9 @@ class KelolaShopping extends CI_Controller {
 		$id_produk = $_POST['id_produk'];
 		$this->load->model('shopping_models/ShoppingModels');
 		$this->ShoppingModels->setuju_produk($id_produk);
-
+		$sub_setuju = "Youth Shopping";
+		$msg_setuju = "Posting yang anda masukan di Youth Shopping telah disetujui";
+		$this->kirim_email($sub_setuju,$msg_setuju);
 		$this->validasi_shopping();
 	}
 	
@@ -78,7 +80,31 @@ class KelolaShopping extends CI_Controller {
 		$id_produk = $_POST['id_produk'];
 		$this->load->model('shopping_models/ShoppingModels');
 		$this->ShoppingModels->delete_produk($id_produk);
-
+		$sub_tolak = "Youth Shopping";
+		$msg_tolak = "Posting yang anda masukan di Youth Shopping telah ditolak";
+		$this->kirim_email($sub_tolak,$msg_tolak);
 		$this->validasi_shopping();
 	}
+	
+	function kirim_email($sub,$msg) {
+		$config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'ssl://smtp.gmail.com'; //change this
+		$config['smtp_port'] = '465';
+		$config['smtp_user'] = 'youthsuaramerdeka@gmail.com'; //change this
+		$config['smtp_pass'] = 'suaramerdeka'; //change this
+		$config['mailtype'] = 'html';
+		$config['charset'] = 'iso-8859-1';
+		$config['wordwrap'] = TRUE;
+		$config['newline'] = "\r\n"; //use double quotes to comply with RFC 822 standard
+		$this->load->library('email'); // load email library
+		$this->email->initialize($config);
+		$this->email->from('youthsuaramerdeka@gmail.com', 'admin');
+		$this->email->to('abdulazies.k@gmail.com');
+		$this->email->subject($sub);
+		$this->email->message($msg);
+		if ($this->email->send())
+			echo "Mail Sent!";
+		else
+			show_error($this->email->print_debugger());
+    }
 }

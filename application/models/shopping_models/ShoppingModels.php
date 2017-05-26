@@ -10,7 +10,23 @@
 		//Mengambil data produk shopping
 		function get_data_produk()
 		{
-			$query = $this->db->query("SELECT * FROM `shopping`");
+			$query = $this->db->query("SELECT * FROM `shopping` WHERE status='1'");
+		
+			$indeks = 0;
+			$result = array();
+			
+			foreach ($query->result_array() as $row)
+			{
+				$result[$indeks++] = $row;
+			}
+		
+			return $result;
+		}
+		
+		//Mengambil data shopping yang butuh validasi
+		function get_data_produk_pend()
+		{
+			$query = $this->db->query("SELECT * FROM `shopping` WHERE status='2'");
 		
 			$indeks = 0;
 			$result = array();
@@ -23,6 +39,16 @@
 			return $result;
 		}
 
+		//Menghapus data  produk shopping
+		function setuju_produk($id_produk)
+		{
+			$data = array(
+				'status' => 1	
+			);
+			$this->db->where('id_produk',$id_produk);
+			$this->db->update('shopping',$data);
+		}
+		
 		//Menghapus data  produk shopping
 		function delete_produk($id_produk)
 		{

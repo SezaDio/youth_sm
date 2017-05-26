@@ -21,7 +21,7 @@
             } );
         </script>
 
-        <!-- Sparkline -->
+        <!-- Ajax -->
         <script src="<?php echo base_url('asset/js/ajax.js'); ?>" type="text/javascript"></script>
 
 		<!-- Morris.js charts -->

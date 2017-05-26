@@ -46,7 +46,7 @@
                                             <br><br><br>
                                             <div style="width: 250px; margin-left: 50px; margin-top: -40px;">
                                                 <!-- Tombol lihat detail -->
-                                                <a href="#"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
+                                                <a href="<?php echo site_url('KelolaShopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
 
                                                 <!-- Tombol Hapus -->
                                                 <button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>

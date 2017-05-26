@@ -20,10 +20,14 @@
                 });
             } );
         </script>
+<<<<<<< HEAD
 
         <!-- Ajax -->
         <script src="<?php echo base_url('asset/js/ajax.js'); ?>" type="text/javascript"></script>
 
+=======
+		<script src="<?php echo base_url('asset/js/ajax.js'); ?>" type="text/javascript"></script>
+>>>>>>> origin/master
 		<!-- Morris.js charts -->
         <script src="<?php echo base_url('asset/js/morris/morris.min.js'); ?>" type="text/javascript"></script>
 

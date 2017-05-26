@@ -51,9 +51,7 @@
                                                                 <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button>
 
                                                                 <!-- Tombol Hapus -->
-                                                               
-                                                                    <button onclick="delete_produk_ajax(<?php echo $item['id_produk']; ?>)" id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
-                                                               
+                                                                <button onclick="delete_produk_ajax(<?php echo $item['id_produk']; ?>)" id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
                                                             </td>
                                                         </tr>
                                                     <?php } ?>
@@ -68,5 +66,5 @@
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
 
-            
+
             

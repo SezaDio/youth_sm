@@ -3,7 +3,7 @@ function delete_produk_ajax(id_produk)
 	if (confirm("Anda yakin ingin menghapus produk ini ?"))
 	{
 		$.ajax({
-			url: 'KelolaShopping/delete_produk',
+			url: 'delete_produk',
 			type: 'POST',
 			data: {id_produk:id_produk},
 			success: function(){

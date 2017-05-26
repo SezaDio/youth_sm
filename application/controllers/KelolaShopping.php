@@ -32,6 +32,7 @@ class KelolaShopping extends CI_Controller {
 		$this->load->model('shopping_models/ShoppingModels');
 		$this->ShoppingModels->delete_produk($id_produk);
 
+
 		$this->index();
 	}
 	

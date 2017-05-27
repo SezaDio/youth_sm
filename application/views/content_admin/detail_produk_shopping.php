@@ -79,11 +79,22 @@
                                 </div><!-- /.box -->
                             </div><!--/.col (left) -->
                             <div class="col-md-4" style="padding-left: 185px; position: absolute; margin-top: 390px;">
-                                <!-- Tombol kembali -->
-                                <a href="<?php echo site_url('KelolaShopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
+                                <?php if($id_produk->status==1){?>
+									<!-- Tombol kembali -->
+									<a href="<?php echo site_url('KelolaShopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
 
-                                <!-- Tombol Hapus -->
-                                <a href="<?php echo site_url('KelolaShopping/delete_detail_produk/'.$id_produk->id_produk);?>"><button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button></a>
+									<!-- Tombol Hapus -->
+									<a href="<?php echo site_url('KelolaShopping/delete_detail_produk/'.$id_produk->id_produk);?>"><button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button></a>
+								<?php } else {?>
+								
+									<!-- Tombol kembali -->
+									<a href="<?php echo site_url('KelolaShopping/validasi_shopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
+									<!-- Tombol Setuju -->
+									<a href="<?php echo site_url('KelolaShopping/setuju_detail_produk/'.$id_produk->id_produk);?>"><button id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button></a>
+									<!-- Tombol Hapus -->
+									<a href="<?php echo site_url('KelolaShopping/tolak_detail_produk/'.$id_produk->id_produk);?>"><button  id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+								
+								<?php }?>
                             </div>
                             
                             <div class="col-md-1">

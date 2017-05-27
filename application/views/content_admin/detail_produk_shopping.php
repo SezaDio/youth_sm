@@ -16,20 +16,23 @@
                         <!-- left column -->
                         <div>
                             <div class="col-md-1">
-                            </div><!--/.col (left) -->
-
-                            <div class="col-md-10">
+							</div>
+							<div class="col-md-10">
                                 <!-- general form elements -->
                                 <div class="box box-primary">
+                                    
                                     <!--Mulai Tampilkan Data Table-->
                                     <div class="box-body" style="align-content: center;">
+
                                         <div style="padding-bottom: 10px">
                                             <div class="col-sm-12">
                                                <H3 style="text-align: center;"><?php echo $id_produk->nama_produk;?></H3>
                                                <hr color="red">
                                             </div>
                                         </div>
+
                                             <!--Gambar Produk-->
+<<<<<<< HEAD
                                             <div class="col-sm-4" style="padding-top: 20px;">
                                                 <div style="background-color: ghostwhite; border: solid 2px steelblue; height:250px; width: 250px">
                                                     
@@ -53,6 +56,22 @@
                                                                 <td style="width:1%;"><label>:</label></td>
                                                                 <td><label><?php echo $id_produk->harga_produk;?></label></td>
                                                             </tr>
+=======
+											<div class="col-sm-4" style="padding-top:20px">
+												<div style="background-color: ghostwhite; border: solid 2px steelblue; height:250px; width: 250px">
+													<div class="col-md-6">
+														<label>Gambar</label>
+													</div>
+												</div>
+											</div>
+
+                                            <!--Detail Produk-->
+											<div class="col-sm-8" style="padding-top:20px">
+                                            
+                                                <div style="background-color: ghostwhite; border: solid 2px steelblue; height:250px; width: 495px">
+                                                    <div class="col-md-6">
+                                                        <table>
+>>>>>>> origin/master
                                                             <tr>
                                                                 <td style="width:25%;"><label>Penjual</label></td>
                                                                 <td style="width:1%;"><label>:</label></td>
@@ -69,6 +88,7 @@
                                                             </tr>
                                                         </table>
                                                     </div>
+<<<<<<< HEAD
                                                 </div>    
 
                                             </div>
@@ -88,6 +108,41 @@
                             
                             <div class="col-md-1">
                             </div><!--/.col (left) -->
+=======
+                                                </div>
+                                            
+											</div>
+											<div style="padding-left:15px; padding-top:360px; padding-right:640px">
+                                                <?php if(($id_produk->status)==1){?>
+												<!-- Tombol kembali -->
+                                                <div style="padding-left:50px">
+													<a href="<?php echo site_url('KelolaShopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
+
+													<!-- Tombol Hapus -->
+													<a href="<?php echo site_url('KelolaShopping/delete_detail_produk/'.$id_produk->id_produk);?>"><button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button></a>
+												</div>
+												<?php } else {?>
+												<div style="padding-left:15px">
+													<!-- Tombol kembali -->
+													<a href="<?php echo site_url('KelolaShopping/validasi_shopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
+													
+													<!-- Tombol Setuju -->
+													<a href="<?php echo site_url('KelolaShopping/setuju_detail_produk/'.$id_produk->id_produk);?>"><button  id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button></a>
+																	
+													<!-- Tombol Hapus -->
+													<a href="<?php echo site_url('KelolaShopping/tolak_detail_produk/'.$id_produk->id_produk);?>"><button id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button></a>
+												</div>
+												<?php } ?>
+
+                                            </div>
+                                    </div><!-- /.box-body -->
+                                    
+                                </div><!-- /.box -->
+							</div>
+							<div class="col-md-1">
+							</div>
+                        </div><!--/.col (left) -->
+>>>>>>> origin/master
                         </div>
                     </div>   <!-- /.row -->
                 </section><!-- /.content -->

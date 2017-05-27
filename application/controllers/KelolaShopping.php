@@ -84,6 +84,17 @@ class KelolaShopping extends CI_Controller {
 		$this->validasi_shopping();
 	}
 	
+	//Setujui Shopping
+	public function setuju_detail_produk($id_produk)
+	{
+		$this->load->model('shopping_models/ShoppingModels');
+		$this->ShoppingModels->setuju_produk($id_produk);
+		$sub_setuju = "Youth Shopping";
+		$msg_setuju = "Posting yang anda masukan di Youth Shopping telah disetujui";
+		$this->kirim_email($sub_setuju,$msg_setuju);
+		$this->validasi_shopping();
+	}
+	
 	//Tolak Data
 	public function tolak_produk()
 	{
@@ -96,6 +107,18 @@ class KelolaShopping extends CI_Controller {
 		$this->validasi_shopping();
 	}
 	
+	//Tolak Data
+	public function tolak_detail_produk($id_produk)
+	{
+		$this->load->model('shopping_models/ShoppingModels');
+		$this->ShoppingModels->delete_produk($id_produk);
+		$sub_tolak = "Youth Shopping";
+		$msg_tolak = "Posting yang anda masukan di Youth Shopping telah ditolak";
+		$this->kirim_email($sub_tolak,$msg_tolak);
+		$this->validasi_shopping();
+	}
+	
+	//kirim email
 	function kirim_email($sub,$msg) {
 		$config['protocol'] = 'smtp';
 		$config['smtp_host'] = 'ssl://smtp.gmail.com'; //change this

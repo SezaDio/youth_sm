@@ -21,7 +21,16 @@
                                     
                                     <!--Mulai Tampilkan Data Table-->
                                     <div class="box-body" style="align-content: center;">
+<<<<<<< HEAD
                                             
+=======
+                                        <div style="padding-bottom: 10px">
+                                            <div class="col-sm-12">
+                                               <H3 style="text-align: center;"><?php echo $id_produk->nama_produk;?></H3>
+                                               <hr color: "steelblue">
+                                            </div>
+                                        </div>
+>>>>>>> origin/master
                                             <!--Gambar Produk-->
                                             <div style="background-color: ghostwhite; border: solid 2px steelblue; height:250px; width: 250px">
                                                 <div class="col-md-6">
@@ -50,6 +59,7 @@
                                                 <a href="<?php echo site_url('KelolaShopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
 
                                                 <!-- Tombol Hapus -->
+<<<<<<< HEAD
                                                 <button onclick="delete_produk_ajax(<?php echo($id_produk->id_produk); ?>)" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
 												
 												<?php } else {?>
@@ -62,6 +72,9 @@
                                                 <!-- Tombol Hapus -->
                                                 <button id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
 												<?php } ?>
+=======
+                                                <a href="<?php echo site_url('KelolaShopping/delete_detail_produk/'.$id_produk->id_produk);?>"><button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button></a>
+>>>>>>> origin/master
                                             </div>
                                     </div><!-- /.box-body -->
                                     

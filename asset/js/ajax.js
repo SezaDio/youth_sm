@@ -72,7 +72,7 @@ function delete_wow_ajax(id_wow)
 	if (confirm("Anda yakin ingin menghapus posting Wow ini ?"))
 	{
 		$.ajax({
-			url: 'KelolaWow/delete_wow',
+			url: 'delete_wow',
 			type: 'POST',
 			data: {id_wow:id_wow},
 			success: function(){

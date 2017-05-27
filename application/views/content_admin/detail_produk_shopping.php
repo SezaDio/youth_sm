@@ -57,10 +57,10 @@
                                                 
 												<a href="<?php echo site_url('KelolaShopping/validasi_shopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
 												<!-- Tombol Setuju -->
-                                                <button onclick="setuju_produk_ajax(<?php echo($id_produk->id_produk); ?>)" id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
+                                                <button  id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
                                                                 
                                                 <!-- Tombol Hapus -->
-                                                <button onclick="tolak_produk_ajax(<?php echo($id_produk->id_produk); ?>)" id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+                                                <button id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
 												<?php } ?>
                                             </div>
                                     </div><!-- /.box-body -->

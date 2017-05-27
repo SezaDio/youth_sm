@@ -26,7 +26,7 @@
                                         <div style="padding-bottom: 10px">
                                             <div class="col-sm-12">
                                                <H3 style="text-align: center;"><?php echo $id_produk->nama_produk;?></H3>
-                                               <hr style="outline-color: : steelblue">
+                                               <hr color: "steelblue">
                                             </div>
                                         </div>
                                             <!--Gambar Produk-->

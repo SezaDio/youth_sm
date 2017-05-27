@@ -39,24 +39,24 @@ class KelolaWow extends CI_Controller {
 		$this->load->library('form_validation');
                 
 		$this->form_validation->set_rules('judul_wow', 'Judul', 'required');
-		$this->form_validation->set_rules('penulis', 'Penulis', 'required');
+		$this->form_validation->set_rules('kategori', 'Kategori', 'required');
 		$this->form_validation->set_rules('deskripsi_wow', 'Deskripsi', 'required');
 		//value id_koridor berisi beberapa data, sehingga dilakukan split dengan explode
 		
 		if ($this->form_validation->run() == TRUE){
 			$data_wow=array(
 				'judul_wow'=>$this->input->post('judul_wow'),
-				'posted_by'=>$this->input->post('penulis'),
+				'kategori_wow'=>$this->input->post('kategori'),
 				'deskripsi'=>$this->input->post('deskripsi_wow'),
 				'tanggal_posting'=>date("Y-m-d h:i:sa"),
 				'path_gambar'=>1212
 			);
 		}
 		if($this->db->insert('wow', $data_wow)){
-			$this->session->set_flashdata('msg_berhasil', 'Data Wow berhasil ditambahkan');
+			$this->session->set_flashdata('msg_berhasil', 'Data Youth Wow berhasil ditambahkan');
 			redirect('KelolaWow');
 		} else{
-			$this->session->set_flashdata('msg_gagal', 'Data Wow gagal ditambahkan');
+			$this->session->set_flashdata('msg_gagal', 'Data Youth Wow gagal ditambahkan');
 			$this->tambah_wow_check();
 		}
 		

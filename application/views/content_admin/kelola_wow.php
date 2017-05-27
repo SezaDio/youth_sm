@@ -30,7 +30,7 @@
                                                 <tr>
                                                     <th class="title-center" style="font-size:1em; text-align:center;">No.</th>
                                                     <th class="title-center" style="font-size:1em; text-align:center;">Judul Wow</th>
-                                                    <th class="title-center" style="font-size:1em; text-align:center;">Posted By</th>
+                                                    <th class="title-center" style="font-size:1em; text-align:center;">Kategori</th>
                                                     <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
                                                     <th class="title-center" style="font-size:1em; text-align:center;">Aksi</th>                                                        
                                                 </tr>
@@ -42,11 +42,11 @@
                                                         <tr>
                                                             <td style="text-align: center;"><?php echo $item['id_wow'] ?></td>
                                                             <td><?php echo $item['judul_wow'] ?></td>
-                                                            <td><?php echo $item['posted_by'] ?></td>
+                                                            <td><?php echo $item['kategori_wow'] ?></td>
                                                             <td><?php echo $item['tanggal_posting'] ?></td>
                                                             <td align="center">
                                                                 <!-- Tombol lihat detail -->
-                                                                <a href="<?php echo site_url('KelolaWow/lihat_detail_wow/'.$item['id_wow']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button></a>
+                                                                <a href="<?php echo site_url('KelolaWow/lihat_detail_wow/'.$item['id_wow']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit </button></a>
 
                                                                 <!-- Tombol Hapus -->
                                                                 <button onclick="delete_wow_ajax(<?php echo $item['id_wow']; ?>)" id="delete-button-wow" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>

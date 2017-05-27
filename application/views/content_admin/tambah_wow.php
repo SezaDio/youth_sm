@@ -15,6 +15,8 @@
                 <section class="content">
                     <div class="row">
                         <!-- left column -->
+                        
+
                         <div class="col-md-8">
                             <!-- general form elements -->
                             <div class="box box-primary">
@@ -23,18 +25,22 @@
 								
                                 <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaWow/tambah_wow_check/');?>" method="POST">
                                     <div class="box-body">
+										<div class="form-group">
+                                            <label for="exampleInputEmail1">Kategori   :</label><br>
+                                            <select name="kategori" required class="form-control" id="kategori">
+                                                <option value="">--Pilih Kategori Wow--</option>
+                                                <option value="Wow Sains">Wow Sains</option>
+                                                <option value="Wow Teknologi">Wow Teknologi</option>
+                                                <option value="Wow Sejarah">Wow Sejarah</option>
+                                                <option value="Wow Politik">Wow Politik</option>
+                                                <option value="Wow Fiksi">Wow Fiksi</option>
+                                            </select></br>
+                                        </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Judul Wow   :</label>
                                             <input type="text" required name="judul_wow" class="form-control" id="exampleInputEmail1" 
-											value="">
-											<small>* Maksimal 100 Karakter</small>
-                                        </div>
-										<div class="form-group">
-                                            <label for="exampleInputEmail1">Penulis   :</label>
-                                            <input type="text" required name="penulis" class="form-control" id="exampleInputEmail1"
-											value="#"
-											>
-											<small>* Maksimal 50 Karakter</small>
+                                            value="">
+                                            
                                         </div>
 										
 										<div class="form-group">
@@ -58,11 +64,11 @@
                                     <div class="box-footer">
                                         <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                                     </div>
+                                </form>
                             </div><!-- /.box -->
-
-                            
                         </div><!--/.col (left) -->
-                        
+
+                        <div class="col-md-2"></div>
                     </div>   <!-- /.row -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->

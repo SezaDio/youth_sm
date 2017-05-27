@@ -45,11 +45,23 @@
                                             </div>
                                             <br><br><br>
                                             <div style="width: 250px; margin-left: 50px; margin-top: -40px;">
-                                                <!-- Tombol lihat detail -->
+                                                <?php if(($id_produk->status)==1){?>
+												<!-- Tombol kembali -->
                                                 <a href="<?php echo site_url('KelolaShopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
 
                                                 <!-- Tombol Hapus -->
-                                                <button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                <button onclick="delete_produk_ajax(<?php echo($id_produk->id_produk); ?>)" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+												
+												<?php } else {?>
+												<!-- Tombol kembali -->
+                                                
+												<a href="<?php echo site_url('KelolaShopping/validasi_shopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
+												<!-- Tombol Setuju -->
+                                                <button onclick="setuju_produk_ajax(<?php echo($id_produk->id_produk); ?>)" id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
+                                                                
+                                                <!-- Tombol Hapus -->
+                                                <button onclick="tolak_produk_ajax(<?php echo($id_produk->id_produk); ?>)" id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+												<?php } ?>
                                             </div>
                                     </div><!-- /.box-body -->
                                     

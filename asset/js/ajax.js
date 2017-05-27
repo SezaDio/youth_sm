@@ -2,6 +2,7 @@ function delete_produk_ajax(id_produk)
 {
 	if (confirm("Anda yakin ingin menghapus produk ini ?"))
 	{
+		alert(id_produk);
 		$.ajax({
 			url: 'delete_produk',
 			type: 'POST',

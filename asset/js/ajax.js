@@ -1,8 +1,7 @@
 function delete_produk_ajax(id_produk)
 {
 	if (confirm("Anda yakin ingin menghapus produk ini ?"))
-	{
-		alert(id_produk);
+	{;
 		$.ajax({
 			url: 'delete_produk',
 			type: 'POST',
@@ -65,5 +64,28 @@ function setuju_produk_ajax(id_produk)
 	else
 	{
 		alert(id_produk + "Gagal disetujui");
+	}
+}
+
+function delete_wow_ajax(id_wow)
+{
+	if (confirm("Anda yakin ingin menghapus posting Wow ini ?"))
+	{
+		$.ajax({
+			url: 'delete_wow',
+			type: 'POST',
+			data: {id_wow:id_wow},
+			success: function(){
+						alert('Delete posting Wow berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Delete posting Wow gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_produk + "Gagal dihapus");
 	}
 }

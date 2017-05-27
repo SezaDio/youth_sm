@@ -48,7 +48,7 @@
                                 <i class="glyphicon glyphicon-menu-right pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_prestasi.php"><i class="glyphicon glyphicon-minus"></i> Kelola Wow </a></li>
+                                <li><a href="<?php echo site_url('KelolaWow/index'); ?>"><i class="glyphicon glyphicon-minus"></i> Kelola Wow </a></li>
                             </ul>
                         </li>
 

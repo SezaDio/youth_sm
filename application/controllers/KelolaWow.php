@@ -64,7 +64,7 @@ class KelolaWow extends CI_Controller {
 	
 	public function delete_wow()//$id_produk
 	{
-		$id_produk = $_POST['id_wow'];
+		$id_wow = $_POST['id_wow'];
 		$this->load->model('wow_models/WowModels');
 		$this->WowModels->delete_wow($id_wow);
 

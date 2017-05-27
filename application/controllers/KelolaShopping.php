@@ -35,6 +35,16 @@ class KelolaShopping extends CI_Controller {
 
 		$this->index();
 	}
+
+	//Delete Data detail produk
+	public function delete_detail_produk($id_produk)//
+	{
+		$this->load->model('shopping_models/ShoppingModels');
+		$this->ShoppingModels->delete_produk($id_produk);
+
+
+		$this->index();
+	}
 	
 	//Lihat detail produk
 	public function lihat_detail_produk($id_produk)

@@ -42,7 +42,7 @@
                             </ul>
                         </li>
 						
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo site_url('KelolaWow/index'); ?>">
                                 <i class="glyphicon glyphicon-star"></i> <span> Youth Wow </span>
                             </a>

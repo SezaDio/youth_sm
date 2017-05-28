@@ -18,11 +18,20 @@
                         {"orderable":false, "targets":4}
                     ]
                 });
+                
+                CKEDITOR.replace('editor_wow');
+                $(".textarea").wysihtml5();
             } );
         </script>
 
         <!-- Ajax -->
         <script src="<?php echo base_url('asset/js/ajax.js'); ?>" type="text/javascript"></script>
+
+        <!-- CK Editor -->
+        <script src="<?php echo base_url('asset/js/ckeditor.js'); ?>" type="text/javascript"></script>
+
+        <!-- Bootstrap WYSIHTML5 -->
+        <script src="<?php echo base_url('asset/js/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'); ?>" type="text/javascript"></script>
 
 		<!-- Morris.js charts -->
         <script src="<?php echo base_url('asset/js/morris/morris.min.js'); ?>" type="text/javascript"></script>
@@ -33,8 +42,6 @@
         <!-- datepicker -->
         <script src="<?php echo base_url('asset/js/datepicker/bootstrap-datepicker.js'); ?>" type="text/javascript"></script>
 
-        <!-- Bootstrap WYSIHTML5 -->
-        <script src="<?php echo base_url('asset/js/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'); ?>" type="text/javascript"></script>
         
 		
 	</body>

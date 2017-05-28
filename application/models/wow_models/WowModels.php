@@ -10,6 +10,7 @@
 		//Mengambil data produk wow
 		function get_data_wow()
 		{
+			
 			$query = $this->db->query("SELECT * FROM `wow`");
 		
 			$indeks = 0;

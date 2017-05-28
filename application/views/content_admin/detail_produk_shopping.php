@@ -22,7 +22,7 @@
                                 <!-- general form elements -->
                                 <div class="box box-primary">
                                     <!--Mulai Tampilkan Data Table-->
-                                    <div class="box-body" style="align-content: center;">
+                                    <div class="box-body" style="align-content: center; min-height: 450px;">
                                         <div style="padding-bottom: 10px">
                                             <div class="col-sm-12">
                                                <H3 style="text-align: center;"><?php echo $id_produk->nama_produk;?></H3>
@@ -66,6 +66,7 @@
                                                             <tr>
                                                                 <td style="width:25%;"><label>Deksripsi Produk</label></td>
                                                                 <td style="width:1%;"><label>:</label></td>
+                                                                <td><label> <?php echo $id_produk->deskripsi_produk;?> </label></td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -73,29 +74,29 @@
 
                                             </div>
                                             <div style="padding-left: 330px; padding-right: 20px; text-align: justify;">
-                                                <label><?php echo $id_produk->deskripsi_produk;?></label>
+                                                <p></p>
                                             </div>                                  
                                     </div><!-- /.box-body -->
                                 </div><!-- /.box -->
                             </div><!--/.col (left) -->
                             <div class="col-md-4" style="padding-left: 185px; position: absolute; margin-top: 390px;">
                                 <?php if($id_produk->status==1){?>
-									<!-- Tombol kembali -->
+                                    <!-- Tombol kembali -->
 									<a href="<?php echo site_url('KelolaShopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
 
 									<!-- Tombol Hapus -->
 									<a href="<?php echo site_url('KelolaShopping/delete_detail_produk/'.$id_produk->id_produk);?>"><button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button></a>
-								<?php } else {?>
-								
-									<!-- Tombol kembali -->
-									<a href="<?php echo site_url('KelolaShopping/validasi_shopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
-									<!-- Tombol Setuju -->
-									<a href="<?php echo site_url('KelolaShopping/setuju_detail_produk/'.$id_produk->id_produk);?>"><button id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button></a>
-									<!-- Tombol Hapus -->
-									<a href="<?php echo site_url('KelolaShopping/tolak_detail_produk/'.$id_produk->id_produk);?>"><button  id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
-								
-								<?php }?>
                             </div>
+                                <?php } else {?>
+                            <div class="col-md-8" style="position: absolute; margin-left: -49px;">    
+                                    <!-- Tombol kembali -->
+                                    <a href="<?php echo site_url('KelolaShopping/validasi_shopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
+                                    <!-- Tombol Setuju -->
+                                    <a href="<?php echo site_url('KelolaShopping/setuju_detail_produk/'.$id_produk->id_produk);?>"><button id="success-button-produk" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button></a>
+                                    <!-- Tombol Hapus -->
+                                    <a href="<?php echo site_url('KelolaShopping/tolak_detail_produk/'.$id_produk->id_produk);?>"><button  id="delete-button-produk" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+                            </div>
+                                <?php }?>
                             
                             <div class="col-md-1">
                             </div><!--/.col (left) -->

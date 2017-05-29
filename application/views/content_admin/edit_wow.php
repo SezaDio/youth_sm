@@ -23,7 +23,7 @@
                                 
                                 <!-- form start -->
 								
-                                <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaWow/edit_wow_check/');?>" method="POST">
+                                <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaWow/proses_update_wow/');?>" method="POST">
                                     <div class="box-body">
 										<div class="form-group">
                                             <label for="exampleInputEmail1">Kategori   :</label><br>

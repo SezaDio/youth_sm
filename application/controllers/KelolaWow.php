@@ -91,7 +91,7 @@ class KelolaWow extends CI_Controller {
 		$this->load->view('skin/admin/footer_admin');
 		
 	}
-	/*public function proses_edit_wow() //Fungsi melakukan update pada database
+	/*public function proses_update_wow() //Fungsi melakukan update pada database
 	{
 		$this->load->model('daftaragenda/Agenda_model');
 		$id_agenda = $this->input->post('id_agenda');

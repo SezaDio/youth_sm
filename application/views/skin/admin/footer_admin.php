@@ -21,6 +21,13 @@
                 
                 CKEDITOR.replace('editor_wow');
                 $(".textarea").wysihtml5();
+
+                // Script untuk onchange ganti gambar
+
+                $(".ganti_gambar").hide();
+                $("#ganti").click(function(){
+                    $(".ganti_gambar").toggle();
+                });
             } );
         </script>
 

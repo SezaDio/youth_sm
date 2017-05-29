@@ -78,22 +78,27 @@ class KelolaWow extends CI_Controller {
 	}
 	
 	//Edit Data WOW
-	public function select_data_by_id_wow($id_agenda) //Fungsi mengambil id data WOW yang akan di edit
+	public function edit_wow($id_wow) //Fungsi mengambil id data WOW yang akan di edit
 	{
 		$this->load->model('wow_models/WowModels');
 
 		//Ambil id_agenda yang akan diedit
-		$data['wow'] = $this->WowModels->select_by_id($id_agenda)->row();
-		$this->load->view('daftaragenda/form_edit_agenda', $data);
+		$data['wow'] = $this->WowModels->select_by_id_wow($id_wow)->row();
+
+		$this->load->view('skin/admin/header_admin');
+		$this->load->view('skin/admin/nav_kiri');
+		$this->load->view('content_admin/edit_wow',$data);
+		$this->load->view('skin/admin/footer_admin');
+		
 	}
-	public function proses_edit_wow() //Fungsi melakukan update pada database
+	/*public function proses_edit_wow() //Fungsi melakukan update pada database
 	{
 		$this->load->model('daftaragenda/Agenda_model');
 		$id_agenda = $this->input->post('id_agenda');
 		$this->Agenda_model->update_agenda($id_agenda, $data);
 		
 		redirect(site_url('daftaragenda'));
-	}
+	}*/
 
 
 	public function delete_wow()//$id_produk

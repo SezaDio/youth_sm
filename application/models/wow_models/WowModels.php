@@ -47,7 +47,7 @@
 			return $this->db->get();
 		}
 
-		
+
 		
 		//Mengambil data shopping yang butuh validasi
 		function get_data_produk_pend()

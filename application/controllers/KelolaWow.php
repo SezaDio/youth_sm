@@ -71,7 +71,8 @@ class KelolaWow extends CI_Controller {
 		if($this->db->insert('wow', $data_wow)){
 			$this->session->set_flashdata('msg_berhasil', 'Data Youth Wow berhasil ditambahkan');
 			redirect('KelolaWow');
-		} else{
+		} 
+		else{
 			$this->session->set_flashdata('msg_gagal', 'Data Youth Wow gagal ditambahkan');
 			$this->tambah_wow_check();
 		}

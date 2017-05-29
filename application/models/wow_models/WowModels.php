@@ -24,6 +24,7 @@
 			return $result;
 		}
 		
+		//Menambah data youth WOW
 		function add_data_wow($data_wow)
 		{
 			$this->db->insert('wow', $data_wow);
@@ -35,6 +36,17 @@
 			$this->db->where('id_wow',$id_wow);
 			$this->db->delete('wow');
 		}
+
+		//Select data WOW by id wow
+		function select_by_id_wow($id_wow)
+		{
+			$this->db->select('*');
+			$this->db->from('wow');
+			$this->db->where('id_wow',$id_wow);
+
+			return $this->db->get();
+		}
+
 		
 		
 		//Mengambil data shopping yang butuh validasi
@@ -70,13 +82,4 @@
 			$this->db->delete('shopping');
 		}
 
-		//Select produk by id produk
-		function select_by_id_shopping($id_produk)
-		{
-			$this->db->select('*');
-			$this->db->from('shopping');
-			$this->db->where('id_produk',$id_produk);
-
-			return $this->db->get();
-		}
 	}

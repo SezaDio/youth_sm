@@ -41,15 +41,31 @@ class KelolaWow extends CI_Controller {
 		$this->form_validation->set_rules('judul_wow', 'Judul', 'required');
 		$this->form_validation->set_rules('kategori', 'Kategori', 'required');
 		$this->form_validation->set_rules('deskripsi_wow', 'Deskripsi', 'required');
+
+		//Mengambil filename gambar untuk disimpan
+		$nmfile = "file_".time();
+		$config['upload_path'] = './asset/upload_img_wow/';
+		$config['allowed_types'] = 'jpg|png|jpeg';
+		$config['max_size'] = '4000'; //kb
+		$config['file_name'] = $nmfile;
+
 		//value id_koridor berisi beberapa data, sehingga dilakukan split dengan explode
-		
-		if ($this->form_validation->run() == TRUE){
+		if (($this->form_validation->run() == TRUE) AND (!empty($_FILES['filefoto']['name'])))
+		{
+
+			$this->load->library('upload', $config);
+			if($this->upload->do_upload('filefoto'))
+			{
+				//echo "Masuk";
+				$gbr = $this->upload->data();
+			}
+
 			$data_wow=array(
 				'judul_wow'=>$this->input->post('judul_wow'),
 				'kategori_wow'=>$this->input->post('kategori'),
 				'deskripsi'=>$this->input->post('deskripsi_wow'),
 				'tanggal_posting'=>date("Y-m-d h:i:sa"),
-				'path_gambar'=>1212
+				'path_gambar'=>$gbr['file_name']
 			);
 		}
 		if($this->db->insert('wow', $data_wow)){
@@ -59,9 +75,27 @@ class KelolaWow extends CI_Controller {
 			$this->session->set_flashdata('msg_gagal', 'Data Youth Wow gagal ditambahkan');
 			$this->tambah_wow_check();
 		}
-		
 	}
 	
+	//Edit Data WOW
+	public function select_data_by_id_wow($id_agenda) //Fungsi mengambil id data WOW yang akan di edit
+	{
+		$this->load->model('wow_models/WowModels');
+
+		//Ambil id_agenda yang akan diedit
+		$data['wow'] = $this->WowModels->select_by_id($id_agenda)->row();
+		$this->load->view('daftaragenda/form_edit_agenda', $data);
+	}
+	public function proses_edit_wow() //Fungsi melakukan update pada database
+	{
+		$this->load->model('daftaragenda/Agenda_model');
+		$id_agenda = $this->input->post('id_agenda');
+		$this->Agenda_model->update_agenda($id_agenda, $data);
+		
+		redirect(site_url('daftaragenda'));
+	}
+
+
 	public function delete_wow()//$id_produk
 	{
 		$id_wow = $_POST['id_wow'];

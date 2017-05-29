@@ -34,11 +34,12 @@
                                                 <option value="Wow Sejarah">Wow Sejarah</option>
                                                 <option value="Wow Politik">Wow Politik</option>
                                                 <option value="Wow Fiksi">Wow Fiksi</option>
-                                                <option value="Wow Fiksi">Wow Rekomendasi</option>
-                                                <option value="Wow Fiksi">Wow Komunitas</option>
-                                                <option value="Wow Fiksi">Wow Lain-Lain</option>
+                                                <option value="Wow Rekomendasi">Wow Rekomendasi</option>
+                                                <option value="Wow Komunitas">Wow Komunitas</option>
+                                                <option value="Wow Lain-Lain">Wow Lain-Lain</option>
                                             </select></br>
                                         </div>
+
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Judul Wow   :</label>
                                             <input type="text" required name="judul_wow" class="form-control" id="exampleInputEmail1" 
@@ -47,20 +48,22 @@
                                         </div>
 										
 										<div class="form-group">
-										
-												<div class='box-header'>
-													 <label>Deskripsi Wow :</label>
-												</div>
-												<div class='box-body pad'>
-													<textarea required id="editor_wow" name="deskripsi_wow" rows="10" cols="80">
+											<div class='box-header'>
+												 <label>Deskripsi Wow :</label>
+											</div>
+											<div class='box-body pad'>
+												<textarea required id="editor_wow" name="deskripsi_wow" rows="10" cols="80">
 														
-													</textarea>                                    
-												</div>
+												</textarea>                                    
+											</div>
                                         </div>
+
                                         <div class="form-group">
                                             <label for="exampleInputFile">Unggah File Gambar :</label>
-                                            <input accept="image/*" type="file" name="gambar" id="exampleInputFile"><br/>
-											<b><p style="color:red;">File diizinkan: jpg, jpeg, png, Max 2MB</p></b>
+                                            <div class="input-group">
+                                                <input class="form" type="file" name="filefoto" required >
+                                            </div>
+											<b><p style="color:red;">File diizinkan: jpg, jpeg, dan png (Max 2Mb)</p></b>
                                         </div>
                                     </div><!-- /.box-body -->
 

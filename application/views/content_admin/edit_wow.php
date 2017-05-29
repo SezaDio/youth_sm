@@ -43,21 +43,28 @@
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Judul Wow   :</label>
                                             <input type="text" required name="judul_wow" class="form-control" id="exampleInputEmail1" value="<?php echo htmlspecialchars($wow->judul_wow); ?>">
-                                            
                                         </div>
 										
 										<div class="form-group">
 											<div class='box-header'>
 												 <label>Deskripsi Wow :</label>
 											</div>
-											<div class='box-body pad'>
+											
 												<textarea required id="editor_wow" name="deskripsi_wow" rows="10" cols="80">
 												    <?php echo htmlspecialchars($wow->deskripsi); ?>
 												</textarea>                                    
-											</div>
+											
                                         </div>
 
-                                        <label style="color: blue;" id="ganti">Ganti Gambar ?</label><br>
+                                        <div class='box-header'>
+                                            <label>Gambar Wow :</label>
+                                        </div>
+
+                                        <div class='box-header'>                
+                                                <img style="height: 250px; padding: 4px; max-width:250px; border: solid 1px black" src="<?php echo base_url('asset/upload_img_wow/'.$wow->path_gambar); ?>"/>
+                                        </div>
+                                        
+                                        <label class='box-header' style="color: blue;" id="ganti">Ganti Gambar ?</label><br>
                                         <div class="ganti_gambar">
                                             <input class="form" type="file" name="filefoto" required >
 											<b><p style="color:red;">File diizinkan: jpg, jpeg, dan png (Max 2Mb)</p></b>

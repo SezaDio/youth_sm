@@ -95,6 +95,7 @@ function delete_coming_ajax(id_coming)
 	if (confirm("Anda yakin ingin menghapus Coming Soon ini ?"))
 	{;
 		$.ajax({
+			url: 'delete_coming',
 			type: 'POST',
 			data: {id_coming:id_coming},
 			success: function(){

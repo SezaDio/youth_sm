@@ -10,7 +10,7 @@
 		//Mengambil data coming coming
 		function get_data_coming()
 		{
-			$query = $this->db->query("SELECT * FROM `coming`");
+			$query = $this->db->query("SELECT * FROM `coming` WHERE status='1'");
 		
 			$indeks = 0;
 			$result = array();

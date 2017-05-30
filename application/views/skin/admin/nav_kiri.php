@@ -56,7 +56,7 @@
                             <ul class="treeview-menu">
                                 <li><a href="add_prestasi.php"><i class="glyphicon glyphicon-minus"></i> Kelola Kategori </a></li>
                                 <li><a href="<?php echo site_url('KelolaComing/index'); ?>"><i class="glyphicon glyphicon-minus"></i> Kelola Coming Soon</a></li>
-                                <li><a href="prestasi_editor.php"><i class="glyphicon glyphicon-minus"></i> Validasi Coming Soon</a></li>
+                                <li><a href="<?php echo site_url('KelolaComing/validasi_coming'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi Coming Soon</a></li>
                             </ul>
                         </li>
 

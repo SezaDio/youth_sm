@@ -2,11 +2,11 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header" style="margin-top: 45px;">
                     <h1>
-                       Kelola Coming Soon
+                       Validasi Coming Soong
                     </h1>
                     <ol class="breadcrumb">
                         <li><i class="fa fa-dashboard"></i>Youth Coming Soon</li>
-                        <li class="active">Kelola Coming Soon</li>
+                        <li class="active">Validasi Cpming Soon</li>
                     </ol>
                 </section>
 
@@ -43,9 +43,13 @@
                                                             <td align="center">
                                                                 <!-- Tombol lihat detail -->
                                                                 <a href="<?php echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button></a>
-
+																
+																<!-- Tombol Setuju -->
+                                                                <button onclick="setuju_coming_ajax(<?php echo $item['id_coming']; ?>)" id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
+                                                                
                                                                 <!-- Tombol Hapus -->
-                                                                <button onclick="delete_coming_ajax(<?php echo $item['id_coming']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                <button onclick="tolak_coming_ajax(<?php echo $item['id_coming']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+                                                                
                                                             </td>
                                                         </tr>
                                                     <?php } ?>

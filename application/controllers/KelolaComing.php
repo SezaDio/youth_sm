@@ -30,33 +30,33 @@ class KelolaComing extends CI_Controller {
 	{
 		$id_coming = $_POST['id_coming'];
 		$this->load->model('coming_models/ComingModels');
-		$this->ComingModels->delete_produk($id_produk);
+		$this->ComingModels->delete_produk($id_coming);
 
 
 		$this->index();
 	}
 
 	//Delete Data detail produk
-	public function delete_detail_produk($id_produk)//
+	public function delete_detail_coming($id_coming)//
 	{
 		$this->load->model('coming_models/ComingModels');
-		$this->ComingModels->delete_produk($id_produk);
+		$this->ComingModels->delete_coming($id_coming);
 
 
 		$this->index();
 	}
 	
 	//Lihat detail produk
-	public function lihat_detail_produk($id_produk)
+	public function lihat_detail_coming($id_coming)
 	{
 		$this->load->model('coming_models/ComingModels');
 
 		//Ambil id_agenda yang akan diedit
-		$data['id_produk'] = $this->ComingModels->select_by_id_coming($id_produk)->row();
+		$data['id_coming'] = $this->ComingModels->select_by_id_coming($id_coming)->row();
 
 		$this->load->view('skin/admin/header_admin');
 		$this->load->view('skin/admin/nav_kiri');
-		$this->load->view('content_admin/detail_produk_coming', $data);
+		$this->load->view('content_admin/detail_coming', $data);
 		$this->load->view('skin/admin/footer_admin');
 	}
 
@@ -64,7 +64,7 @@ class KelolaComing extends CI_Controller {
 	public function validasi_coming()
 	{
 		$this->load->model('coming_models/ComingModels');
-		$data['listProduk'] = $this->ComingModels->get_data_produk_pend();
+		$data['listComing'] = $this->ComingModels->get_data_coming_pend();
 			
 		$this->load->view('skin/admin/header_admin');
 		$this->load->view('skin/admin/nav_kiri');
@@ -73,11 +73,11 @@ class KelolaComing extends CI_Controller {
 	}
 	
 	//Setujui coming
-	public function setuju_produk()
+	public function setuju_coming()
 	{
-		$id_produk = $_POST['id_produk'];
+		$id_coming = $_POST['id_coming'];
 		$this->load->model('coming_models/ComingModels');
-		$this->ComingModels->setuju_produk($id_produk);
+		$this->ComingModels->setuju_coming($id_coming);
 		$sub_setuju = "Youth coming";
 		$msg_setuju = "Posting yang anda masukan di Youth coming telah disetujui";
 		$this->kirim_email($sub_setuju,$msg_setuju);
@@ -85,35 +85,35 @@ class KelolaComing extends CI_Controller {
 	}
 	
 	//Setujui coming
-	public function setuju_detail_produk($id_produk)
+	public function setuju_detail_coming($id_coming)
 	{
 		$this->load->model('coming_models/ComingModels');
-		$this->ComingModels->setuju_produk($id_produk);
+		$this->ComingModels->setuju_coming($id_coming);
 		$sub_setuju = "Youth coming";
-		$msg_setuju = "Posting yang anda masukan di Youth coming telah disetujui";
+		$msg_setuju = "Posting yang anda masukan di Youth Coming Soon telah disetujui";
 		$this->kirim_email($sub_setuju,$msg_setuju);
 		$this->validasi_coming();
 	}
 	
 	//Tolak Data
-	public function tolak_produk()
+	public function tolak_coming()
 	{
-		$id_produk = $_POST['id_produk'];
+		$id_coming = $_POST['id_coming'];
 		$this->load->model('coming_models/ComingModels');
-		$this->ComingModels->delete_produk($id_produk);
+		$this->ComingModels->delete_coming($id_coming);
 		$sub_tolak = "Youth coming";
-		$msg_tolak = "Posting yang anda masukan di Youth coming telah ditolak";
+		$msg_tolak = "Posting yang anda masukan di Youth Coming Soon telah ditolak";
 		$this->kirim_email($sub_tolak,$msg_tolak);
 		$this->validasi_coming();
 	}
 	
 	//Tolak Data
-	public function tolak_detail_produk($id_produk)
+	public function tolak_detail_coming($id_coming)
 	{
 		$this->load->model('coming_models/ComingModels');
-		$this->ComingModels->delete_produk($id_produk);
+		$this->ComingModels->delete_coming($id_coming);
 		$sub_tolak = "Youth coming";
-		$msg_tolak = "Posting yang anda masukan di Youth coming telah ditolak";
+		$msg_tolak = "Posting yang anda masukan di Youth Coming Soon telah ditolak";
 		$this->kirim_email($sub_tolak,$msg_tolak);
 		$this->validasi_coming();
 	}

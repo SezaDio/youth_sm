@@ -89,3 +89,71 @@ function delete_wow_ajax(id_wow)
 		alert(id_produk + "Gagal dihapus");
 	}
 }
+
+function delete_coming_ajax(id_coming)
+{
+	if (confirm("Anda yakin ingin menghapus Coming Soon ini ?"))
+	{;
+		$.ajax({
+			type: 'POST',
+			data: {id_coming:id_coming},
+			success: function(){
+						alert('Delete Coming Soon berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Delete Coming Soon gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_coming + "Gagal dihapus");
+	}
+}
+
+function tolak_coming_ajax(id_coming)
+{
+	if (confirm("Anda yakin ingin menolak Coming Soon ini ?"))
+	{
+		$.ajax({
+			url: 'tolak_coming',
+			type: 'POST',
+			data: {id_coming:id_coming},
+			success: function(){
+						alert('Tolak Coming SOon berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Tolak Coming Soon gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_coming + "Gagal ditolak");
+	}
+}
+
+function setuju_coming_ajax(id_coming)
+{
+	if (confirm("Anda yakin ingin menyetujui Coming Soon ini ?"))
+	{
+		$.ajax({
+			url: 'setuju_coming',
+			type: 'POST',
+			data: {id_coming:id_coming},
+			success: function(){
+						alert('Setuju Coming Soon berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Setuju Coming Soon gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_coming + "Gagal disetujui");
+	}
+}

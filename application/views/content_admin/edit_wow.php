@@ -23,26 +23,31 @@
                                 
                                 <!-- form start -->
 								
-                                <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaWow/proses_update_wow/');?>" method="POST">
+                                <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaWow/edit_wow/'.$idWow);?>" method="POST">
                                     <div class="box-body">
 										<div class="form-group">
                                             <label for="exampleInputEmail1">Kategori   :</label><br>
+                                            
                                             <select name="kategori" required class="form-control" id="kategori">
                                                 <option value="">--Pilih Kategori Wow--</option>
-                                                <option value="Wow Sains">Wow Sains</option>
-                                                <option value="Wow Teknologi">Wow Teknologi</option>
-                                                <option value="Wow Sejarah">Wow Sejarah</option>
-                                                <option value="Wow Politik">Wow Politik</option>
-                                                <option value="Wow Fiksi">Wow Fiksi</option>
-                                                <option value="Wow Rekomendasi">Wow Rekomendasi</option>
-                                                <option value="Wow Komunitas">Wow Komunitas</option>
-                                                <option value="Wow Lain-Lain">Wow Lain-Lain</option>
+                                                <?php
+                                                    foreach ($kategori_wow as $key=>$kategori) 
+                                                    {
+                                                        if ($key==$dataWow['kategori_wow']){
+                                                            echo '<option value="'.$key.'" selected>'.$kategori.'</option>';
+                                                        }
+                                                        else
+                                                        {
+                                                            echo '<option value="'.$key.'">'.$kategori.'</option>';   
+                                                        }
+                                                    }
+                                                ?>
                                             </select></br>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Judul Wow   :</label>
-                                            <input type="text" required name="judul_wow" class="form-control" id="exampleInputEmail1" value="<?php echo htmlspecialchars($wow->judul_wow); ?>">
+                                            <input type="text" required name="judul_wow" class="form-control" id="exampleInputEmail1" value="<?php echo htmlspecialchars($dataWow['judul_wow']); ?>">
                                         </div>
 										
 										<div class="form-group">
@@ -51,7 +56,7 @@
 											</div>
 											
 												<textarea required id="editor_wow" name="deskripsi_wow" rows="10" cols="80">
-												    <?php echo htmlspecialchars($wow->deskripsi); ?>
+												    <?php echo htmlspecialchars($dataWow['deskripsi']); ?>
 												</textarea>                                    
 											
                                         </div>
@@ -61,19 +66,19 @@
                                         </div>
 
                                         <div class='box-header'>                
-                                                <img style="height: 250px; padding: 4px; max-width:250px; border: solid 1px black" src="<?php echo base_url('asset/upload_img_wow/'.$wow->path_gambar); ?>"/>
+                                                <img style="height: 250px; padding: 4px; max-width:250px; border: solid 1px black" src="<?php echo base_url('asset/upload_img_wow/'.$dataWow['path_gambar']); ?>"/>
                                         </div>
                                         
                                         <label class='box-header' style="color: blue;" id="ganti">Ganti Gambar ?</label><br>
                                         <div class="ganti_gambar">
-                                            <input class="form" type="file" name="filefoto" required >
+                                            <input class="form" type="file" name="filefoto" >
 											<b><p style="color:red;">File diizinkan: jpg, jpeg, dan png (Max 2Mb)</p></b>
                                         </div>
                                     </div><!-- /.box-body -->
-
+                                    <input type="hidden" name="id_wow" value="<?php echo $idWow; ?>">
                                     <div class="box-footer">
-                                        <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
-                                        <button type="submit" name="submit" class="btn btn-danger">Batal</button>
+                                        <button type="submit" name="save" value="1" class="btn btn-primary">Simpan</button>
+                                        <button type="button" name="submit" class="btn btn-danger">Batal</button>
                                     </div>
                                 </form>
                             </div><!-- /.box -->

@@ -28,7 +28,7 @@
                                                 <?php echo $this->session->flashdata('msg_berhasil');?> 
                                             </div>
                                         <?php }?>
-										<a href="<?php echo site_url('KelolaWow/tambah_wow/');?>">
+										<a href="<?php echo site_url('KelolaWow/tambah_wow_check/');?>">
                                             <button type="submit" name="submit" class="btn btn-primary">Tambah Wow</button>
                                         </a>
 									</div>

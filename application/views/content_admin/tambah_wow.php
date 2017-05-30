@@ -15,8 +15,6 @@
                 <section class="content">
                     <div class="row">
                         <!-- left column -->
-                        
-
                         <div class="col-md-8">
                             <!-- general form elements -->
                             <div class="box box-primary">
@@ -25,25 +23,42 @@
 								
                                 <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaWow/tambah_wow_check/');?>" method="POST">
                                     <div class="box-body">
+                                        <div style="margin-top:10px; margin-bottom:30px">
+                                            <?php if($this->session->flashdata('msg_gagal')!=''){?>
+                                                <div class="alert alert-danger alert-dismissable">
+                                                    <i class="glyphicon glyphicon-remove"></i>
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <?php echo $this->session->flashdata('msg_gagal');?> 
+                                                </div>
+                                            <?php }?>
+                                        </div>
 										<div class="form-group">
                                             <label for="exampleInputEmail1">Kategori   :</label><br>
                                             <select name="kategori" required class="form-control" id="kategori">
                                                 <option value="">--Pilih Kategori Wow--</option>
-                                                <option value="Wow Sains">Wow Sains</option>
-                                                <option value="Wow Teknologi">Wow Teknologi</option>
-                                                <option value="Wow Sejarah">Wow Sejarah</option>
-                                                <option value="Wow Politik">Wow Politik</option>
-                                                <option value="Wow Fiksi">Wow Fiksi</option>
-                                                <option value="Wow Rekomendasi">Wow Rekomendasi</option>
-                                                <option value="Wow Komunitas">Wow Komunitas</option>
-                                                <option value="Wow Lain-Lain">Wow Lain-Lain</option>
+                                                <?php
+                                                    foreach ($kategori_wow as $key=>$kategori) 
+                                                    {
+                                                        if ($key==$dataWow['kategori_wow']){
+                                                            echo '<option value="'.$key.'" selected>'.$kategori.'</option>';
+                                                        }
+                                                        else
+                                                        {
+                                                            echo '<option value="'.$key.'">'.$kategori.'</option>';   
+                                                        }
+                                                    }
+                                                ?>
                                             </select></br>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Judul Wow   :</label>
-                                            <input type="text" required name="judul_wow" class="form-control" id="exampleInputEmail1" 
-                                            value="">
+                                            <input type="text" required name="judul_wow" class="form-control" id="exampleInputEmail1" value="<?php 
+                                                    if (isset($dataWow['judul_wow']))
+                                                    {
+                                                        echo htmlspecialchars($dataWow['judul_wow']);
+                                                    }
+                                            ?>">
                                             
                                         </div>
 										
@@ -53,7 +68,12 @@
 											</div>
 											<div class='box-body pad'>
 												<textarea required id="editor_wow" name="deskripsi_wow" rows="10" cols="80">
-														
+													<?php 
+                                                        if (isset($dataWow['deskripsi']))
+                                                        {
+                                                            echo htmlspecialchars($dataWow['deskripsi']);
+                                                        }
+                                                    ?>
 												</textarea>                                    
 											</div>
                                         </div>
@@ -68,7 +88,7 @@
                                     </div><!-- /.box-body -->
 
                                     <div class="box-footer">
-                                        <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+                                        <button type="submit" name="submit" value="1" class="btn btn-primary">Simpan</button>
                                     </div>
                                 </form>
                             </div><!-- /.box -->

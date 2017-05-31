@@ -13,7 +13,17 @@
 		<script src="<?php echo base_url('asset/js/jquery.dataTables.js'); ?>" type="text/javascript"></script>
 		<script>
             $(document).ready( function () {
-                $('#dataTables-list').DataTable({
+                $('#dataTables-list-sm').DataTable({
+                    "columnDefs":[
+                        {"orderable":false, "targets":4}
+                    ]
+                });
+                $('#dataTables-list-rekomendasi').DataTable({
+                    "columnDefs":[
+                        {"orderable":false, "targets":4}
+                    ]
+                });
+                $('#dataTables-list-komunitas').DataTable({
                     "columnDefs":[
                         {"orderable":false, "targets":4}
                     ]

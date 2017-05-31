@@ -26,8 +26,8 @@
                                 <i class="glyphicon glyphicon-menu-right pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="add_prestasi.php"><i class="glyphicon glyphicon-minus"></i> Kelola News </a></li>
-                                <li><a href="prestasi_editor.php"><i class="glyphicon glyphicon-minus"></i> Validasi News</a></li>
+                                <li><a href="<?php echo site_url('KelolaNews/index'); ?>"><i class="glyphicon glyphicon-minus"></i> Kelola News </a></li>
+                                <li><a href="<?php echo site_url('KelolaNews/validasi_news'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi News</a></li>
                             </ul>
                         </li>
 

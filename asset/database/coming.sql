@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2017 at 02:17 AM
+-- Generation Time: Jun 01, 2017 at 02:56 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -32,16 +32,18 @@ CREATE TABLE `coming` (
   `deskripsi_coming` text NOT NULL,
   `posted_by` varchar(50) NOT NULL,
   `tanggal_posting` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `status` int(1) NOT NULL
+  `status` int(1) NOT NULL,
+  `path_gambar` varchar(100) NOT NULL,
+  `kategori_coming` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `coming`
 --
 
-INSERT INTO `coming` (`id_coming`, `nama_coming`, `deskripsi_coming`, `posted_by`, `tanggal_posting`, `status`) VALUES
-(3, 'Lomba Mewarnai', 'Lomba mewarnai anak sd dan tk', 'azies', '2017-05-30 00:13:31', 1),
-(5, 'Color Run', 'Color Run hari minggu', 'azies', '2017-05-30 00:17:11', 2);
+INSERT INTO `coming` (`id_coming`, `nama_coming`, `deskripsi_coming`, `posted_by`, `tanggal_posting`, `status`, `path_gambar`, `kategori_coming`) VALUES
+(3, 'Lomba Mewarnai', 'Lomba mewarnai anak sd dan tk', 'azies', '2017-05-30 00:13:31', 1, '', ''),
+(9, 'Gathering Komunitas R024', 'Semarang, 23 Juni 2017																									', '', '2017-05-31 19:56:22', 1, 'file_1496321782.jpg', 'Coming Soon Komunitas');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +63,7 @@ ALTER TABLE `coming`
 -- AUTO_INCREMENT for table `coming`
 --
 ALTER TABLE `coming`
-  MODIFY `id_coming` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_coming` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

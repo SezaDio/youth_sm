@@ -140,4 +140,96 @@ class KelolaComing extends CI_Controller {
 		else
 			show_error($this->email->print_debugger());
     }
+	
+	//tambah coming soon
+	public function tambah_coming()
+	{
+		$this->load->model('coming_models/ComingModels');
+
+		$this->load->view('skin/admin/header_admin');
+		$this->load->view('skin/admin/nav_kiri');
+		$this->load->view('content_admin/tambah_coming');
+		$this->load->view('skin/admin/footer_admin');
+	}
+	
+	function tambah_coming_check() {
+        $this->load->model('coming_models/ComingModels');
+		$this->load->library('form_validation');
+
+		$tambah = $this->input->post('submit');
+		$kategori_coming = array('Coming Soon Sains'=>'Coming Soon Sains',
+                              'Coming Soon Teknologi'=>'Coming Soon Teknologi',
+                              'Coming Soon Sejarah'=>'Coming Soon Sejarah',
+                              'Coming Soon Politik'=>'Coming Soon Politik',
+                              'Coming Soon Fiksi'=>'Coming Soon Fiksi',
+                              'Coming Soon Rekomendasi'=>'Coming Soon Rekomendasi',
+                              'Coming Soon Komunitas'=>'Coming Soon Komunitas',
+                              'Coming Soon Lain-Lain'=>'Coming Soon Lain-Lain'
+                              );
+		$data['kategori_coming']= $kategori_coming;
+
+		if ($tambah == 1) 
+		{
+			$this->form_validation->set_rules('judul_coming', 'Judul', 'required');
+			$this->form_validation->set_rules('kategori', 'Kategori', 'required');
+			$this->form_validation->set_rules('deskripsi_coming', 'Deskripsi', 'required');
+
+			//Mengambil filename gambar untuk disimpan
+			$nmfile = "file_".time();
+			$config['upload_path'] = './asset/upload_img_coming/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['max_size'] = '4000'; //kb
+			$config['file_name'] = $nmfile;
+
+			//value id_koridor berisi beberapa data, sehingga dilakukan split dengan explode
+			if (($this->form_validation->run() == TRUE) AND (!empty($_FILES['filefoto']['name'])))
+			{
+				$gbr = NULL;
+
+					$data_coming=array(
+						'nama_coming'=>$this->input->post('judul_coming'),
+						'kategori_coming'=>$this->input->post('kategori'),
+						'deskripsi_coming'=>$this->input->post('deskripsi_coming'),
+						'tanggal_posting'=>date("Y-m-d h:i:sa"),
+						'path_gambar'=> NULL,
+						'status'=>1
+					);
+					$data['dataComing'] = $data_coming;
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('filefoto'))
+				{
+					//echo "Masuk";
+					$gbr = $this->upload->data();
+
+					$data_coming['path_gambar'] = $gbr['file_name'];
+
+					$this->db->insert('coming', $data_coming);
+					$this->session->set_flashdata('msg_berhasil', 'Data Youth Coming Soon berhasil ditambahkan');
+					redirect('KelolaComing');
+				}
+				else
+				{
+					$this->session->set_flashdata('msg_gagal', 'Data Youth Coming Soon gagal ditambahkan, cek type file dan ukuran file yang anda upload');
+					
+					$this->load->view('skin/admin/header_admin');
+					$this->load->view('skin/admin/nav_kiri');
+					$this->load->view('content_admin/tambah_coming', $data);
+					$this->load->view('skin/admin/footer_admin');
+				}
+			}
+			else
+			{
+				$this->session->set_flashdata('msg_gagal', 'Data Youth Coming Soon gagal ditambahkan');
+				$this->tambah_coming_check();
+			}
+		}
+		else
+		{
+			$this->load->view('skin/admin/header_admin');
+			$this->load->view('skin/admin/nav_kiri');
+			$this->load->view('content_admin/tambah_coming',$data);
+			$this->load->view('skin/admin/footer_admin');
+		}     
+		
+	}
 }

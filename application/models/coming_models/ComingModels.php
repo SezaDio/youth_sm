@@ -65,4 +65,10 @@
 
 			return $this->db->get();
 		}
+		
+		//Menambah data youth coming
+		function add_data_coming($data_coming)
+		{
+			$this->db->insert('coming', $data_coming);
+		}
 	}

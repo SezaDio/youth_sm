@@ -64,7 +64,7 @@
                                                                             <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button></a>
 
                                                                             <!-- Tombol Hapus -->
-                                                                            <button onclick="delete_coming_ajax(<?php //echo $item['id_coming']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                            <button onclick="delete_news_ajax(<?php echo $sm['id_news']; ?>)" id="delete-button-news" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>
@@ -109,7 +109,7 @@
                                                                             <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button></a>
 
                                                                             <!-- Tombol Hapus -->
-                                                                            <button onclick="delete_coming_ajax(<?php //echo $item['id_coming']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                            <button  id="delete-button-news" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>
@@ -149,7 +149,7 @@
                                                                             <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button></a>
 
                                                                             <!-- Tombol Hapus -->
-                                                                            <button onclick="delete_coming_ajax(<?php //echo $item['id_coming']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                            <button  id="delete-button-news" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>

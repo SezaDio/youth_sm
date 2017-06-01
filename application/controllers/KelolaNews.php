@@ -27,6 +27,7 @@ class KelolaNews extends CI_Controller {
 		$this->load->view('skin/admin/footer_admin');
 	}
 
+	//Tambah berita baru
 	public function tambah_news()
 	{
 		$this->load->model('news_models/NewsModels');
@@ -37,6 +38,16 @@ class KelolaNews extends CI_Controller {
 		$this->load->view('skin/admin/footer_admin');
 	}
 	
+	//Hapus berita
+	public function delete_news()//$id_produk
+	{
+		$id_news = $_POST['id_news'];
+		$this->load->model('news_models/NewsModels');
+		$this->NewsModels->delete_news($id_news);
+
+
+		$this->index();
+	}
 	/*function tambah_news_check() {
         $this->load->model('news_models/NewsModels');
 		$this->load->library('form_validation');

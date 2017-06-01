@@ -158,3 +158,26 @@ function setuju_coming_ajax(id_coming)
 		alert(id_coming + "Gagal disetujui");
 	}
 }
+
+function delete_news_ajax(id_news)
+{
+	if (confirm("Anda yakin ingin menghapus News ini ?"))
+	{;
+		$.ajax({
+			url: 'delete_news',
+			type: 'POST',
+			data: {id_news:id_news},
+			success: function(){
+						alert('Delete News berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Delete News gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_news + "Gagal dihapus");
+	}
+}

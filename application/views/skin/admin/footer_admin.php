@@ -18,6 +18,11 @@
                         {"orderable":false, "targets":4}
                     ]
                 });
+                $('#dataTables-list-youthers').DataTable({
+                    "columnDefs":[
+                        {"orderable":false, "targets":4}
+                    ]
+                });
                 $('#dataTables-list-rekomendasi').DataTable({
                     "columnDefs":[
                         {"orderable":false, "targets":4}
@@ -28,12 +33,21 @@
                         {"orderable":false, "targets":4}
                     ]
                 });
+                $('#dataTables-list-comming').DataTable({
+                    "columnDefs":[
+                        {"orderable":false, "targets":4}
+                    ]
+                });
+                $('#dataTables-list-youth').DataTable({
+                    "columnDefs":[
+                        {"orderable":false, "targets":4}
+                    ]
+                });
                 
                 CKEDITOR.replace('editor_wow');
                 $(".textarea").wysihtml5();
 
                 // Script untuk onchange ganti gambar
-
                 $(".ganti_gambar").hide();
                 $("#ganti").click(function(){
                     $(".ganti_gambar").toggle();

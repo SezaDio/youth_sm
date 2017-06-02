@@ -18,12 +18,15 @@ class KelolaNews extends CI_Controller {
 	{
 		$this->load->model('news_models/NewsModels');
 		$data['listNewsSm'] = $this->NewsModels->get_data_news_sm();
+		$data['listNewsYouthers'] = $this->NewsModels->get_data_news_youthers();
 		$data['listNewsRekomendasi'] = $this->NewsModels->get_data_news_rekomendasi();
 		$data['listNewsKomunitas'] = $this->NewsModels->get_data_news_komunitas();
+		$data['listNewsComming'] = $this->NewsModels->get_data_news_coming();
+		$data['listNewsYouth'] = $this->NewsModels->get_data_news_youth();
 			
 		$this->load->view('skin/admin/header_admin');
 		$this->load->view('skin/admin/nav_kiri');
-		$this->load->view('content_admin/news_content/kelola_news',$data);
+		$this->load->view('content_admin/kelola_news',$data);
 		$this->load->view('skin/admin/footer_admin');
 	}
 
@@ -45,24 +48,28 @@ class KelolaNews extends CI_Controller {
 		$this->load->model('news_models/NewsModels');
 		$this->NewsModels->delete_news($id_news);
 
-
 		$this->index();
 	}
-	/*function tambah_news_check() {
+	
+	//Prose tambah dan edit berita
+	function tambah_news_check() 
+	{
         $this->load->model('news_models/NewsModels');
 		$this->load->library('form_validation');
 
 		$tambah = $this->input->post('submit');
-		$kategori_wow = array('Wow Sains'=>'Wow Sains',
-                              'Wow Teknologi'=>'Wow Teknologi',
-                              'Wow Sejarah'=>'Wow Sejarah',
-                              'Wow Politik'=>'Wow Politik',
-                              'Wow Fiksi'=>'Wow Fiksi',
-                              'Wow Rekomendasi'=>'Wow Rekomendasi',
-                              'Wow Komunitas'=>'Wow Komunitas',
-                              'Wow Lain-Lain'=>'Wow Lain-Lain'
+		$jenis_berita = $this->input->post('jenis_berita');
+
+		$kategori_news = array('Sains'=>'Sains',
+                              'Teknologi'=>'Teknologi',
+                              'Sejarah'=>'Sejarah',
+                              'Politik'=>'Politik',
+                              'Fiksi'=>'Fiksi',
+                              'Rekomendasi'=>'Rekomendasi',
+                              'Komunitas'=>'Komunitas',
+                              'Lain-Lain'=>'Lain-Lain'
                               );
-		$data['kategori_wow']= $kategori_wow;
+		$data['kategori_news']= $kategori_news;
 
 		if ($tambah == 1) 
 		{
@@ -108,7 +115,7 @@ class KelolaNews extends CI_Controller {
 					
 					$this->load->view('skin/admin/header_admin');
 					$this->load->view('skin/admin/nav_kiri');
-					$this->load->view('content_admin/tambah_wow', $data);
+					$this->load->view('content_admin/tambah_news', $data);
 					$this->load->view('skin/admin/footer_admin');
 				}
 			}
@@ -122,11 +129,11 @@ class KelolaNews extends CI_Controller {
 		{
 			$this->load->view('skin/admin/header_admin');
 			$this->load->view('skin/admin/nav_kiri');
-			$this->load->view('content_admin/tambah_wow',$data);
+			$this->load->view('content_admin/tambah_news',$data);
 			$this->load->view('skin/admin/footer_admin');
 		}     
 		
-	}*/
+	}
 
 	//Validasi news
 	public function validasi_news()

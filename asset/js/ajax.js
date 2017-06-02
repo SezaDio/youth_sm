@@ -162,7 +162,7 @@ function setuju_coming_ajax(id_coming)
 function delete_news_ajax(id_news)
 {
 	if (confirm("Anda yakin ingin menghapus News ini ?"))
-	{;
+	{
 		$.ajax({
 			url: 'delete_news',
 			type: 'POST',

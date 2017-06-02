@@ -32,6 +32,7 @@
                                                 </div>
                                             <?php }?>
                                         </div>
+
 										<div class="form-group">
                                             <label for="exampleInputEmail1">Kategori News :</label><br>
                                             <select name="kategori" required class="form-control" id="kategori">
@@ -39,7 +40,7 @@
                                                 <?php
                                                     foreach ($kategori_news as $key=>$kategori) 
                                                     {
-                                                        if ($key==$dataWow['kategori_news']){
+                                                        if ($key==$dataNews['kategori_news']){
                                                             echo '<option value="'.$key.'" selected>'.$kategori.'</option>';
                                                         }
                                                         else
@@ -52,26 +53,37 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Judul Wow   :</label>
-                                            <input type="text" required name="judul_wow" class="form-control" id="exampleInputEmail1" value="<?php 
-                                                    if (isset($dataWow['judul_wow']))
+                                            <label for="exampleInputEmail1">Penulis :</label>
+                                            <input type="text" required name="posted_by" class="form-control" id="exampleInputEmail1" value="<?php 
+                                                    if (isset($dataNews['posted_by']))
                                                     {
-                                                        echo htmlspecialchars($dataWow['judul_wow']);
+                                                        echo htmlspecialchars($dataNews['posted_by']);
                                                     }
                                             ?>">
                                             
                                         </div>
-										
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Judul News   :</label>
+                                            <input type="text" required name="judul_news" class="form-control" id="exampleInputEmail1" value="<?php 
+                                                    if (isset($dataNews['judul_news']))
+                                                    {
+                                                        echo htmlspecialchars($dataNews['judul_news']);
+                                                    }
+                                            ?>">
+                                            
+                                        </div>
+
 										<div class="form-group">
 											<div class='box-header'>
 												 <label>Deskripsi Wow :</label>
 											</div>
 											<div class='box-body pad'>
-												<textarea required id="editor_wow" name="deskripsi_wow" rows="10" cols="80">
+												<textarea required id="editor_wow" name="deskripsi_news" rows="10" cols="80">
 													<?php 
-                                                        if (isset($dataWow['deskripsi']))
+                                                        if (isset($dataNews['isi_news']))
                                                         {
-                                                            echo htmlspecialchars($dataWow['deskripsi']);
+                                                            echo htmlspecialchars($dataNews['isi_news']);
                                                         }
                                                     ?>
 												</textarea>                                    
@@ -87,6 +99,7 @@
                                         </div>
                                     </div><!-- /.box-body -->
 
+                                    <input type="hidden" name="jenis_berita" value="<?php echo $jenis; ?>">
                                     <div class="box-footer">
                                         <button type="submit" name="submit" value="1" class="btn btn-primary">Simpan</button>
                                     </div>

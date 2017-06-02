@@ -51,7 +51,7 @@ class KelolaNews extends CI_Controller {
 		$this->index();
 	}
 	
-	//Prose tambah dan edit berita
+	//Prose tambah berita
 	function tambah_news_check() 
 	{
         $this->load->model('news_models/NewsModels');
@@ -73,13 +73,14 @@ class KelolaNews extends CI_Controller {
 
 		if ($tambah == 1) 
 		{
-			$this->form_validation->set_rules('judul_wow', 'Judul', 'required');
+			$this->form_validation->set_rules('judul_news', 'Judul', 'required');
 			$this->form_validation->set_rules('kategori', 'Kategori', 'required');
-			$this->form_validation->set_rules('deskripsi_wow', 'Deskripsi', 'required');
+			$this->form_validation->set_rules('deskripsi_news', 'Deskripsi', 'required');
+
 
 			//Mengambil filename gambar untuk disimpan
 			$nmfile = "file_".time();
-			$config['upload_path'] = './asset/upload_img_wow/';
+			$config['upload_path'] = './asset/upload_img_news/';
 			$config['allowed_types'] = 'jpg|png|jpeg';
 			$config['max_size'] = '4000'; //kb
 			$config['file_name'] = $nmfile;
@@ -89,29 +90,32 @@ class KelolaNews extends CI_Controller {
 			{
 				$gbr = NULL;
 
-					$data_wow=array(
-						'judul_wow'=>$this->input->post('judul_wow'),
-						'kategori_wow'=>$this->input->post('kategori'),
-						'deskripsi'=>$this->input->post('deskripsi_wow'),
-						'tanggal_posting'=>date("Y-m-d h:i:sa"),
-						'path_gambar'=> NULL
+					$data_news=array(
+						'judul_news'=>$this->input->post('judul_news'),
+						'posted_by'=>$this->input->post('posted_by'),
+						'kategori_news'=>$this->input->post('kategori'),
+						'isi_news'=>$this->input->post('deskripsi_news'),
+						'status'=>$tambah,
+						'jenis_news'=>$jenis_berita,
+						//'tanggal_posting'=>date("Y-m-d h:i:sa"),
+						'gambar_news'=> NULL
 					);
-					$data['dataWow'] = $data_wow;
+					$data['dataNews'] = $data_news;
 				$this->load->library('upload', $config);
 				if($this->upload->do_upload('filefoto'))
 				{
 					//echo "Masuk";
 					$gbr = $this->upload->data();
 
-					$data_wow['path_gambar'] = $gbr['file_name'];
+					$data_news['gambar_news'] = $gbr['file_name'];
 
-					$this->db->insert('wow', $data_wow);
-					$this->session->set_flashdata('msg_berhasil', 'Data Youth Wow berhasil ditambahkan');
-					redirect('KelolaWow');
+					$this->db->insert('news', $data_news);
+					$this->session->set_flashdata('msg_berhasil', 'Data Youth News berhasil ditambahkan');
+					redirect('KelolaNews');
 				}
 				else
 				{
-					$this->session->set_flashdata('msg_gagal', 'Data Youth Wow gagal ditambahkan, cek type file dan ukuran file yang anda upload');
+					$this->session->set_flashdata('msg_gagal', 'Data Youth News gagal ditambahkan, cek type file dan ukuran file yang anda upload');
 					
 					$this->load->view('skin/admin/header_admin');
 					$this->load->view('skin/admin/nav_kiri');
@@ -121,12 +125,14 @@ class KelolaNews extends CI_Controller {
 			}
 			else
 			{
-				$this->session->set_flashdata('msg_gagal', 'Data Youth Wow gagal ditambahkan');
-				$this->tambah_wow_check();
+				$this->session->set_flashdata('msg_gagal', 'Data Youth News gagal ditambahkan');
+				$this->tambah_news_check();
 			}
 		}
 		else
 		{
+			$data['jenis'] = $jenis_berita;
+
 			$this->load->view('skin/admin/header_admin');
 			$this->load->view('skin/admin/nav_kiri');
 			$this->load->view('content_admin/tambah_news',$data);

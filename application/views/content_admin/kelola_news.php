@@ -123,9 +123,10 @@
 
                                                 <!--Tab Recommended News-->
                                                 <div class="tab-pane" id="tab_recommended">
-                                                    <a href="<?php echo site_url('KelolaNews/tambah_news_check/');?>">
-                                                        <button type="submit" value="3" name="jenis_berita" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Recommended News</button>
-                                                    </a><br><br>
+                                                    <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/tambah_news_check/');?>" method="POST">
+                                                        <button value="3" name="jenis_berita" type="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Recommended News</button>
+                                                        <br><br>
+                                                    </form>
                                                     <table class="table table-striped table-bordered table-hover" id="dataTables-list-rekomendasi">
                                                         <thead>
                                                             <tr>
@@ -166,9 +167,10 @@
 
                                                 <!--Tab Comunity News-->
                                                 <div class="tab-pane" id="tab_comunity">
-                                                    <a href="<?php echo site_url('KelolaNews/tambah_news_check/');?>">
-                                                        <button value="4" type="submit" name="jenis_berita" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Community News</button>
-                                                    </a><br><br>
+                                                    <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/tambah_news_check/');?>" method="POST">
+                                                        <button value="4" name="jenis_berita" type="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Community News</button>
+                                                        <br><br>
+                                                    </form>
                                                     <table class="table table-striped table-bordered table-hover" id="dataTables-list-komunitas">
                                                         <thead>
                                                             <tr>
@@ -209,9 +211,10 @@
 
                                                 <!--Tab Comming Soon News-->
                                                 <div class="tab-pane" id="tab_comming">
-                                                    <a href="<?php echo site_url('KelolaNews/tambah_news_check/');?>">
-                                                        <button value="5" type="submit" name="jenis_berita" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Comming Soon News</button>
-                                                    </a><br><br>
+                                                    <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/tambah_news_check/');?>" method="POST">
+                                                        <button value="5" name="jenis_berita" type="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Comming Soon News</button>
+                                                        <br><br>
+                                                    </form>
                                                     <table class="table table-striped table-bordered table-hover" id="dataTables-list-comming">
                                                         <thead>
                                                             <tr>
@@ -252,9 +255,10 @@
 
                                                 <!--Tab Youth.SM News-->
                                                 <div class="tab-pane" id="tab_youth">
-                                                    <a href="<?php echo site_url('KelolaNews/tambah_news_check/');?>">
-                                                        <button value="6" type="submit" name="jenis_berita" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Youth.SM News</button>
-                                                    </a><br><br>
+                                                    <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/tambah_news_check/');?>" method="POST">
+                                                        <button value="6" name="jenis_berita" type="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Youth.SM News</button>
+                                                        <br><br>
+                                                    </form>
                                                     <table class="table table-striped table-bordered table-hover" id="dataTables-list-youth">
                                                         <thead>
                                                             <tr>

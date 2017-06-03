@@ -70,7 +70,9 @@
                                                                         <td><?php echo $sm['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$sm['id_news']);?>" method="POST">
+                                                                                <button value="1" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $sm['id_news']; ?>)" id="delete-button-sm" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
@@ -110,7 +112,9 @@
                                                                         <td><?php echo $youthers['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$youthers['id_news']);?>" method="POST">
+                                                                                <button value="2" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $youthers['id_news']; ?>)" id="delete-button-youthers" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
@@ -154,7 +158,9 @@
                                                                         <td><?php echo $rekomendasi['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$rekomendasi['id_news']);?>" method="POST">
+                                                                                <button value="3" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $rekomendasi['id_news']; ?>)" id="delete-button-rekomendasi" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
@@ -198,7 +204,9 @@
                                                                         <td><?php echo $komunitas['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$komunitas['id_news']);?>" method="POST">
+                                                                                <button value="4" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $komunitas['id_news']; ?>)" id="delete-button-komunitas" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
@@ -242,7 +250,10 @@
                                                                         <td><?php echo $comming['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <!-- Tombol lihat detail -->
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$comming['id_news']);?>" method="POST">
+                                                                                <button value="5" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $comming['id_news']; ?>)" id="delete-button-comming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
@@ -286,7 +297,10 @@
                                                                         <td><?php echo $youth['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <!-- Tombol lihat detail -->
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$youth['id_news']);?>" method="POST">
+                                                                                <button value="6" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $youth['id_news']; ?>)" id="delete-button-youth" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>

@@ -239,7 +239,6 @@ class KelolaWow extends CI_Controller {
 		$this->load->view('skin/admin/nav_kiri');
 		$this->load->view('content_admin/edit_wow', $data);
 		$this->load->view('skin/admin/footer_admin');
-			
 	}
 
 

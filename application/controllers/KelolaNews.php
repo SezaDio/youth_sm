@@ -137,8 +137,113 @@ class KelolaNews extends CI_Controller {
 			$this->load->view('skin/admin/nav_kiri');
 			$this->load->view('content_admin/tambah_news',$data);
 			$this->load->view('skin/admin/footer_admin');
-		}     
-		
+		}     	
+	}
+
+	//Fungsi melakukan update pada database
+	public function edit_news($id_news) 
+	{
+		$this->load->model('news_models/NewsModels');
+		$this->load->library('form_validation');
+
+		$edit = $this->input->post('save');
+		$jenis_berita = $this->input->post('jenis_berita');
+
+		$kategori_news = array('Sains'=>'Sains',
+                              'Teknologi'=>'Teknologi',
+                              'Sejarah'=>'Sejarah',
+                              'Politik'=>'Politik',
+                              'Fiksi'=>'Fiksi',
+                              'Rekomendasi'=>'Rekomendasi',
+                              'Komunitas'=>'Komunitas',
+                              'Lain-Lain'=>'Lain-Lain'
+                              );
+		$data['kategori_news']= $kategori_news;
+		if (isset($_POST['save']))
+		{
+			$id_news = $this->input->post('id_news');
+			
+			$this->form_validation->set_rules('judul_news', 'Judul', 'required');
+			$this->form_validation->set_rules('kategori', 'Kategori', 'required');
+			$this->form_validation->set_rules('deskripsi_news', 'Deskripsi', 'required');
+
+			//Mengambil filename gambar untuk disimpan
+			$nmfile = "file_".time();
+			$config['upload_path'] = './asset/upload_img_news/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['max_size'] = '4000'; //kb
+			$config['file_name'] = $nmfile;
+
+			$data_news=array(
+						'judul_news'=>$this->input->post('judul_news'),
+						'posted_by'=>$this->input->post('posted_by'),
+						'kategori_news'=>$this->input->post('kategori'),
+						'isi_news'=>$this->input->post('deskripsi_news'),
+						'status'=>$edit,
+						'jenis_news'=>$jenis_berita,
+						//'tanggal_posting'=>date("Y-m-d h:i:sa"),
+						'gambar_news'=> NULL
+					);
+					$data['dataNews'] = $data_news;
+			//value id_koridor berisi beberapa data, sehingga dilakukan split dengan explode
+			if (($this->form_validation->run() == TRUE))
+			{
+				$gbr = NULL;
+				$iserror = false;
+				if ((!empty($_FILES['filefoto']['name']))) {
+					
+					$this->load->library('upload', $config);
+					if($this->upload->do_upload('filefoto'))
+					{
+						//echo "Masuk";
+						$gbr = $this->upload->data();
+
+						$data_news['gambar_news'] = $gbr['file_name'];
+
+						
+					}
+					else
+					{
+						$this->session->set_flashdata('msg_gagal', 'Data Youth News gagal diperbaharui');
+						$iserror = true;
+					}
+
+				}
+				if (!$iserror) {
+					$this->db->update('news', $data_news, array('id_news'=>$id_news));
+					$this->session->set_flashdata('msg_berhasil', 'Data Youth News berhasil diperbaharui');
+					redirect('KelolaNews');
+					
+				}
+			}
+			else
+			{
+				$this->session->set_flashdata('msg_gagal', 'Data Youth News gagal diperbaharui');
+				$this->tambah_wow_check();
+			}
+		}
+		else
+		{
+			$data['news'] = $this->NewsModels->select_by_id_news($id_news)->row();
+
+			$data_news=array(
+						'judul_news'=>$data['news']->judul_news,
+						'posted_by'=>$data['news']->posted_by,
+						'kategori_news'=>$data['news']->kategori_news,
+						'isi_news'=>$data['news']->isi_news,
+						'status'=>$edit,
+						'jenis_news'=>$jenis_berita,
+						//'tanggal_posting'=>date("Y-m-d h:i:sa"),
+						'gambar_news'=> $data['news']->gambar_news,
+					);
+			$data['dataNews'] = $data_news;
+		}
+		$data['idNews'] = $id_news;
+		$data['jenis'] = $jenis_berita;
+		$this->load->view('skin/admin/header_admin');
+		$this->load->view('skin/admin/nav_kiri');
+		$this->load->view('content_admin/edit_news', $data);
+		$this->load->view('skin/admin/footer_admin');
 	}
 
 	//Validasi news

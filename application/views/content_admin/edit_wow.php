@@ -78,7 +78,7 @@
                                     <input type="hidden" name="id_wow" value="<?php echo $idWow; ?>">
                                     <div class="box-footer">
                                         <button type="submit" name="save" value="1" class="btn btn-primary">Simpan</button>
-                                        <button type="button" name="submit" class="btn btn-danger">Batal</button>
+                                       <a href="<?php echo site_url('KelolaWow/');?>"><button type="button" name="submit" class="btn btn-danger">Batal</button>
                                     </div>
                                 </form>
                             </div><!-- /.box -->

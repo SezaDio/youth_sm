@@ -93,10 +93,40 @@
 			return $result;
 		}
 		
+		
 		//Mengambil data news yang butuh validasi
-		function get_data_news_pend()
+		function get_data_pendnews_youthers()
 		{
-			$query = $this->db->query("SELECT * FROM `news` WHERE status='2'");
+			$query = $this->db->query("SELECT * FROM `news` WHERE status='2' AND jenis_news='2'");
+		
+			$indeks = 0;
+			$result = array();
+			
+			foreach ($query->result_array() as $row)
+			{
+				$result[$indeks++] = $row;
+			}
+		
+			return $result;
+		}
+		function get_data_pendnews_komunitas()
+		{
+			$query = $this->db->query("SELECT * FROM `news` WHERE status='2' AND jenis_news='4'");
+		
+			$indeks = 0;
+			$result = array();
+			
+			foreach ($query->result_array() as $row)
+			{
+				$result[$indeks++] = $row;
+			}
+		
+			return $result;
+		}
+		
+		function get_data_pendnews_coming()
+		{
+			$query = $this->db->query("SELECT * FROM `news` WHERE status='2' AND jenis_news='5'");
 		
 			$indeks = 0;
 			$result = array();
@@ -109,6 +139,15 @@
 			return $result;
 		}
 
+		//Menyetujui data news
+		function setuju_news($id_news)
+		{
+			$data = array(
+				'status' => 1	
+			);
+			$this->db->where('id_news',$id_news);
+			$this->db->update('news',$data);
+		}
 		//Menghapus data  news
 		function delete_news($id_news)
 		{

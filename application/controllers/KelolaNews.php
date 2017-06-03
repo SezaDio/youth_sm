@@ -145,7 +145,9 @@ class KelolaNews extends CI_Controller {
 	public function validasi_news()
 	{
 		$this->load->model('news_models/NewsModels');
-		$data['listNews'] = $this->NewsModels->get_data_news_pend();
+		$data['listNewsYouthers'] = $this->NewsModels->get_data_pendnews_youthers();
+		$data['listNewsKomunitas'] = $this->NewsModels->get_data_pendnews_komunitas();
+		$data['listNewsComming'] = $this->NewsModels->get_data_pendnews_coming();
 			
 		$this->load->view('skin/admin/header_admin');
 		$this->load->view('skin/admin/nav_kiri');

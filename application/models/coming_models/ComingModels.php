@@ -39,7 +39,7 @@
 			return $result;
 		}
 
-		//Menghapus data  coming coming
+		//Menyetujui data  coming coming
 		function setuju_coming($id_coming)
 		{
 			$data = array(

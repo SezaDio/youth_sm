@@ -181,3 +181,50 @@ function delete_news_ajax(id_news)
 		alert(id_news + "Gagal dihapus");
 	}
 }
+
+function tolak_news_ajax(id_news)
+{
+	if (confirm("Anda yakin ingin menolak News ini ?"))
+	{
+		$.ajax({
+			url: 'tolak_news',
+			type: 'POST',
+			data: {id_news:id_news},
+			success: function(){
+						alert('Tolak News berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Tolak News gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_news + "Gagal ditolak");
+	}
+}
+
+function setuju_news_ajax(id_news)
+{
+	if (confirm("Anda yakin ingin menyetujui News ini ?"))
+	{
+	
+		$.ajax({
+			url: 'setuju_news',
+			type: 'POST',
+			data: {id_news:id_news},
+			success: function(){
+						alert('Setuju News berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Setuju News gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_news + "Gagal disetujui");
+	}
+}

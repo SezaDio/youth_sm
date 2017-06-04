@@ -21,7 +21,7 @@
                             <div class="box box-primary">
                                 
                                 <!-- form start -->
-                                <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/');?>" method="POST">
+                                <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$idNews);?>" method="POST">
                                     <div class="box-body">
                                         <div style="margin-top:10px; margin-bottom:30px">
                                             <?php if($this->session->flashdata('msg_gagal')!=''){?>

@@ -37,7 +37,6 @@
                                                 <li><a href="#tab_youthers" data-toggle="tab">Youthers News</a></li>
                                                 <li><a href="#tab_recommended" data-toggle="tab">Recommended News</a></li>
                                                 <li><a href="#tab_comunity" data-toggle="tab">Community News</a></li>
-                                                <li><a href="#tab_comming" data-toggle="tab">Comming Soon News</a></li>
                                                 <li><a href="#tab_youth" data-toggle="tab">Youth.SM News</a></li>
                                             </ul>
                                             <div class="tab-content">
@@ -210,53 +209,6 @@
 
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $komunitas['id_news']; ?>)" id="delete-button-komunitas" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                <?php } ?>
-                                                        </tbody>
-                                                    </table>
-                                                </div><!-- /.tab-pane -->
-
-                                                <!--Tab Comming Soon News-->
-                                                <div class="tab-pane" id="tab_comming">
-                                                    <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/tambah_news_check/');?>" method="POST">
-                                                        <button value="5" name="jenis_berita" type="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Comming Soon News</button>
-                                                        <br><br>
-                                                    </form>
-                                                    <table class="table table-striped table-bordered table-hover" id="dataTables-list-comming">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">No.</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Judul News</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Pemosting</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Kategori</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Hits</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Suka</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Aksi</th>                                                        
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <?php 
-                                                                foreach($listNewsComming as $comming)
-                                                                { ?>
-                                                                    <tr>
-                                                                        <td style="text-align: center;"><?php echo $comming['id_news'] ?></td>
-                                                                        <td><?php echo $comming['judul_news'] ?></td>
-                                                                        <td><?php echo $comming['posted_by'] ?></td>
-                                                                        <td><?php echo $comming['kategori_news'] ?></td>
-                                                                        <td><?php echo $comming['hits'] ?></td>
-                                                                        <td><?php echo $comming['suka'] ?></td>
-                                                                        <td><?php echo $comming['waktu_posting'] ?></td>
-                                                                        <td align="center">
-                                                                            <!-- Tombol lihat detail -->
-                                                                            <!-- Tombol lihat detail -->
-                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$comming['id_news']);?>" method="POST">
-                                                                                <button value="5" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
-                                                                            </form>
-
-                                                                            <!-- Tombol Hapus -->
-                                                                            <button onclick="delete_news_ajax(<?php echo $comming['id_news']; ?>)" id="delete-button-comming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>

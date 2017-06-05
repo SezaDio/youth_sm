@@ -67,7 +67,7 @@
 												 <label>Deskripsi Coming Soon :</label>
 											</div>
 											<div class='box-body pad'>
-												<textarea required id="editor_coming" name="deskripsi_coming" rows="10" cols="80">
+												<textarea required id="editor_wow" name="deskripsi_coming" rows="10" cols="80">
 													<?php 
                                                         if (isset($dataComing['deskripsi']))
                                                         {

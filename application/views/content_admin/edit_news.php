@@ -93,10 +93,19 @@
                                     <input type="hidden" name="id_news" value="<?php echo $idNews; ?>">
                                     <input type="hidden" name="jenis_berita" value="<?php echo $jenis; ?>">
                                     <div class="box-footer">
+									
                                         <button type="submit" name="save" value="1" class="btn btn-primary">Simpan</button>
                                         <a href="<?php echo site_url('KelolaNews/');?>"><button type="button" name="submit" class="btn btn-danger">Batal</button>
-                                    </div>
+									</div>
                                 </form>
+								<div style="margin-top:-42px;margin-left:145px">
+									<?php if($dataNews['status']==2){?>
+										    <!-- Tombol Setuju -->
+											<a href="<?php echo site_url('KelolaNews/setuju_detail_news/'.$idNews);?>"><button id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button></a>
+											<!-- Tombol Hapus -->
+											<a href="<?php echo site_url('KelolaNews/tolak_detail_news/'.$idNews);?>"><button  id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+									<?php } ?>
+								</div>
                             </div><!-- /.box -->
                         </div><!--/.col (left) -->
 

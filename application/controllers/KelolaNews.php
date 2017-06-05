@@ -231,7 +231,7 @@ class KelolaNews extends CI_Controller {
 						'posted_by'=>$data['news']->posted_by,
 						'kategori_news'=>$data['news']->kategori_news,
 						'isi_news'=>$data['news']->isi_news,
-						'status'=>$edit,
+						'status'=>$data['news']->status,
 						'jenis_news'=>$jenis_berita,
 						//'tanggal_posting'=>date("Y-m-d h:i:sa"),
 						'gambar_news'=> $data['news']->gambar_news,

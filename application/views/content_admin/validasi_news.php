@@ -68,7 +68,9 @@
                                                                         <td><?php echo $youthers['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$youthers['id_news']);?>" method="POST">
+                                                                                <button value="1" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Setuju -->
 																			<button onclick="setuju_news_ajax(<?php echo $youthers['id_news']; ?>)" id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
@@ -84,10 +86,7 @@
 
                                                 <!--Tab Comunity News-->
                                                 <div class="tab-pane" id="tab_comunity">
-                                                    <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/tambah_news_check/');?>" method="POST">
-                                                        <button value="4" name="jenis_berita" type="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Community News</button>
-                                                        <br><br>
-                                                    </form>
+                                                    
                                                     <table class="table table-striped table-bordered table-hover" id="dataTables-list-komunitas">
                                                         <thead>
                                                             <tr>
@@ -115,7 +114,9 @@
                                                                         <td><?php echo $komunitas['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$komunitas['id_news']);?>" method="POST">
+                                                                                <button value="1" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Setuju -->
 																			<button onclick="setuju_news_ajax(<?php echo $komunitas['id_news']; ?>)" id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
@@ -131,10 +132,7 @@
 
                                                 <!--Tab Comming Soon News-->
                                                 <div class="tab-pane" id="tab_comming">
-                                                    <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/tambah_news_check/');?>" method="POST">
-                                                        <button value="5" name="jenis_berita" type="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Comming Soon News</button>
-                                                        <br><br>
-                                                    </form>
+                                                    
                                                     <table class="table table-striped table-bordered table-hover" id="dataTables-list-comming">
                                                         <thead>
                                                             <tr>
@@ -162,13 +160,15 @@
                                                                         <td><?php echo $comming['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <a href="<?php //echo site_url('KelolaComing/lihat_detail_coming/'.$item['id_coming']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$comming['id_news']);?>" method="POST">
+                                                                                <button value="1" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                                                            </form>
 
                                                                             <!-- Tombol Setuju -->
-																			<button onclick="setuju_news_ajax(<?php echo $coming['id_news']; ?>)" id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
+																			<button onclick="setuju_news_ajax(<?php echo $comming['id_news']; ?>)" id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
                                                                 
 																			<!-- Tombol Hapus -->
-																			<button onclick="tolak_news_ajax(<?php echo $coming['id_news']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+																			<button onclick="tolak_news_ajax(<?php echo $comming['id_news']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>

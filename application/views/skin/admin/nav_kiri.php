@@ -71,11 +71,7 @@
 
                         <li>
                             <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Member Control</a></span>  
-                        </li>
-						
-                        
-                       
-                        
+                        </li> 
                     </ul>
                 </section>
                 <!-- /.sidebar -->

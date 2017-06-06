@@ -58,7 +58,18 @@
                                 <li><a href="<?php echo site_url('KelolaComing/validasi_coming'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi Coming Soon</a></li>
                             </ul>
                         </li>
-
+						
+						<li class="treeview">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-th-list"></i> <span> Youth Pepak </span>
+                                <i class="glyphicon glyphicon-menu-right pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="<?php echo site_url('KelolaPepak/index'); ?>"><i class="glyphicon glyphicon-minus"></i> Kelola Pepak</a></li>
+                                <li><a href="<?php echo site_url('KelolaPepak/validasi_pepak'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi Pepak</a></li>
+                            </ul>
+                        </li>
+						
                         <li class="treeview">
                             <a href="#">
                                 <i class="glyphicon glyphicon-collapse-up"></i> <span> Youth Update </span>

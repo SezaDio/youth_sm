@@ -61,7 +61,7 @@
 						
 						<li class="treeview">
                             <a href="#">
-                                <i class="glyphicon glyphicon-th-list"></i> <span> Youth Pepak </span>
+                                <i class="glyphicon glyphicon-book"></i> Youth Pepak </span>
                                 <i class="glyphicon glyphicon-menu-right pull-right"></i>
                             </a>
                             <ul class="treeview-menu">

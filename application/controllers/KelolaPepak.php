@@ -202,4 +202,33 @@ class KelolaPepak extends CI_Controller {
 		}     
 		
 	}
+	
+	function cari_kata($kata) {
+		$kata=str_replace('%20',' ',$kata);
+        header('Access-Control-Allow-Origin: *');
+        header('Content-type: text/xml');
+        
+        //var_dump($search_term); exit();
+        $get_kata=$this->db->like('jawa',$this->db->escape_like_str($kata))->get('pepak');
+        
+		
+        
+        
+        $this->load->helper('xml');
+        if ($get_kata->num_rows()>0) {
+            foreach ($get_kata->result() as $row_kata) {
+                $xml_out .= '<kata ';
+                $xml_out .= 'id="' . xml_convert($row_kata->id_pepak) . '" ';
+                $xml_out .= 'jawa="' . xml_convert($row_kata->jawa) . '" ';
+                $xml_out .= 'indonesia="' . xml_convert(($row_kata->indonesia)) . '" ';
+                $xml_out .= 'deskripsi_jawa="' . xml_convert(($row_kata->deskripsi_jawa)) . '" ';
+                $xml_out .= '/>';
+            }
+        }
+		
+		$xml_out .= '</kata>';
+		
+        echo $xml_out;
+		
+    }
 }

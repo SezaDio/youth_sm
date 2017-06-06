@@ -228,3 +228,101 @@ function setuju_news_ajax(id_news)
 		alert(id_news + "Gagal disetujui");
 	}
 }
+
+function delete_pepak_ajax(id_pepak)
+{
+	if (confirm("Anda yakin ingin menghapus kosakata ini ?"))
+	{
+		$.ajax({
+			url: 'delete_pepak',
+			type: 'POST',
+			data: {id_pepak:id_pepak},
+			success: function(){
+						alert('Delete kosakata berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Delete kosakata gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_pepak + "Gagal dihapus");
+	}
+}
+
+function tolak_pepak_ajax(id_pepak)
+{
+	if (confirm("Anda yakin ingin menolak kosakata ini ?"))
+	{
+		$.ajax({
+			url: 'tolak_pepak',
+			type: 'POST',
+			data: {id_pepak:id_pepak},
+			success: function(){
+						alert('Tolak kosakata berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Tolak kosakata gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_pepak + "Gagal ditolak");
+	}
+}
+
+function setuju_pepak_ajax(id_pepak)
+{
+	if (confirm("Anda yakin ingin menyetujui kosakata ini ?"))
+	{
+	
+		$.ajax({
+			url: 'setuju_pepak',
+			type: 'POST',
+			data: {id_pepak:id_pepak},
+			success: function(){
+						alert('Setuju kosakata berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Setuju kosakata gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_pepak + "Gagal disetujui");
+	}
+}
+
+function cariKata() {
+        var kata=document.getElementById("kata_kunci").value;
+        //clear old marker
+		
+        delMarkFak();
+		delGetMark();
+        var infoWindow = new google.maps.InfoWindow;
+		$.post('<?php echo site_url('KelolaPepak/cari_kata/'); ?>'+kata, function(dataKata){
+		
+			var xml = parseXml(dataKata);
+			var getKata = xml.documentElement.getElementsByTagName("kata");
+			
+			if(getKata.length==0){
+				alert("Kata kunci yang dicari tidak tersedia !");
+			}
+			else {
+			for (var i = 0; i < getKata.length; i++) {
+			  
+			  var jawa = getKata[i].getAttribute("jawa");
+			  var indonesia=getKata[i].getAttribute("indonesia");
+			  var deskripsi_jawa=getKata[i].getAttribute("deskripsi_jawa");
+			  
+			  
+			}
+			}
+		},"text");
+}

@@ -2,11 +2,11 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header" style="margin-top: 45px;">
                     <h1>
-                       Kelola Pepak
+                       Validasi Pepak
                     </h1>
                     <ol class="breadcrumb">
                         <li><i class="fa fa-dashboard"></i>Youth Pepak</li>
-                        <li class="active">Kelola Pepak</li>
+                        <li class="active">Validasi Pepak</li>
                     </ol>
                 </section>
 
@@ -20,18 +20,6 @@
 
                                 <!--Mulai Tampilkan Data Table-->
                                 <div class="box-body">
-									<div style="margin-top:10px; margin-bottom:30px">
-										<?php if($this->session->flashdata('msg_berhasil')!=''){?>
-                                            <div class="alert alert-success alert-dismissable">
-                                                <i class="glyphicon glyphicon-ok"></i>
-                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <?php echo $this->session->flashdata('msg_berhasil');?> 
-                                            </div>
-                                        <?php }?>
-										<a href="<?php echo site_url('KelolaPepak/tambah_pepak_check/');?>">
-                                            <button type="submit" name="submit" class="btn btn-primary">Tambah Pepak</button>
-                                        </a>
-									</div>
                                     <div class="form-group">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-list">
                                             <thead>
@@ -55,16 +43,18 @@
                                                             <td align="center">
                                                                 <!-- Tombol lihat detail -->
                                                                 <a href="<?php echo site_url('KelolaPepak/lihat_detail_pepak/'.$item['id_pepak']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open" ></i> Detail</button></a>
-
+																
+																<!-- Tombol Setuju -->
+                                                                <button onclick="setuju_pepak_ajax(<?php echo $item['id_pepak']; ?>)" id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button>
+                                                                
                                                                 <!-- Tombol Hapus -->
-                                                                <button onclick="delete_pepak_ajax(<?php echo $item['id_pepak']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                <button onclick="tolak_pepak_ajax(<?php echo $item['id_pepak']; ?>)" id="delete-button-coming" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove" ></i> Tolak</button>
+                                                                
                                                             </td>
                                                         </tr>
                                                     <?php } ?>
                                             </tbody>
                                         </table>
-										<input type="text" name="kata_kunci" id="kata_kunci"><br />
-										<input type="button" name="btn_search" id="btn_search" onclick="cariKata();" value="Cari" class="btn btn-success"/>
                                     </div>
                                 </div><!-- /.box-body -->
 

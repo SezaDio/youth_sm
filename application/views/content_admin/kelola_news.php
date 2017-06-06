@@ -33,57 +33,15 @@
                                     <div class="form-group">
                                         <div class="nav-tabs-custom">
                                             <ul class="nav nav-tabs">
-                                                <li class="active"><a href="#tab_sm" data-toggle="tab">SM News</a></li>
-                                                <li><a href="#tab_youthers" data-toggle="tab">Youthers News</a></li>
+                                                <li class="active"><a href="#tab_youthers" data-toggle="tab">Youthers News</a></li>
                                                 <li><a href="#tab_recommended" data-toggle="tab">Recommended News</a></li>
                                                 <li><a href="#tab_comunity" data-toggle="tab">Community News</a></li>
                                                 <li><a href="#tab_youth" data-toggle="tab">Youth.SM News</a></li>
                                             </ul>
                                             <div class="tab-content">
-                                                <!--Tab SM News-->
-                                                <div class="tab-pane active" id="tab_sm">
-                                                    <table class="table table-striped table-bordered table-hover" id="dataTables-list-sm">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">No.</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Judul News</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Pemosting</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Kategori</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Hits</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Suka</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Aksi</th>                                                        
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <?php 
-                                                                foreach($listNewsSm as $sm)
-                                                                { ?>
-                                                                    <tr>
-                                                                        <td style="text-align: center;"><?php echo $sm['id_news'] ?></td>
-                                                                        <td><?php echo $sm['judul_news'] ?></td>
-                                                                        <td><?php echo $sm['posted_by'] ?></td>
-                                                                        <td><?php echo $sm['kategori_news'] ?></td>
-                                                                        <td><?php echo $sm['hits'] ?></td>
-                                                                        <td><?php echo $sm['suka'] ?></td>
-                                                                        <td><?php echo $sm['waktu_posting'] ?></td>
-                                                                        <td align="center">
-                                                                            <!-- Tombol lihat detail -->
-                                                                            <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$sm['id_news']);?>" method="POST">
-                                                                                <button value="1" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
-                                                                            </form>
-
-                                                                            <!-- Tombol Hapus -->
-                                                                            <button onclick="delete_news_ajax(<?php echo $sm['id_news']; ?>)" id="delete-button-sm" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                <?php } ?>
-                                                        </tbody>
-                                                    </table>
-                                                </div><!-- /.tab-pane -->
-
+                                                
                                                 <!--Tab Youthers News-->
-                                                <div class="tab-pane" id="tab_youthers">
+                                                <div class="tab-pane active" id="tab_youthers">
                                                     <table class="table table-striped table-bordered table-hover" id="dataTables-list-youthers">
                                                         <thead>
                                                             <tr>

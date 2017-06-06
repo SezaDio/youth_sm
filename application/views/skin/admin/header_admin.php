@@ -34,7 +34,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="#" class="logo">
+            <a href="<?php echo base_url()?>" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Administrator
             </a>

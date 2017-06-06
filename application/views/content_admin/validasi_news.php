@@ -40,7 +40,7 @@
                                             <div class="tab-content">
                                                 
                                                 <!--Tab Youthers News-->
-                                                <div class="tab-pane" id="tab_youthers">
+                                                <div class="tab-pane active" id="tab_youthers">
                                                     <table class="table table-striped table-bordered table-hover" id="dataTables-list-youthers">
                                                         <thead>
                                                             <tr>

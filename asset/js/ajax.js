@@ -299,13 +299,19 @@ function setuju_pepak_ajax(id_pepak)
 	}
 }
 
+
+    function parseXml(str) {
+      if (window.ActiveXObject) {
+        var doc = new ActiveXObject('Microsoft.XMLDOM');
+        doc.loadXML(str);
+        return doc;
+      } else if (window.DOMParser) {
+        return (new DOMParser).parseFromString(str, 'text/xml');
+      }
+    }
+
 function cariKata() {
         var kata=document.getElementById("kata_kunci").value;
-        //clear old marker
-		
-        delMarkFak();
-		delGetMark();
-        var infoWindow = new google.maps.InfoWindow;
 		$.post('<?php echo site_url('KelolaPepak/cari_kata/'); ?>'+kata, function(dataKata){
 		
 			var xml = parseXml(dataKata);

@@ -63,7 +63,7 @@
                                                     <?php } ?>
                                             </tbody>
                                         </table>
-										<input type="text" name="kata_kunci" id="kata_kunci"><br />
+										<input type="text" name="kata_kunci" id="kata_kunci" value="Cari"><input type="text" name="hasil" id="hasil" value="Hasil"><br />
 										<input type="button" name="btn_search" id="btn_search" onclick="cariKata();" value="Cari" class="btn btn-success"/>
                                     </div>
                                 </div><!-- /.box-body -->
@@ -73,6 +73,63 @@
                     </div>   <!-- /.row -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
+<script>
+function delete_pepak_ajax(id_pepak)
+{
+	if (confirm("Anda yakin ingin menghapus kosakata ini ?"))
+	{
+		$.ajax({
+			url: 'delete_pepak',
+			type: 'POST',
+			data: {id_pepak:id_pepak},
+			success: function(){
+						alert('Delete kosakata berhasil');
+						location.reload();
+					},
+			error: function(){
+						alert('Delete kosakata gagal');
+					}
+		});
+	}
+	else
+	{
+		alert(id_pepak + "Gagal dihapus");
+	}
+}
 
+    function parseXml(str) {
+      if (window.ActiveXObject) {
+        var doc = new ActiveXObject('Microsoft.XMLDOM');
+        doc.loadXML(str);
+        return doc;
+      } else if (window.DOMParser) {
+        return (new DOMParser).parseFromString(str, 'text/xml');
+      }
+    }
+
+function cariKata() {
+        var kata=document.getElementById("kata_kunci").value;
+		$.post('<?php echo site_url('KelolaPepak/cari_kata/'); ?>'+kata, function(dataKata){
+		
+			var xml = parseXml(dataKata);
+			var getKata = xml.documentElement.getElementsByTagName("kata");
+			
+			if(getKata.length==0){
+				alert("Kata kunci yang dicari tidak tersedia !");
+			}
+			else {
+			for (var i = 0; i < getKata.length; i++) {
+			  
+			  var jawa = getKata[i].getAttribute("jawa");
+			  var indonesia=getKata[i].getAttribute("indonesia");
+			  var deskripsi_jawa=getKata[i].getAttribute("deskripsi_jawa");
+			  
+			  var hasil = document.getElementById("hasil");
+			  hasil.value = indonesia;
+			}
+			}
+		},"text");
+}
+</script>
 
             

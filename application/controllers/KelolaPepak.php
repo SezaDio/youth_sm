@@ -30,7 +30,7 @@ class KelolaPepak extends CI_Controller {
 	{
 		$id_pepak = $_POST['id_pepak'];
 		$this->load->model('pepak_models/PepakModels');
-		$this->PepakModels->delete_produk($id_pepak);
+		$this->PepakModels->delete_pepak($id_pepak);
 
 
 		$this->index();
@@ -215,6 +215,7 @@ class KelolaPepak extends CI_Controller {
         
         
         $this->load->helper('xml');
+		$xml_out = '<kosakata>';
         if ($get_kata->num_rows()>0) {
             foreach ($get_kata->result() as $row_kata) {
                 $xml_out .= '<kata ';

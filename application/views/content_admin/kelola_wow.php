@@ -29,7 +29,7 @@
                                             </div>
                                         <?php }?>
 										<a href="<?php echo site_url('KelolaWow/tambah_wow_check/');?>">
-                                            <button type="submit" name="submit" class="btn btn-primary">Tambah Wow</button>
+                                            <button type="submit" name="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Tambah Wow</button>
                                         </a>
 									</div>
                                     <div class="form-group">
@@ -54,7 +54,7 @@
                                                             <td><?php echo $item['tanggal_posting'] ?></td>
                                                             <td align="center">
                                                                 <!-- Tombol lihat detail -->
-                                                                <a href="<?php echo site_url('KelolaWow/edit_wow/'.$item['id_wow']);?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit </button></a>
+                                                                <a href="<?php echo site_url('KelolaWow/edit_wow/'.$item['id_wow']);?>"><button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit </button></a>
 
                                                                 <!-- Tombol Hapus -->
                                                                 <button onclick="delete_wow_ajax(<?php echo $item['id_wow']; ?>)" id="delete-button-wow" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>

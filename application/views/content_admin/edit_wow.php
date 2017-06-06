@@ -20,7 +20,15 @@
                         <div class="col-md-8">
                             <!-- general form elements -->
                             <div class="box box-primary">
-                                
+                                <div style="margin-top:10px; margin-bottom:30px">
+                                    <?php if($this->session->flashdata('msg_gagal')!=''){?>
+                                        <div class="alert alert-danger alert-dismissable">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <?php echo $this->session->flashdata('msg_gagal');?> 
+                                        </div>
+                                    <?php }?>
+                                </div>
                                 <!-- form start -->
 								
                                 <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaWow/edit_wow/'.$idWow);?>" method="POST">

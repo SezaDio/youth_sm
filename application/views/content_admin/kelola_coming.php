@@ -29,7 +29,7 @@
                                             </div>
                                         <?php }?>
 										<a href="<?php echo site_url('KelolaComing/tambah_coming_check/');?>">
-                                            <button type="submit" name="submit" class="btn btn-primary">Tambah Comming Soon</button>
+                                            <button type="submit" name="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus"></i> Tambah Comming Soon</button>
                                         </a>
 									</div>
                                     <div class="form-group">

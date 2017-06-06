@@ -207,7 +207,6 @@
                                                                         <td><?php echo $youth['waktu_posting'] ?></td>
                                                                         <td align="center">
                                                                             <!-- Tombol lihat detail -->
-                                                                            <!-- Tombol lihat detail -->
                                                                             <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$youth['id_news']);?>" method="POST">
                                                                                 <button value="6" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
                                                                             </form>

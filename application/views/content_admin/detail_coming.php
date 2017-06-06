@@ -60,11 +60,12 @@
                                     </div><!-- /.box-body -->
                                 </div><!-- /.box -->
                             </div><!--/.col (left) -->
-                            <div class="col-md-4" style="padding-left: 185px; position: absolute; margin-top: 390px;">
+                            <div class="col-md-4" style="padding-left: 155px; position: absolute; margin-top: 390px;">
                                 <?php if($id_coming->status==1){?>
                                     <!-- Tombol kembali -->
 									<a href="<?php echo site_url('KelolaComing');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
-
+                                    <!-- Tombol Edit -->
+                                    <a href="<?php //echo site_url('KelolaShopping/edit_shopping/'.$id_produk->id_produk);?>"><button id="edit-button-produk" type="submit" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
 									<!-- Tombol Hapus -->
 									<a href="<?php echo site_url('KelolaComing/delete_detail_coming/'.$id_coming->id_coming);?>"><button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button></a>
                             </div>
@@ -72,6 +73,8 @@
                             <div class="col-md-8" style="position: absolute; margin-left: -49px;">    
                                     <!-- Tombol kembali -->
                                     <a href="<?php echo site_url('KelolaComing/validasi_Coming');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
+                                    <!-- Tombol Edit -->
+                                    <a href="<?php //echo site_url('KelolaShopping/edit_shopping/'.$id_produk->id_produk);?>"><button id="edit-button-produk" type="submit" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
                                     <!-- Tombol Setuju -->
                                     <a href="<?php echo site_url('KelolaComing/setuju_detail_coming/'.$id_coming->id_coming);?>"><button id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button></a>
                                     <!-- Tombol Hapus -->

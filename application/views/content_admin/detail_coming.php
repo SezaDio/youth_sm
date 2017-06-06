@@ -32,9 +32,7 @@
                                             <!--Gambar Produk-->
                                             <div class="col-sm-4" style="padding-top: 20px;">
                                                 <div style="background-color: ghostwhite; border: solid 2px steelblue; height:250px; width: 250px">
-                                                    
-                                                        <img style="height:100%" src="<?php echo base_url('asset/img/sarung.jpg'); ?>">
-                                                    
+                                                    <img style="height:100%" src="<?php echo base_url('asset/upload_img_coming/'.$id_coming->path_gambar); ?>">
                                                 </div>
                                             </div>
 
@@ -65,16 +63,16 @@
                                     <!-- Tombol kembali -->
 									<a href="<?php echo site_url('KelolaComing');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
                                     <!-- Tombol Edit -->
-                                    <a href="<?php //echo site_url('KelolaShopping/edit_shopping/'.$id_produk->id_produk);?>"><button id="edit-button-produk" type="submit" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                    <a href="<?php echo site_url('KelolaComing/edit_comming_soon/'.$id_coming->id_coming);?>"><button id="edit-button-coming" type="submit" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
 									<!-- Tombol Hapus -->
 									<a href="<?php echo site_url('KelolaComing/delete_detail_coming/'.$id_coming->id_coming);?>"><button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button></a>
                             </div>
                                 <?php } else {?>
-                            <div class="col-md-8" style="position: absolute; margin-left: -49px;">    
+                            <div class="col-md-10" style="position: absolute; margin-left: -47px;">    
                                     <!-- Tombol kembali -->
                                     <a href="<?php echo site_url('KelolaComing/validasi_Coming');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
                                     <!-- Tombol Edit -->
-                                    <a href="<?php //echo site_url('KelolaShopping/edit_shopping/'.$id_produk->id_produk);?>"><button id="edit-button-produk" type="submit" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
+                                    <a href="<?php echo site_url('KelolaComing/edit_comming_soon/'.$id_coming->id_coming);?>"><button id="edit-button-coming" type="submit" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
                                     <!-- Tombol Setuju -->
                                     <a href="<?php echo site_url('KelolaComing/setuju_detail_coming/'.$id_coming->id_coming);?>"><button id="success-button-coming" type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-ok" ></i> Setuju</button></a>
                                     <!-- Tombol Hapus -->

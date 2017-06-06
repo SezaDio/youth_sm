@@ -101,7 +101,7 @@
 
                                     <input type="hidden" name="jenis_berita" value="<?php echo $jenis; ?>">
                                     <div class="box-footer">
-                                        <button type="submit" name="submit" value="1" class="btn btn-primary">Simpan</button>
+                                        <button type="submit" name="submit" value="1" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-saved"></i> Simpan</button>
                                     </div>
                                 </form>
                             </div><!-- /.box -->

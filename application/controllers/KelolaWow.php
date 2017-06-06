@@ -114,31 +114,6 @@ class KelolaWow extends CI_Controller {
 		
 	}
 	
-	//Edit Data WOW
-	/*public function edit_wow($id_wow) //Fungsi mengambil id data WOW yang akan di edit
-	{
-		$this->load->model('wow_models/WowModels');
-
-		$kategori_wow = array('Wow Sains'=>'Wow Sains',
-                              'Wow Teknologi'=>'Wow Teknologi',
-                              'Wow Sejarah'=>'Wow Sejarah',
-                              'Wow Politik'=>'Wow Politik',
-                              'Wow Fiksi'=>'Wow Fiksi',
-                              'Wow Rekomendasi'=>'Wow Rekomendasi',
-                              'Wow Komunitas'=>'Wow Komunitas',
-                              'Wow Lain-Lain'=>'Wow Lain-Lain'
-                              );
-		$data['kategori_wow']= $kategori_wow;
-		//Ambil id_agenda yang akan diedit
-		$data['wow'] = $this->WowModels->select_by_id_wow($id_wow);
-
-		$this->load->view('skin/admin/header_admin');
-		$this->load->view('skin/admin/nav_kiri');
-		$this->load->view('content_admin/edit_wow',$data);
-		$this->load->view('skin/admin/footer_admin');
-		
-	}*/
-
 	//Fungsi melakukan update pada database
 	public function edit_wow($id_wow) 
 	{

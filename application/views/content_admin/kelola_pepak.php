@@ -29,7 +29,7 @@
                                             </div>
                                         <?php }?>
 										<a href="<?php echo site_url('KelolaPepak/tambah_pepak_check/');?>">
-                                            <button type="submit" name="submit" class="btn btn-primary">Tambah Pepak</button>
+                                            <button type="submit" name="submit" class="btn btn-info"><i class="glyphicon glyphicon-plus" ></i> Tambah Pepak</button>
                                         </a>
 									</div>
                                     <div class="form-group">

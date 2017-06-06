@@ -9,18 +9,19 @@
                             </a>
                         </li>
 
-						<li class="treeview">
-                            <a href="#">
-                                <i class="glyphicon glyphicon-asterisk"></i> <span> Youth Karepmu </span>
-                                <i class="glyphicon glyphicon-menu-right pull-right"></i>
+                        <li>
+                            <a href="<?php echo site_url('KelolaWow/index'); ?>">
+                                <i class="glyphicon glyphicon-star"></i> <span> Youth Wow </span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="add_event.php"><i class="glyphicon glyphicon-minus"></i> Kelola Posting Karepmu	 </a></li>
-                                <li><a href="event_editors.php"><i class="glyphicon glyphicon-minus"></i> Kelola Stiker</a></li>
-                            </ul>
                         </li>
 
-						<li class="treeview">
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-collapse-up"></i> <span> Youth Update </span>
+                            </a>
+                        </li>
+                        
+                        <li class="treeview">
                             <a href="#">
                                 <i class="glyphicon glyphicon-list-alt"></i> <span> Youth News </span>
                                 <i class="glyphicon glyphicon-menu-right pull-right"></i>
@@ -30,6 +31,29 @@
                                 <li><a href="<?php echo site_url('KelolaNews/validasi_news'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi News</a></li>
                             </ul>
                         </li>
+                        
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-book"></i> Youth Pepak </span>
+                                <i class="glyphicon glyphicon-menu-right pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="<?php echo site_url('KelolaPepak/index'); ?>"><i class="glyphicon glyphicon-minus"></i> Kelola Pepak</a></li>
+                                <li><a href="<?php echo site_url('KelolaPepak/validasi_pepak'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi Pepak</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-asterisk"></i> <span> Youth Karepmu </span>
+                                <i class="glyphicon glyphicon-menu-right pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="add_event.php"><i class="glyphicon glyphicon-minus"></i> Kelola Posting Karepmu     </a></li>
+                                <li><a href="event_editors.php"><i class="glyphicon glyphicon-minus"></i> Kelola Stiker</a></li>
+                            </ul>
+                        </li>
+
 
                         <li class="treeview">
                             <a href="#">
@@ -41,12 +65,7 @@
                                 <li><a href="<?php echo site_url('KelolaShopping/validasi_shopping'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi Shopping </a></li>
                             </ul>
                         </li>
-						
-                        <li>
-                            <a href="<?php echo site_url('KelolaWow/index'); ?>">
-                                <i class="glyphicon glyphicon-star"></i> <span> Youth Wow </span>
-                            </a>
-                        </li>
+                        
 
                         <li class="treeview">
                             <a href="#">
@@ -58,31 +77,15 @@
                                 <li><a href="<?php echo site_url('KelolaComing/validasi_coming'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi Coming Soon</a></li>
                             </ul>
                         </li>
-						
-						<li class="treeview">
-                            <a href="#">
-                                <i class="glyphicon glyphicon-book"></i> Youth Pepak </span>
-                                <i class="glyphicon glyphicon-menu-right pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="<?php echo site_url('KelolaPepak/index'); ?>"><i class="glyphicon glyphicon-minus"></i> Kelola Pepak</a></li>
-                                <li><a href="<?php echo site_url('KelolaPepak/validasi_pepak'); ?>"><i class="glyphicon glyphicon-minus"></i> Validasi Pepak</a></li>
-                            </ul>
-                        </li>
-						
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="glyphicon glyphicon-collapse-up"></i> <span> Youth Update </span>
-                            </a>
-                        </li>
                         
-						<li>
-                            <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Administrator Control</a></span>  
-                        </li>
-
                         <li>
                             <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Member Control</a></span>  
                         </li> 
+                        
+                        <li>
+                            <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Administrator Control</a></span>  
+                        </li>
+
                     </ul>
                 </section>
                 <!-- /.sidebar -->

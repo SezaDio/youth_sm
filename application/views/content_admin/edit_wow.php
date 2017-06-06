@@ -85,7 +85,7 @@
                                     </div><!-- /.box-body -->
                                     <input type="hidden" name="id_wow" value="<?php echo $idWow; ?>">
                                     <div class="box-footer">
-                                        <button type="submit" name="save" value="1" class="btn btn-primary">Simpan</button>
+                                        <button type="submit" name="save" value="1" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-saved"></i> Simpan</button>
                                        <a href="<?php echo site_url('KelolaWow/');?>"><button type="button" name="submit" class="btn btn-danger">Batal</button>
                                     </div>
                                 </form>

@@ -232,4 +232,105 @@ class KelolaComing extends CI_Controller {
 		}     
 		
 	}
+
+	//Fungsi melakukan update pada database
+	public function edit_comming_soon($id_coming) 
+	{
+		$this->load->model('coming_models/ComingModels');
+		$this->load->library('form_validation');
+
+		$edit = $this->input->post('save');
+
+		$kategori_coming = array('Coming Soon Sains'=>'Coming Soon Sains',
+                              'Coming Soon Teknologi'=>'Coming Soon Teknologi',
+                              'Coming Soon Sejarah'=>'Coming Soon Sejarah',
+                              'Coming Soon Politik'=>'Coming Soon Politik',
+                              'Coming Soon Fiksi'=>'Coming Soon Fiksi',
+                              'Coming Soon Rekomendasi'=>'Coming Soon Rekomendasi',
+                              'Coming Soon Komunitas'=>'Coming Soon Komunitas',
+                              'Coming Soon Lain-Lain'=>'Coming Soon Lain-Lain'
+                              );
+		$data['kategori_coming']= $kategori_coming;
+		if (isset($_POST['save']))
+		{
+			$id_coming = $this->input->post('id_coming');
+
+			$this->form_validation->set_rules('nama_coming', 'Judul', 'required');
+			$this->form_validation->set_rules('kategori_coming', 'Kategori', 'required');
+			$this->form_validation->set_rules('deskripsi_coming', 'Deskripsi', 'required');
+			$this->form_validation->set_rules('posted_by', 'Posted', 'required');
+
+			//Mengambil filename gambar untuk disimpan
+			$nmfile = "file_".time();
+			$config['upload_path'] = './asset/upload_img_coming/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['max_size'] = '4000'; //kb
+			$config['file_name'] = $nmfile;
+
+			$data_coming=array(
+							'nama_coming'=>$this->input->post('nama_coming'),
+							'kategori_coming'=>$this->input->post('kategori_coming'),
+							'deskripsi_coming'=>$this->input->post('deskripsi_coming'),
+							'posted_by'=>$this->input->post('posted_by'),
+							'path_gambar'=>NULL
+							);
+			$data['dataComing'] = $data_coming;
+
+			//value id_koridor berisi beberapa data, sehingga dilakukan split dengan explode
+			if (($this->form_validation->run() == TRUE))
+			{
+				$gbr = NULL;
+				$iserror = false;
+				if ((!empty($_FILES['filefoto']['name']))) {
+					
+					$this->load->library('upload', $config);
+					if($this->upload->do_upload('filefoto'))
+					{
+						//echo "Masuk";
+						$gbr = $this->upload->data();
+
+						$data_coming['path_gambar'] = $gbr['file_name'];
+
+						
+					}
+					else
+					{
+						$this->session->set_flashdata('msg_gagal', 'Data Youth Comming Soon gagal diperbaharui');
+						$iserror = true;
+					}
+
+				}
+				if (!$iserror) {
+					$this->db->update('coming', $data_coming, array('id_coming'=>$id_coming));
+					$this->session->set_flashdata('msg_berhasil', 'Data Youth Comming Soon berhasil diperbaharui');
+					redirect('KelolaComing');
+				}
+			}
+			else
+			{
+				$this->session->set_flashdata('msg_gagal', 'Data Youth Comming Soon gagal diperbaharui');
+				//$this->edit_comming_soon();
+			}
+		}
+		else
+		{
+			$data['coming'] = $this->ComingModels->select_by_id_coming($id_coming)->row();
+
+			$data_coming=array(
+							'nama_coming'=>$data['coming']->nama_coming,
+							'kategori_coming'=>$data['coming']->kategori_coming,
+							'deskripsi_coming'=>$data['coming']->deskripsi_coming,
+							'posted_by'=>$data['coming']->posted_by,
+							'path_gambar'=> $data['coming']->path_gambar
+							);
+			$data['dataComing'] = $data_coming;
+
+
+		}
+		$data['idComing'] = $id_coming;
+		$this->load->view('skin/admin/header_admin');
+		$this->load->view('skin/admin/nav_kiri');
+		$this->load->view('content_admin/edit_comming', $data);
+		$this->load->view('skin/admin/footer_admin');
+	}
 }

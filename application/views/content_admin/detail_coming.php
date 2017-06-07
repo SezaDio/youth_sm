@@ -30,9 +30,9 @@
                                             </div>
                                         </div>
                                             <!--Gambar Produk-->
-                                            <div class="col-sm-4" style="padding-top: 20px;">
-                                                <div style="background-color: ghostwhite; border: solid 2px steelblue; height:250px; width: 250px">
-                                                    <img style="height:100%" src="<?php echo base_url('asset/upload_img_coming/'.$id_coming->path_gambar); ?>">
+                                            <div class="col-sm-4" style="padding-top: 20px; text-align: center;">
+                                                <div style="height:250px; width: 250px">
+                                                    <img style="border: solid currentColor; height:100%" src="<?php echo base_url('asset/upload_img_coming/'.$id_coming->path_gambar); ?>">
                                                 </div>
                                             </div>
 

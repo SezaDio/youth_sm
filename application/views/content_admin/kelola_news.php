@@ -52,7 +52,7 @@
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Hits</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Suka</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Aksi</th>                                                  
+                                                                <th class="title-center" style="font-size:1em; text-align:center; width:150px;">Aksi</th>                                                  
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -71,10 +71,10 @@
                                                                             <!-- Tombol lihat detail -->
                                                                             <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$youthers['id_news']);?>" method="POST">
                                                                                 <button value="2" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
-                                                                            </form>
-
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $youthers['id_news']; ?>)" id="delete-button-youthers" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                            </form>
+
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>
@@ -92,13 +92,13 @@
                                                         <thead>
                                                             <tr>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">No.</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Judul News</th>
+                                                                <th class="title-center" style="font-size:1em; text-align:center; width:100px;">Judul News</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Pemosting</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Kategori</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Hits</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Suka</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Aksi</th>                                                        
+                                                                <th class="title-center" style="font-size:1em; text-align:center; width:80px;">Aksi</th>                                                        
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -117,10 +117,10 @@
                                                                             <!-- Tombol lihat detail -->
                                                                             <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$rekomendasi['id_news']);?>" method="POST">
                                                                                 <button value="3" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
-                                                                            </form>
-
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $rekomendasi['id_news']; ?>)" id="delete-button-rekomendasi" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                            </form>
+
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>
@@ -138,13 +138,13 @@
                                                         <thead>
                                                             <tr>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">No.</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Judul News</th>
+                                                                <th class="title-center" style="font-size:1em; text-align:center; width:100px;">Judul News</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Pemosting</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Kategori</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Hits</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Suka</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Aksi</th>                                                        
+                                                                <th class="title-center" style="font-size:1em; text-align:center; width:80px;">Aksi</th>                                                        
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -163,10 +163,10 @@
                                                                             <!-- Tombol lihat detail -->
                                                                             <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$komunitas['id_news']);?>" method="POST">
                                                                                 <button value="4" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
-                                                                            </form>
-
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $komunitas['id_news']; ?>)" id="delete-button-komunitas" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                            </form>
+
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>
@@ -184,13 +184,13 @@
                                                         <thead>
                                                             <tr>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">No.</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Judul News</th>
+                                                                <th class="title-center" style="font-size:1em; text-align:center; width:100px;">Judul News</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Pemosting</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Kategori</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Hits</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Suka</th>
                                                                 <th class="title-center" style="font-size:1em; text-align:center;">Waktu Posting</th>
-                                                                <th class="title-center" style="font-size:1em; text-align:center;">Aksi</th>                                                        
+                                                                <th class="title-center" style="font-size:1em; text-align:center; width:80px;">Aksi</th>                                                        
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -209,10 +209,10 @@
                                                                             <!-- Tombol lihat detail -->
                                                                             <form role="form" enctype="multipart/form-data" action="<?php echo site_url('KelolaNews/edit_news/'.$youth['id_news']);?>" method="POST">
                                                                                 <button value="6" name="jenis_berita" type="submit" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil" ></i> Edit</button></a>
-                                                                            </form>
-
                                                                             <!-- Tombol Hapus -->
                                                                             <button onclick="delete_news_ajax(<?php echo $youth['id_news']; ?>)" id="delete-button-youth" type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button>
+                                                                            </form>
+
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>

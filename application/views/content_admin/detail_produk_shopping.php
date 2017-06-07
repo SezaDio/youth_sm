@@ -30,10 +30,10 @@
                                             </div>
                                         </div>
                                             <!--Gambar Produk-->
-                                            <div class="col-sm-4" style="padding-top: 20px;">
-                                                <div style="background-color: ghostwhite; border: solid 2px steelblue; height:250px; width: 250px">
+                                            <div class="col-sm-4" style="padding-top: 20px; text-align: center;">
+                                                <div style="height:250px; width: 250px">
                                                     
-                                                        <img style="height:100%" src="<?php echo base_url('asset/upload_img_shopping/'.$id_produk->path_gambar); ?>">
+                                                        <img style="border: solid currentColor; height:100%" src="<?php echo base_url('asset/upload_img_shopping/'.$id_produk->path_gambar); ?>">
                                                     
                                                 </div>
                                             </div>
@@ -91,7 +91,7 @@
 									<a href="<?php echo site_url('KelolaShopping/delete_detail_produk/'.$id_produk->id_produk);?>"><button class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash" ></i> Hapus</button></a>
                             </div>
                                 <?php } else {?>
-                            <div class="col-md-10" style="position: absolute; margin-left: -76px;">    
+                            <div class="col-md-10" style="position: absolute; margin-left: -40px;">    
                                     <!-- Tombol kembali -->
                                     <a href="<?php echo site_url('KelolaShopping/validasi_shopping');?>"><button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-arrow-left" ></i> Kembali</button></a>
                                     <!-- Tombol Edit -->

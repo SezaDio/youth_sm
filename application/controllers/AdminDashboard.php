@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class AdminDashboard extends CI_Controller {
 
 	public function _construct()
 	{
@@ -17,6 +17,6 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('url');
-		$this->load->view('skin/front_end/welcome');
+		$this->load->view('skin/admin/welcome');
 	}
 }

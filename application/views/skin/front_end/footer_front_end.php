@@ -52,7 +52,7 @@
       <script src="<?php echo base_url('asset/js/modernizr.js'); ?>" type="text/javascript"></script> 
 
       <!-- Mega Menu Script -->
-      <script src="<?php echo base_url('asset/js/megaMenu.min.js'); ?>"></script>
+      <script src="<?php echo base_url('asset/js/megaMenu.min.js'); ?>" type="text/javascript"></script>
 
       <!-- Bootstrap Core Js --> 
       <script type="text/javascript" src="<?php echo base_url('asset/bootstrap/js/bootstrap.min.js'); ?>"></script> 
@@ -66,7 +66,7 @@
       <script src="<?php echo base_url('asset/js/theia-sticky-sidebar.js'); ?>" type="text/javascript"></script>
 
       <!-- Gallery Magnify  -->
-      <script src="<?php echo base_url('asset/js/jquery.magnific-popup.min.js'); ?>"></script>
+      <script src="<?php echo base_url('asset/js/jquery.magnific-popup.min.js'); ?>" type="text/javascript"></script>
 
       <!-- Template Custom Js --> 
       <script src="<?php echo base_url('asset/js/custom.js'); ?>" type="text/javascript"></script> 

@@ -1,10 +1,10 @@
-      <!--<footer class="footer-2">
+      <footer class="footer-2">
          <div class="footer-top">
             <div class="container">
                <div class="row">
                   <div class="col-md-12 col-sm-12 col-xs-12">
                      <div class="footer-block">
-                        <img src="<?php //echo base_url('asset/img/logo-footer.png'); ?>" alt="" class="logo-footer">
+                        <img src="<?php echo base_url('asset/img/logo-footer.png'); ?>" alt="" class="logo-footer">
                         <div class="social-media-icons">
                            <ul>
                               <li> <a href=""><i class="ti-facebook"></i></a></li>
@@ -41,7 +41,7 @@
             </div>
          </div>
       </footer>
-      <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>-->
+      <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
       <!-- ======================================== script tags =============================================== -->
 

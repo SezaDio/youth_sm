@@ -12,7 +12,7 @@
 	<link rel="icon" href="<?php echo base_url('asset/img/favicon.ico'); ?>" type="image/x-icon">
 
       <!-- Core Bootstrap File -->
-      <l<link href="<?php echo base_url('asset/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css" />
+      <link href="<?php echo base_url('asset/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css" />
 
       <!-- ANIMATE CSS -->
       <link href="<?php echo base_url('asset/css/animate.min.css'); ?>" rel="stylesheet" type="text/css">

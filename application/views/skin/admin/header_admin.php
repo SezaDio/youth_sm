@@ -22,7 +22,7 @@
         
         
     </head>
-	<script src="<?php echo base_url('asset/js/instafeed.js-master/instafeed.min.js'); ?>" type="text/javascript"></script>
+	<!--<script src="<?php //echo base_url('asset/js/instafeed.js-master/instafeed.min.js'); ?>" type="text/javascript"></script>
     <script type="text/javascript">
     var feed = new Instafeed({
 		get: 'tagged',
@@ -30,7 +30,8 @@
 		clientId: '60e2f0527b724be4af2dc7215295ed9d'
     });
     feed.run();
-	</script>
+	</script>-->
+    
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">

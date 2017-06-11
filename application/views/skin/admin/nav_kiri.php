@@ -34,7 +34,7 @@
                         
                         <li class="treeview">
                             <a href="#">
-                                <i class="glyphicon glyphicon-book"></i> Youth Pepak </span>
+                                <i class="glyphicon glyphicon-book"></i><span> Youth Pepak </span>
                                 <i class="glyphicon glyphicon-menu-right pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
@@ -79,11 +79,11 @@
                         </li>
                         
                         <li>
-                            <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Member Control</a></span>  
+                            <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Member Control</span></a>  
                         </li> 
                         
                         <li>
-                            <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Administrator Control</a></span>  
+                            <a href="overview_album.php"><i class="glyphicon glyphicon-cog"></i> <span>Administrator Control</span></a>  
                         </li>
 
                     </ul>

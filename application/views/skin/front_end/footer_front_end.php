@@ -69,6 +69,11 @@
       <script src="<?php echo base_url('asset/js/jquery.magnific-popup.min.js'); ?>" type="text/javascript"></script>
 
       <!-- Template Custom Js --> 
-      <script src="<?php echo base_url('asset/js/custom.js'); ?>" type="text/javascript"></script> 
+      <script src="<?php echo base_url('asset/js/custom.js'); ?>" type="text/javascript"></script>
+
+      <script>
+            $(document).ready( function () { 
+               $("#form-login").validate();
+            }); 
    </body>
 </html>

@@ -14,14 +14,20 @@
       <!-- Core Bootstrap File -->
       <link href="<?php echo base_url('asset/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css" />
 
+      <!-- Mega Menu -->
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/megaMenu.css'); ?>">
+
+      <!-- Template Core Css -->
+      <link href="<?php echo base_url('asset/css/style_front_end.css'); ?>" rel="stylesheet" type="text/css">
+      <link href="<?php echo base_url('asset/css/breakingNews.css'); ?>" rel="stylesheet" type="text/css">
+      <link href="<?php echo base_url('asset/css/magnific-popup.css'); ?>" rel="stylesheet" type="text/css">
+
       <!-- ANIMATE CSS -->
       <link href="<?php echo base_url('asset/css/animate.min.css'); ?>" rel="stylesheet" type="text/css">
 
       <!-- ZERO GRID CSS -->
       <link href="<?php echo base_url('asset/css/zerogrid.css'); ?>" rel="stylesheet" type="text/css">
 
-      <!-- Mega Menu -->
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/megaMenu.css'); ?>">
       
       <!-- Font Awesome Icons -->
       <link href="<?php echo base_url('asset/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
@@ -31,10 +37,6 @@
       <link href="<?php echo base_url('asset/css/owl.carousel.css'); ?>" rel="stylesheet" type="text/css">
       <link href="<?php echo base_url('asset/css/owl.theme.default.css'); ?>" rel="stylesheet" type="text/css">
 
-      <!-- Template Core Css -->
-      <link href="<?php echo base_url('asset/css/style_front_end.css'); ?>" rel="stylesheet" type="text/css">
-      <link href="<?php echo base_url('asset/css/breakingNews.css'); ?>" rel="stylesheet" type="text/css">
-      <link href="<?php echo base_url('asset/css/magnific-popup.css'); ?>" rel="stylesheet" type="text/css">
 
       <!-- Theme Color -->
       <link rel="stylesheet" id="color" href="<?php echo base_url('asset/css/colors/defualt.css'); ?>">
@@ -53,11 +55,36 @@
                      
                   </div>
                   <div class="col-md-6 col-sm-9 col-xs-12">
-                     <ul class="">
+                     <ul>
                         <li> <i class="ti-calendar"></i> Saturday 28 January, 2017</li>
-                        <li><a href=""><i class="ti-stats-up"></i> Advertize</a></li>
-                        <li><a href=""><i class="ti-share"></i> Follow</a></li>
-                        <li><a href=""> <i class="ti-user"></i> login</a></li>
+                        <li class="dropdown" role="presentation">
+                              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href=""><i class="ti-user"></i> login <span class="caret"></span></a>
+                              <div class="dropdown-menu" style="width: 400px; right: 0px; left: unset; padding: 20px;">
+                                    <form class="omb_loginForm" id="form-login" action="<?php //echo site_url('Account/login'); ?>" autocomplete="on" method="POST">
+                                          <?php 
+                                                //$this->load->library('form_validation');
+                                                //echo validation_errors(); 
+                                          ?>
+
+                                          <p style="color:red; font-family: Comic Sans Ms;"><?php //echo $this->session->flashdata('notification'); ?></p>
+                                          
+                                          <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                <input type="text" class="form-control" name="username" placeholder="username" required value="<?php //echo set_value('username'); ?>">
+                                          </div>
+                                          <span class="help-block"></span>
+                                                                        
+                                          <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                <input  type="password" class="form-control" name="password" placeholder="Password" required value="<?php //echo set_value('password'); ?>">
+                                          </div>
+                                          <span class="help-block"><hr class="omb_hrOr"></span>
+
+                                          <button class="btn btn-colored-blog pull-right" type="submit" name="login"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                                          <p class="omb_forgotPwd" style="color:blue;"><a href="#">Forgot password?</a></p>
+                                    </form>
+                              </div>
+                        </li>
                      </ul>
                   </div>
                </div>
@@ -65,6 +92,7 @@
          </div>
       </section>
 
+      
       <!--Big Logo-->
       <section class="logo-row logo-center">
          <div class="container">

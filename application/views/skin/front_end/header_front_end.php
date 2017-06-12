@@ -63,28 +63,40 @@
                                        <label>Sign In Youthers</label>
                                     </div>
                                     <form style="padding:10px;" class="omb_loginForm" id="form-login" action="<?php //echo site_url('Account/login'); ?>" autocomplete="on" method="POST">
-                                          <?php 
-                                                //$this->load->library('form_validation');
-                                                //echo validation_errors(); 
-                                          ?>
+                                       <?php 
+                                             //$this->load->library('form_validation');
+                                             //echo validation_errors(); 
+                                       ?>
 
-                                          <p style="color:red; font-family: Comic Sans Ms;"><?php //echo $this->session->flashdata('notification'); ?></p>
-                                          
-                                          <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                                <input type="text" class="form-control" name="username" placeholder="username" required value="<?php //echo set_value('username'); ?>">
+                                       <p style="color:red; font-family: Comic Sans Ms;"><?php //echo $this->session->flashdata('notification'); ?></p>
+                                       
+                                       <div class="input-group">
+                                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                             <input type="text" class="form-control" name="username" placeholder="username" required value="<?php //echo set_value('username'); ?>">
+                                       </div>
+                                       <span class="help-block"></span>
+                                                                     
+                                       <div class="input-group">
+                                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                             <input  type="password" class="form-control" name="password" placeholder="Password" required value="<?php //echo set_value('password'); ?>">
+                                       </div><br>
+                                       <button class="btn btn-colored-blog pull-right" type="submit" name="login"><span class="glyphicon glyphicon-log-in"></span> Sign In</button>
+                                       <p class="omb_forgotPwd" style="color:blue; font-size:small; padding:6px;"><a style="color:blue;" href="#">Forgot password?</a></p>
+                                       <!--
+                                       <div class="col-sm-4 omb_login"><hr class="omb_hrOr"></div>      
+                                       <div class="col-sm-4" style="margin-top: 9px"><p style="color:black;">OR</p></div>
+                                       <div class="col-sm-4 omb_login"><hr class="omb_hrOr"></div>
+                                       
+                                       <div>
+                                          <div class="col-sm-6">
+                                             <button class="btn btn-primary" type="submit" name="login"><label>facebook</label></button>
                                           </div>
-                                          <span class="help-block"></span>
-                                                                        
-                                          <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                                <input  type="password" class="form-control" name="password" placeholder="Password" required value="<?php //echo set_value('password'); ?>">
+                                          <div class="col-sm-6">
+                                             <button class="btn btn-danger" type="submit" name="login"><label>GMail</label></button>
                                           </div>
-                                          <span class="help-block"><hr class="omb_hrOr"></span>
-
-                                          <button class="btn btn-colored-blog pull-right" type="submit" name="login"><span class="glyphicon glyphicon-log-in"></span> Login</button>
-                                          <p class="omb_forgotPwd" style="color:blue; padding:6px;"><a style="color:blue;" href="#">Forgot password?</a></p>
+                                       </div>-->
                                     </form>
+
                               </div>
                         </li>
                         <li> <i class="ti-calendar"></i> Saturday 28 January, 2017</li>

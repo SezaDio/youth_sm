@@ -47,7 +47,7 @@
    <body>
 
       <!--Top Bar-->
-      <section class="topbar">
+      <section class="topbar" style="display: block;">
          <div class="container">
             <div class="row">
                <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
@@ -56,11 +56,13 @@
                   </div>
                   <div class="col-md-6 col-sm-9 col-xs-12">
                      <ul>
-                        <li> <i class="ti-calendar"></i> Saturday 28 January, 2017</li>
                         <li class="dropdown" role="presentation">
-                              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href=""><i class="ti-user"></i> login <span class="caret"></span></a>
-                              <div class="dropdown-menu" style="width: 400px; right: 0px; left: unset; padding: 20px;">
-                                    <form class="omb_loginForm" id="form-login" action="<?php //echo site_url('Account/login'); ?>" autocomplete="on" method="POST">
+                              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href=""><i class="ti-user"></i> Sign In <span class="caret"></span></a>
+                              <div class="dropdown-menu" style="width: 250px; padding: 2px;">
+                                    <div style="background-color: steelblue; text-align:center; padding:5px; border-radius:inherit;" >
+                                       <label>Sign In Youthers</label>
+                                    </div>
+                                    <form style="padding:10px;" class="omb_loginForm" id="form-login" action="<?php //echo site_url('Account/login'); ?>" autocomplete="on" method="POST">
                                           <?php 
                                                 //$this->load->library('form_validation');
                                                 //echo validation_errors(); 
@@ -81,10 +83,11 @@
                                           <span class="help-block"><hr class="omb_hrOr"></span>
 
                                           <button class="btn btn-colored-blog pull-right" type="submit" name="login"><span class="glyphicon glyphicon-log-in"></span> Login</button>
-                                          <p class="omb_forgotPwd" style="color:blue;"><a href="#">Forgot password?</a></p>
+                                          <p class="omb_forgotPwd" style="color:blue; padding:6px;"><a style="color:blue;" href="#">Forgot password?</a></p>
                                     </form>
                               </div>
                         </li>
+                        <li> <i class="ti-calendar"></i> Saturday 28 January, 2017</li>
                      </ul>
                   </div>
                </div>

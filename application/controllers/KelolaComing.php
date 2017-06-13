@@ -23,6 +23,7 @@ class KelolaComing extends CI_Controller {
 		$this->load->view('skin/admin/nav_kiri');
 		$this->load->view('content_admin/kelola_coming', $data);
 		$this->load->view('skin/admin/footer_admin');
+		
 	}
 
 	//Delete Data
@@ -200,6 +201,7 @@ class KelolaComing extends CI_Controller {
 				{
 					//echo "Masuk";
 					$gbr = $this->upload->data();
+					$this->crop($gbr['full_path'],$gbr['file_name']);
 
 					$data_coming['path_gambar'] = $gbr['file_name'];
 
@@ -288,7 +290,6 @@ class KelolaComing extends CI_Controller {
 					{
 						//echo "Masuk";
 						$gbr = $this->upload->data();
-
 						$data_coming['path_gambar'] = $gbr['file_name'];
 
 						
@@ -332,5 +333,20 @@ class KelolaComing extends CI_Controller {
 		$this->load->view('skin/admin/nav_kiri');
 		$this->load->view('content_admin/edit_comming', $data);
 		$this->load->view('skin/admin/footer_admin');
+	}
+	
+	function crop($img,$filename){
+		$name = $img;
+		$myImage = imagecreatefromjpeg($name);
+		list($width, $height) = getimagesize($name);
+		//Create the zoom_out and cropped image
+		$myImageCrop =  imagecreatetruecolor(900, 550);
+		 
+		// Fill the two images
+		$b=imagecopyresampled($myImageCrop,$myImage,0,0,0,291 ,$width,$height,$width,$height);	
+		 
+		// Save the two images created
+		$fileName="thumb_".$filename;
+		imagejpeg( $myImageCrop,"./asset/upload_img_coming/".$fileName );
 	}
 }

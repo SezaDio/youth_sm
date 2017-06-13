@@ -106,7 +106,7 @@ class KelolaNews extends CI_Controller {
 				{
 					//echo "Masuk";
 					$gbr = $this->upload->data();
-
+					$this->crop($gbr['full_path'],$gbr['file_name']);
 					$data_news['gambar_news'] = $gbr['file_name'];
 
 					$this->db->insert('news', $data_news);
@@ -332,4 +332,19 @@ class KelolaNews extends CI_Controller {
 		else
 			show_error($this->email->print_debugger());
     }
+	
+	function crop($img,$filename){
+		$name = $img;
+		$myImage = imagecreatefromjpeg($name);
+		list($width, $height) = getimagesize($name);
+		//Create the zoom_out and cropped image
+		$myImageCrop =  imagecreatetruecolor(900, 550);
+		 
+		// Fill the two images
+		$b=imagecopyresampled($myImageCrop,$myImage,0,0,0,0 ,$width,$height,$width,$height);	
+		 
+		// Save the two images created
+		$fileName="thumb_".$filename;
+		imagejpeg( $myImageCrop,"./asset/upload_img_news/".$fileName );
+	}
 }

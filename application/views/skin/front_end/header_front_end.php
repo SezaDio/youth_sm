@@ -148,19 +148,9 @@
                   <ul class="menu-links pull-right">
                      <li class="active">
                         <a href="javascript:void (0)">
-                        <span class="text">  Home </span>
+                           <span class="text">  Home </span>
                         </a>
-                        <ul class="drop-down">
-                           <li><a href="index.html"> <i class="fa fa-file-image-o"></i> Home 1  </a></li>
-                           <li><a href="index2.html"> <i class="fa fa-apple"></i> Home 2  </a></li>
-                           <li><a href="index3.html"> <i class="fa fa-university"></i> Home 3  </a></li>
-                           <li><a href="index4.html"> <i class="fa fa-adjust"></i> Home 4</a></li>
-                           <li><a href="index5.html"> <i class="fa fa-archive"></i> Home 5</a></li>
-                           <li><a href="index6.html"> <i class="fa fa-bar-chart"></i> Home 6</a></li>
-                           <li><a href="index7.html"> <i class="fa fa-adjust"></i> Home 7</a></li>
-                           <li><a href="index8.html"> <i class="fa fa-automobile"></i> Home 8</a></li>
-                           <li><a href="index-box.html"> <i class="fa fa-automobile"></i> Home Box Width</a></li>
-                        </ul></li>
+                     </li>
                      <li>
                         <a href="blog-grids.html"><span class="text">  Food </span> </a>
                      </li>

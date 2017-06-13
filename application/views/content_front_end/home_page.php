@@ -7,19 +7,14 @@
                         <div class="col-2-4">
                            <div class="wrap-col">
                               <div class="grid-item">
-                                 <div class="post-content">
-                                    <div class="catname">
-                                       <a class="btn btn-maroon" href="#">
-                                          <div>Sports</div>
-                                       </a>
-                                    </div>
-                                    <h5> <a href="#">BYU men's basketball team beset by slow starts in recent games </a> </h5>
-                                    <ul class="post-tools">
-                                       <li>  June 10, 2017 </li>
-                                       <li> <a href=""><i class="ti-thought"></i> 12 </a></li>
-                                    </ul>
+                                 <div> 
+                                    <ul class="rslides" id="slider1">
+                                      <li><img alt="" src="<?php echo base_url('asset/img/anforcom.jpg'); ?>"></li>
+                                      <li class="post-thumb thumb"><img alt="" src="<?php echo base_url('asset/img/anforcom.jpg'); ?>"></li>
+                                      <li><img alt="" src="<?php echo base_url('asset/img/anforcom.jpg'); ?>"></li>
+                                      <li class="post-thumb thumb"><img alt="" src="<?php echo base_url('asset/img/anforcom.jpg'); ?>"></li>
+                                    </ul> 
                                  </div>
-                                 <div class="post-thumb thumb"> <img alt="" src="<?php echo base_url('asset/img/slide-13.jpg'); ?>"> </div>
                               </div>
                            </div>
                         </div>

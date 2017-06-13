@@ -28,7 +28,9 @@
       <!-- ZERO GRID CSS -->
       <link href="<?php echo base_url('asset/css/zerogrid.css'); ?>" rel="stylesheet" type="text/css">
 
-      
+      <!-- Responsive slider CSS -->
+      <link href="<?php echo base_url('asset/css/slider/responsiveslides.css'); ?>" rel="stylesheet" type="text/css">
+
       <!-- Font Awesome Icons -->
       <link href="<?php echo base_url('asset/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="<?php echo base_url('asset/css/themify-icons.css'); ?>" type="text/css">

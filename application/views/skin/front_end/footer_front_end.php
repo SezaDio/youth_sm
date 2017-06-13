@@ -48,14 +48,33 @@
       <!-- Core Jquery --> 
       <script type="text/javascript" src="<?php echo base_url('asset/js/jquery.min.js'); ?>"></script>
 
-      <!-- MODERNIZR JS --> 
-      <script src="<?php echo base_url('asset/js/modernizr.js'); ?>" type="text/javascript"></script> 
-
       <!-- Mega Menu Script -->
       <script src="<?php echo base_url('asset/js/megaMenu.min.js'); ?>" type="text/javascript"></script>
 
       <!-- Bootstrap Core Js --> 
-      <script type="text/javascript" src="<?php echo base_url('asset/bootstrap/js/bootstrap.min.js'); ?>"></script> 
+      <script type="text/javascript" src="<?php echo base_url('asset/bootstrap/js/bootstrap.min.js'); ?>"></script>
+
+      <!-- Slider Js --> 
+      <script type="text/javascript" src="<?php echo base_url('asset/js/slider/responsiveslides.min.js'); ?>"></script>
+
+      <script>
+          // You can also use "$(window).load(function() {"
+          $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+              maxwidth: 900,
+              speed: 800,
+              before: function(){},
+              after: function(){}
+            });
+            
+            $("#form-login").validate();
+         });
+      </script>
+
+      <!-- MODERNIZR JS --> 
+      <script src="<?php echo base_url('asset/js/modernizr.js'); ?>" type="text/javascript"></script> 
+
 
       <!-- Jquery Plugin --> 
       <script src="<?php echo base_url('asset/js/jquery-migrate.min.js'); ?>" type="text/javascript"></script> 
@@ -71,9 +90,5 @@
       <!-- Template Custom Js --> 
       <script src="<?php echo base_url('asset/js/custom.js'); ?>" type="text/javascript"></script>
 
-      <script>
-            $(document).ready( function () { 
-               $("#form-login").validate();
-            }); 
    </body>
 </html>

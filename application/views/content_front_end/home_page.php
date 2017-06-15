@@ -652,13 +652,24 @@
                            <span class="heading-ping"></span> 
                         </div>
                         <div class="search-widget">
-                           <form>
                               <div class="form-group">
+<<<<<<< HEAD
                                  <input placeholder="Goleki" name="search" class="form-control" type="text">
                                  <a href="#"><button> <i class="fa fa-search"></i></button></a>
+=======
+                                 <input placeholder="Goleki" name="search" class="form-control" type="text" id="kata_kunci">
+                                 <button onclick="cariKata()"> <i class="fa fa-search"></i></button>
+>>>>>>> origin/master
                               </div>
-                           </form>
                         </div>
+						<div class="detail" style="background:white; padding:10px; display:none" id="notFound">
+							<p>Kata tidak ditemukan !</p>
+							<p>Tambah kata <b><a id="kata"></a></b> ke dalam <b>Pepak Semarangan</b> ? </p> <>
+						</div>
+						<div class="detail" style="background:white; padding:10px; display:none" id="hasil">
+							<p id="arti"></p>
+							<p id="deskripsi"></p>
+						</div>
                      </div>
 
                      <!--Fitur Comming Soon-->
@@ -687,3 +698,43 @@
             </div>
          </div>
       </section>
+	  <script type="text/javascript">
+	  function parseXml(str) {
+		  if (window.ActiveXObject) {
+			var doc = new ActiveXObject('Microsoft.XMLDOM');
+			doc.loadXML(str);
+			return doc;
+		  } else if (window.DOMParser) {
+			return (new DOMParser).parseFromString(str, 'text/xml');
+		  }
+		}
+
+	function cariKata() {
+			var kata=document.getElementById("kata_kunci").value;
+			$.post('<?php echo site_url('KelolaPepak/cari_kata/'); ?>'+kata, function(dataKata){
+			
+				var xml = parseXml(dataKata);
+				var getKata = xml.documentElement.getElementsByTagName("kata");
+				
+				if(getKata.length==0){
+				
+					document.getElementById("hasil").style.display = "none";
+					document.getElementById("notFound").style.display = "block";
+					document.getElementById("kata").innerHTML = kata;
+				}
+				else {
+				document.getElementById("notFound").style.display = "none";
+				document.getElementById("hasil").style.display = "block";
+				for (var i = 0; i < getKata.length; i++) {
+				  
+				  var jawa = getKata[i].getAttribute("jawa");
+				  var indonesia=getKata[i].getAttribute("indonesia");
+				  var deskripsi_jawa=getKata[i].getAttribute("deskripsi_jawa");
+				  
+				  document.getElementById("arti").innerHTML = "<b>"+jawa+"</b> yang berarti <b>"+indonesia+"</b>";
+				  document.getElementById("deskripsi").innerHTML = "<strong>"+deskripsi_jawa+"</strong>";
+				}
+				}
+			},"text");
+	}
+	  </script>

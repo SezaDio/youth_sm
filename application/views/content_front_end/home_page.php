@@ -653,13 +653,8 @@
                         </div>
                         <div class="search-widget">
                               <div class="form-group">
-<<<<<<< HEAD
-                                 <input placeholder="Goleki" name="search" class="form-control" type="text">
-                                 <a href="#"><button> <i class="fa fa-search"></i></button></a>
-=======
                                  <input placeholder="Goleki" name="search" class="form-control" type="text" id="kata_kunci">
                                  <button onclick="cariKata()"> <i class="fa fa-search"></i></button>
->>>>>>> origin/master
                               </div>
                         </div>
 						<div class="detail" style="background:white; padding:10px; display:none" id="notFound">

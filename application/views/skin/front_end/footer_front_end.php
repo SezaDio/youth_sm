@@ -1,4 +1,4 @@
-      <footer class="footer-2">
+<footer class="footer-2">
          <div class="footer-top">
             <div class="container">
                <div class="row">
@@ -22,7 +22,7 @@
                <div class="row">
                   <div class="col-md-12 col-sm-12 col-xs-12">
                      <div class="footer-footer-area">
-                        <div class="copyright"> <span>&copy; 2017 All rights reserved.  Designed By <a href="">Youth.SM</a></span> </div>
+                        <div class="copyright"><span>&copy; 2017 All rights reserved.  Designed By <a href="">Youth.SM</a></span></div>
                         <ul>
                            <li><a href="#">Home </a></li>
                            <li><a href="#">About Us</a></li>
@@ -88,7 +88,6 @@
       <script src="<?php echo base_url('asset/js/jquery.magnific-popup.min.js'); ?>" type="text/javascript"></script>
 
       <!-- Template Custom Js --> 
-      <script src="<?php echo base_url('asset/js/custom.js'); ?>" type="text/javascript"></script>
-
+      <script src="<?php echo base_url('asset/js/custom.js'); ?>" type="text/javascript"></script> 
    </body>
 </html>

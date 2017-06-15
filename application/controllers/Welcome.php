@@ -13,10 +13,12 @@ class Welcome extends CI_Controller {
 		$this->load->library('session');
 
 	}
-
+	
 	public function index()
 	{
 		$this->load->helper('url');
-		$this->load->view('skin/front_end/welcome');
+		$this->load->model('youth_models/YouthModels');
+		$data['listSlider'] = $this->YouthModels->get_data_slider();
+		$this->load->view('skin/front_end/welcome',$data);
 	}
 }

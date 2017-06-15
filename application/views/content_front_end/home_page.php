@@ -9,10 +9,9 @@
                               <div class="grid-item">
                                  <div> 
                                     <ul class="rslides" id="slider1">
-                                      <li><img alt="" src="<?php echo base_url('asset/img/anforcom.jpg'); ?>"></li>
-                                      <li class="post-thumb thumb"><img alt="" src="<?php echo base_url('asset/img/anforcom.jpg'); ?>"></li>
-                                      <li><img alt="" src="<?php echo base_url('asset/img/anforcom.jpg'); ?>"></li>
-                                      <li class="post-thumb thumb"><img alt="" src="<?php echo base_url('asset/img/anforcom.jpg'); ?>"></li>
+									  <?php foreach($listSlider as $item){ ?>
+                                      <li class="thumb"><img alt="" src="<?php echo base_url('asset/upload_img_slider/'.$item['path_gambar']); ?>"></li>
+									  <?php } ?>
                                     </ul> 
                                  </div>
                               </div>

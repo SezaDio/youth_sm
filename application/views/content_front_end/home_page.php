@@ -105,7 +105,7 @@
                   <div class="section">
                      <div class="col-md-12 col-xs-12 col-sm-12 nopadding">
                         <div class="heading colored">
-                           <h2 class="main-heading">Whats News</h2>
+                           <h2 class="main-heading"><strong>Whats News</strong></h2>
                            <span class="heading-ping"></span>
                            <span class="heading-read-more">
                            <a href="#" class="btn btn-black">See all</a>
@@ -252,7 +252,7 @@
                   <div class="section">
                      <div class="col-md-12 col-xs-12 col-sm-12 nopadding">
                         <div class="heading colored">
-                           <h2 class="main-heading">Topik Karepmu</h2>
+                           <h2 class="main-heading"><Strong>Topik Karepmu</Strong></h2>
                            <span class="heading-ping"></span>
                            <span class="heading-read-more">
                            <a href="#" class="btn btn-black">See all</a>
@@ -360,7 +360,7 @@
                   <div class="section">
                      <div class="col-md-12 col-xs-12 col-sm-12 nopadding">
                         <div class="heading colored">
-                           <h2 class="main-heading">Shopping</h2>
+                           <h2 class="main-heading"><Strong>Shopping</Strong></h2>
                            <span class="heading-ping"></span>
                            <span class="heading-read-more">
                            <a href="#" class="btn btn-black">See all</a>
@@ -540,17 +540,176 @@
                                        </div>
                                     </div>
                                  </div>
-                              
                            </div>
                         </div>
                      </div>
                   </div>
-
                </div>
 
+               <!--Fitur Wow Fact-->
                <div class="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                     
+                     <div class="widget widget-bg ">
+                        <div class="heading">
+                           <h2 class="main-heading"><strong>Wow Fact</strong></h2>
+                           <span class="heading-ping"></span>
+                        </div>
+                        <div class="featured-post-slider-single-post owl-carousel owl-theme" style="margin-top: -10px;">
+                           <div class="item">
+                              <div class="latest-news-grid grid-1">
+                                 <div class="picture">
+                                    <div class="category-image">
+                                       <a href="standard-post.html">
+                                       <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/19.jpg'); ?>">
+                                       </a>
+                                       <div class="catname">
+                                          <a class="btn btn-maroon" href="#">
+                                             <div>Sports</div>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="detail">
+                                    <div class="caption" style="text-align: center;">
+                                       <h5>
+                                          <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+                                       </h5>
+                                    </div>
+                                    <p style="text-align: center; font-size: inherit;">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud exercitation .
+                                    </p><br>
+                                    <div class="col-md-12" style="text-align: center;">
+                                       <a href="" class="btn btn-colored-blog"> Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="latest-news-grid grid-1">
+                                 <div class="picture">
+                                    <div class="category-image">
+                                       <a href="standard-post.html">
+                                       <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/19.jpg'); ?>">
+                                       </a>
+                                       <div class="catname">
+                                          <a class="btn btn-green" href="#">
+                                             <div>Travel</div>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="detail">
+                                    <div class="caption" style="text-align: center;">
+                                       <h5>
+                                          <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+                                       </h5>
+                                    </div>
+                                    <p style="text-align: center; font-size: inherit;">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud exercitation .
+                                    </p><br>
+                                    <div class="col-md-12" style="text-align: center;">
+                                       <a href="" class="btn btn-colored-blog"> Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="latest-news-grid grid-1">
+                                 <div class="picture">
+                                    <div class="category-image">
+                                       <a href="standard-post.html">
+                                       <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/19.jpg'); ?>">
+                                       </a>
+                                       <div class="catname">
+                                          <a class="btn btn-maroon" href="#">
+                                             <div>Sports</div>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="detail">
+                                    <div class="caption" style="text-align: center;">
+                                       <h5>
+                                          <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+                                       </h5>
+                                    </div>
+                                    <p style="text-align: center; font-size: inherit;">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud exercitation .
+                                    </p><br>
+                                    <div class="col-md-12" style="text-align: center;">
+                                       <a href="" class="btn btn-colored-blog"> Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="latest-news-grid grid-1">
+                                 <div class="picture">
+                                    <div class="category-image">
+                                       <a href="standard-post.html">
+                                       <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/19.jpg'); ?>">
+                                       </a>
+                                       <div class="catname">
+                                          <a class="btn btn-lightblue" href="#">
+                                             <div>technology</div>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="detail">
+                                    <div class="caption" style="text-align: center;">
+                                       <h5>
+                                          <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+                                       </h5>
+                                    </div>
+                                    <p style="text-align: center; font-size: inherit;">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud exercitation .
+                                    </p><br>
+                                    <div class="col-md-12" style="text-align: center;">
+                                       <a href="" class="btn btn-colored-blog"> Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!--Fitur Search Pepak-->
+                     <div class="widget widget-bg">
+                        <div class="heading">
+                           <h2 class="main-heading"><Strong>Pepak Semarangan</Strong></h2>
+                           <span class="heading-ping"></span> 
+                        </div>
+                        <div class="search-widget">
+                           <form>
+                              <div class="form-group">
+                                 <input placeholder="Goleki" name="search" class="form-control" type="text">
+                                 <button> <i class="fa fa-search"></i></button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+
+                     <!--Fitur Comming Soon-->
+                     <div class="widget widget-bg">
+                        <div class="heading">
+                           <h2 class="main-heading"><strong>Comming Soon</strong></h2>
+                           <span class="heading-ping"></span>
+                        </div>
+                        <div class="ad-div style-box">
+                           <a href="#">
+                              <img src="<?php echo base_url('asset/img/anforcom2.jpg'); ?>" class="img-responsive " alt="">
+                           </a>
+                        </div>
+                        <div class="detail">
+                           <div class="caption" style="text-align: center;">
+                              <h5>
+                                 <a href="#"><strong>Judul</strong></a>
+                              </h5>
+                           </div>
+                           <p style="text-align: center;">by <strong> Seza </strong> / on <strong> March 10, 2017</strong></p>
+                        </div>
+                     </div>
                   </aside>
                </div>
 

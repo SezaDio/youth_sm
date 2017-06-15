@@ -367,179 +367,150 @@
                            </span>
                         </div>
                      </div>
-                     <div class="container full-with-slider-section">
+                     <div class="container">
                         <div class="row">
-                           <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-2">
-                              
-                                 <div class="full-with-slider owl-carousel owl-theme">
-                                    <div class="item">
-                                       <div class="post-content">
-                                          <div class="catname">
-                                             <a class="btn btn-purple" href="">
-                                                <div>Photography</div>
-                                             </a>
+                           <div class="col-md-8 col-sm-8 col-xs-12">
+                              <div id="owl-demo" class="owl-carousel owl-theme">
+                                 <!-- Samsung Note 4 -->
+                                  <div class="item" style="padding: 10px;">
+                                    <div class="post-content">
+                                       <img src="<?php echo base_url('asset/img/slide-25.jpg'); ?>"/>
+                                       <div style="text-align: center;">
+                                          <h4> <a href="#"><strong>Emotions Behind the Photos...</strong></a> </h4>
+                                          <div class="product-pic-info-price-cart">
+                                             <div class="product-pic-info-price">
+                                                <span>Rp 5000000</span>
+                                                
+                                             </div>
+                                             <div class="product-pic-info-cart">
+                                                <a class="p-btn" href="#">Lihat Produk</a>
+                                             </div>
+                                             <div class="clearfix"> </div>
                                           </div>
-                                          <h5> <a href="#"> Emotions Behind the Photos...</a> </h5>
-                                          <ul class="post-tools">
-                                             <li> By <a href=""><strong> Umair</strong></a> </li>
-                                             <li>  March 10, 2017 </li>
-                                             <li> <a href=""><i class="ti-thought"></i> 23</a> </li>
-                                          </ul>
-                                       </div>
-                                       <div class="post-thumb"> 
-                                          <img alt="" src="<?php echo base_url('asset/img/slide-25.jpg'); ?>" class="img-responsive">
-                                       </div>
-                                       <div class="hover-show-div hidden-xs">
-                                          <a href="" class="post-type">
-                                          <i class="ti-quote-left"></i>
-                                          </a>
                                        </div>
                                     </div>
-                                    <div class="item">
-                                       <div class="post-content">
-                                          <div class="catname">
-                                             <a class="btn btn-red" href="#">
-                                                <div>Fashion</div>
-                                             </a>
+                                  </div>
+
+                                  <!-- Samsung Note 4 -->
+                                  <div class="item" style="padding: 10px;">
+                                    <div class="post-content">
+                                       <img src="<?php echo base_url('asset/img/slide-25.jpg'); ?>"/>
+                                       <div style="text-align: center;">
+                                          <h4> <a href="#"><strong>Emotions Behind the Photos...</strong></a> </h4>
+                                          <div class="product-pic-info-price-cart">
+                                             <div class="product-pic-info-price">
+                                                <span>Rp 5000000</span>
+                                                
+                                             </div>
+                                             <div class="product-pic-info-cart">
+                                                <a class="p-btn" href="#">Lihat Produk</a>
+                                             </div>
+                                             <div class="clearfix"> </div>
                                           </div>
-                                          <h5> <a href="#">Attractive Photography in openly</a> </h5>
-                                          <ul class="post-tools">
-                                             <li> By <a href=""><strong> Admin</strong></a> </li>
-                                             <li> April 10, 2017 </li>
-                                             <li> <a href=""><i class="ti-thought"></i> 56</a> </li>
-                                          </ul>
-                                       </div>
-                                       <div class="post-thumb"> 
-                                          <img alt="" src="<?php echo base_url('asset/img/slide-25.jpg'); ?>" class="img-responsive">
-                                       </div>
-                                       <div class="hover-show-div hidden-xs">
-                                          <a href="" class="post-type">
-                                          <i class="ti-video-camera"></i>
-                                          </a>
                                        </div>
                                     </div>
-                                    <div class="item">
-                                       <div class="post-content">
-                                          <div class="catname">
-                                             <a class="btn btn-gray" href="#">
-                                                <div>Food and Health</div>
-                                             </a>
+                                  </div>
+
+                                  <!-- Samsung Note 4 -->
+                                  <div class="item" style="padding: 10px;">
+                                    <div class="post-content">
+                                       <img src="<?php echo base_url('asset/img/slide-25.jpg'); ?>"/>
+                                       <div style="text-align: center;">
+                                          <h4> <a href="#"><strong>Emotions Behind the Photos...</strong></a> </h4>
+                                          <div class="product-pic-info-price-cart">
+                                             <div class="product-pic-info-price">
+                                                <span>Rp 5000000</span>
+                                                
+                                             </div>
+                                             <div class="product-pic-info-cart">
+                                                <a class="p-btn" href="#">Lihat Produk</a>
+                                             </div>
+                                             <div class="clearfix"> </div>
                                           </div>
-                                          <h5> <a href="#">Will Make a History in Food industry</a> </h5>
-                                          <ul class="post-tools">
-                                             <li> By <a href=""><strong> Arslan Ch</strong></a> </li>
-                                             <li>  January 10, 2017 </li>
-                                             <li> <a href=""><i class="ti-thought"></i> 57</a> </li>
-                                          </ul>
-                                       </div>
-                                       <div class="post-thumb"> 
-                                          <img alt="" src="<?php echo base_url('asset/img/slide-25.jpg'); ?>" class="img-responsive">
-                                       </div>
-                                       <div class="hover-show-div hidden-xs">
-                                          <a href="" class="post-type">
-                                          <i class="ti-image"></i>
-                                          </a>
                                        </div>
                                     </div>
-                                    <div class="item">
-                                       <div class="post-content">
-                                          <div class="catname">
-                                             <a class="btn btn-pink" href="#">
-                                                <div>Life Style</div>
-                                             </a>
+                                  </div>
+
+                                  <!-- Samsung Note 4 -->
+                                  <div class="item" style="padding: 10px;">
+                                    <div class="post-content">
+                                       <img src="<?php echo base_url('asset/img/slide-25.jpg'); ?>"/>
+                                       <div style="text-align: center;">
+                                          <h4> <a href="#"><strong>Emotions Behind the Photos...</strong></a> </h4>
+                                          <div class="product-pic-info-price-cart">
+                                             <div class="product-pic-info-price">
+                                                <span>Rp 5000000</span>
+                                                
+                                             </div>
+                                             <div class="product-pic-info-cart">
+                                                <a class="p-btn" href="#">Lihat Produk</a>
+                                             </div>
+                                             <div class="clearfix"> </div>
                                           </div>
-                                          <h5> <a href="#">Trends of Fashion in 2017</a> </h5>
-                                          <ul class="post-tools">
-                                             <li> by <a href=""> <strong> John Doe</strong></a> </li>
-                                             <li>  May 10, 2017 </li>
-                                             <li> <a href=""><i class="ti-thought"></i> 99 </a></li>
-                                          </ul>
-                                       </div>
-                                       <div class="post-thumb"> 
-                                          <img alt="" src="<?php echo base_url('asset/img/slide-25.jpg'); ?>" class="img-responsive">
-                                       </div>
-                                       <div class="hover-show-div hidden-xs">
-                                          <a href="" class="post-type">
-                                          <i class="ti-video-camera"></i>
-                                          </a>
                                        </div>
                                     </div>
-                                    <div class="item">
-                                       <div class="post-content">
-                                          <div class="catname">
-                                             <a class="btn btn-red" href="#">
-                                                <div>Fashion</div>
-                                             </a>
+                                  </div>
+
+                                  <!-- Samsung Note 4 -->
+                                  <div class="item" style="padding: 10px;">
+                                    <div class="post-content">
+                                       <img src="<?php echo base_url('asset/img/slide-25.jpg'); ?>"/>
+                                       <div style="text-align: center;">
+                                          <h4> <a href="#"><strong>Emotions Behind the Photos...</strong></a> </h4>
+                                          <div class="product-pic-info-price-cart">
+                                             <div class="product-pic-info-price">
+                                                <span>Rp 5000000</span>
+                                                
+                                             </div>
+                                             <div class="product-pic-info-cart">
+                                                <a class="p-btn" href="#">Lihat Produk</a>
+                                             </div>
+                                             <div class="clearfix"> </div>
                                           </div>
-                                          <h5> <a href="#">Losing the Scarf Helped Me Let Go of the Marriage</a> </h5>
-                                          <ul class="post-tools">
-                                             <li> By <a href=""><strong> Arslan Ch</strong></a> </li>
-                                             <li>  May 22, 2017 </li>
-                                             <li> <a href=""><i class="ti-thought"></i> 99</a> </li>
-                                          </ul>
-                                       </div>
-                                       <div class="post-thumb"> 
-                                          <img alt="" src="<?php echo base_url('asset/img/slide-25.jpg'); ?>" class="img-responsive">
-                                       </div>
-                                       <div class="hover-show-div hidden-xs">
-                                          <a href="" class="post-type">
-                                          <i class="ti-music-alt"></i>
-                                          </a>
                                        </div>
                                     </div>
-                                    <div class="item">
-                                       <div class="post-content">
-                                          <div class="catname">
-                                             <a class="btn btn-purple" href="#">
-                                                <div>photography</div>
-                                             </a>
-                                             <a class="btn btn-red" href="#">
-                                                <div>Fashion</div>
-                                             </a>
+                                  </div>
+
+                                  <!-- Samsung Note 4 -->
+                                  <div class="item" style="padding: 10px;">
+                                    <div class="post-content">
+                                       <img src="<?php echo base_url('asset/img/slide-25.jpg'); ?>"/>
+                                       <div style="text-align: center;">
+                                          <h4> <a href="#"><strong>Emotions Behind the Photos...</strong></a> </h4>
+                                          <div class="product-pic-info-price-cart">
+                                             <div class="product-pic-info-price">
+                                                <span>Rp 5000000</span>
+                                                
+                                             </div>
+                                             <div class="product-pic-info-cart">
+                                                <a class="p-btn" href="#">Lihat Produk</a>
+                                             </div>
+                                             <div class="clearfix"> </div>
                                           </div>
-                                          <h5> <a href="#">Attractive Photography in openly</a> </h5>
-                                          <ul class="post-tools">
-                                             <li> By <a href=""><strong> Arslan Ch</strong></a> </li>
-                                             <li>  June 10, 2017 </li>
-                                             <li> <a href=""><i class="ti-thought"></i> 36</a> </li>
-                                          </ul>
-                                       </div>
-                                       <div class="post-thumb"> 
-                                          <img alt="" src="<?php echo base_url('asset/img/slide-25.jpg'); ?>" class="img-responsive">
-                                       </div>
-                                       <div class="hover-show-div hidden-xs">
-                                          <a href="" class="post-type">
-                                          <i class="ti-image"></i>
-                                          </a>
                                        </div>
                                     </div>
-                                    <div class="item">
-                                       <div class="post-content">
-                                          <div class="catname">
-                                             <a class="btn btn-red" href="#">
-                                                <div>fashion</div>
-                                             </a>
-                                             <a class="btn btn-pink" href="#">
-                                                <div>Life Style</div>
-                                             </a>
+                                  </div>
+
+                                  <!-- Samsung Note 4 -->
+                                  <div class="item" style="padding: 10px;">
+                                    <div class="post-content">
+                                       <img src="<?php echo base_url('asset/img/slide-25.jpg'); ?>"/>
+                                       <div style="text-align: center;">
+                                          <h4> <a href="#"><strong>Emotions Behind the Photos...</strong></a> </h4>
+                                          <div class="product-pic-info-price-cart">
+                                             <div class="product-pic-info-price">
+                                                <span>Rp 5000000</span>
+                                                
+                                             </div>
+                                             <div class="product-pic-info-cart">
+                                                <a class="p-btn" href="#">Lihat Produk</a>
+                                             </div>
+                                             <div class="clearfix"> </div>
                                           </div>
-                                          <h5> <a href="#">Natural Beauty Perfection in Photography</a> </h5>
-                                          <ul class="post-tools">
-                                             <li> By <a href=""><strong> Admin</strong></a></li>
-                                             <li>  April 10, 2015 </li>
-                                             <li> <a href=""><i class="ti-thought"></i> 103</a> </li>
-                                          </ul>
-                                       </div>
-                                        <div class="post-thumb"> 
-                                          <img alt="" src="<?php echo base_url('asset/img/slide-25.jpg'); ?>" class="img-responsive">
-                                       </div>
-                                       <div class="hover-show-div hidden-xs">
-                                          <a href="" class="post-type">
-                                          <i class="ti-music-alt"></i>
-                                          </a>
                                        </div>
                                     </div>
-                                 </div>
+                                  </div>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -684,7 +655,7 @@
                            <form>
                               <div class="form-group">
                                  <input placeholder="Goleki" name="search" class="form-control" type="text">
-                                 <button> <i class="fa fa-search"></i></button>
+                                 <a href="#"><button> <i class="fa fa-search"></i></button></a>
                               </div>
                            </form>
                         </div>

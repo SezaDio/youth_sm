@@ -69,6 +69,7 @@
             });
             
             $("#form-login").validate();
+
          });
       </script>
 
@@ -83,6 +84,18 @@
       <script src="<?php echo base_url('asset/js/owl.carousel.min.js'); ?>" type="text/javascript"></script> 
       <script src="<?php echo base_url('asset/js/breakingNews.js'); ?>" type="text/javascript"></script>
       <script src="<?php echo base_url('asset/js/theia-sticky-sidebar.js'); ?>" type="text/javascript"></script>
+      <script>
+          $(document).ready(function() {
+            $("#owl-demo").owlCarousel({
+              items : 3,
+              lazyLoad : true,
+              autoPlay : true,
+              navigation : true,
+              navigationText :  false,
+              pagination : false,
+            });
+          });
+      </script>
 
       <!-- Gallery Magnify  -->
       <script src="<?php echo base_url('asset/js/jquery.magnific-popup.min.js'); ?>" type="text/javascript"></script>

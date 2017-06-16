@@ -88,8 +88,10 @@
           $(document).ready(function() {
             $("#owl-demo").owlCarousel({
               items : 3,
+              loop : true,
+              autoplay : true,
               lazyLoad : true,
-              autoPlay : true,
+              autoplayTimeout:3000,
               navigation : true,
               navigationText :  false,
               pagination : false,

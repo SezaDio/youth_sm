@@ -695,12 +695,99 @@
                            <p style="text-align: center;">by <strong> Seza </strong> / on <strong> March 10, 2017</strong></p>
                         </div>
                      </div>
+
+                     <!--Fitur Update Instagram-->
+                     <div class="widget widget-bg">
+                        <div class="heading">
+                           <h2 class="main-heading"><Strong>Update</Strong></h2>
+                           <span class="heading-ping"></span> 
+                        </div>
+                        <div class="col-md-12">
+                           <div class="insta-gallery">
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 100px;"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 100px;"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 100px;"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
                   </aside>
                </div>
 
             </div>
          </div>
       </section>
+
+      <!--Fitur Ranking Point Member-->
+      <section class="photo-gallery-section">
+         <div class="col-md-1"></div>
+         
+            <div class="col-sm-3">
+               <hr class="omb_hrOr" style="border-top-width: 2px; border-color: steelblue;">
+            </div>
+             <div class="col-sm-4">
+               <div class="heading colored" style="background-color: white;">
+                  <h5 class="main-heading" style="float: unset; text-align: center; border-color: steelblue; color: steelblue;border-radius: 10px;">
+                     <Strong>Hyperactive Member</Strong>
+                  </h5>
+               </div>
+            </div>
+             <div class="col-sm-3">
+               <hr class="omb_hrOr" style="border-top-width: 2px; border-color: steelblue;">
+            </div>
+         
+         <div class="col-md-1"></div>
+         <div class="container-flude">
+            <div class="row">
+               <div class="col-md-12 col-xs-12 col-sm-12" style="padding-bottom: 20px;">
+                  <div class="col-sm-1"></div>   
+                  <div class="item col-md-2">
+                     <a href="<?php echo base_url('asset/img/1.jpg'); ?>" class="tt-lightbox"> 
+                        <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+                     </a>
+                  </div>
+                  <div class="item col-md-2">
+                     <a href="<?php echo base_url('asset/img/1.jpg'); ?>" class="tt-lightbox"> 
+                        <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+                     </a>
+                  </div>
+                  <div class="item col-md-2">
+                     <a href="<?php echo base_url('asset/img/1.jpg'); ?>" class="tt-lightbox"> 
+                        <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+                     </a>
+                  </div>
+                  <div class="item col-md-2">
+                     <a href="<?php echo base_url('asset/img/1.jpg'); ?>" class="tt-lightbox"> 
+                        <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+                     </a>
+                  </div>
+                  <div class="item col-md-2">
+                     <a href="<?php echo base_url('asset/img/1.jpg'); ?>" class="tt-lightbox"> 
+                        <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+                     </a>
+                  </div>
+                  <div class="col-sm-1"></div>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+
+
 	  <script type="text/javascript">
 	  function parseXml(str) {
 		  if (window.ActiveXObject) {

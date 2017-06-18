@@ -16,7 +16,9 @@ class FrontControl_Wow extends CI_Controller {
 
    public function index()
    {
-      $this->load->view('skin/front_end/header_menu_front_end');
+      $select=3;
+
+      $this->load->view('skin/front_end/header_menu_front_end', $select);
       $this->load->view('content_front_end/wow_page');
       $this->load->view('skin/front_end/footer_front_end');
    }

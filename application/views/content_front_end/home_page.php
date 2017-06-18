@@ -659,11 +659,19 @@
                         </div>
 						<div class="detail" style="background:white; padding:10px; display:none" id="notFound">
 							<p>Kata tidak ditemukan !</p>
-							<p>Tambah kata <b><a id="kata"></a></b> ke dalam <b>Pepak Semarangan</b> ? </p> <>
+							<p>Tambah kata <b><a id="kata"></a></b> ke dalam <b>Pepak Semarangan</b> ? </p>
+							<a onclick="tambah()"><strong>Ya</strong></a>
 						</div>
 						<div class="detail" style="background:white; padding:10px; display:none" id="hasil">
 							<p id="arti"></p>
-							<p id="deskripsi"></p>
+							<p id="deskripsikata"></p>
+						</div>
+						<div class="detail" style="background:white; padding:10px; display:none" id="tambah">
+							<p>Tambahkan kata <b><a id="katatambah"></a></b></p><br/>
+								<input placeholder="Jawa" name="jawa" class="form-control" type="text" id="jawa2"><br/>
+								<input placeholder="Indonesia" name="indonesia" class="form-control" type="text" id="indonesia2"><br/>
+								<textarea placeholder="Deskripsi Kata" class="form-control" id="deskripsi2"></textarea>
+								<button onclick="tambah_pepak()"><i class="glyphicon glyphicon-save" ></i> Tambah</button>
 						</div>
                      </div>
 
@@ -727,9 +735,41 @@
 				  var deskripsi_jawa=getKata[i].getAttribute("deskripsi_jawa");
 				  
 				  document.getElementById("arti").innerHTML = "<b>"+jawa+"</b> yang berarti <b>"+indonesia+"</b>";
-				  document.getElementById("deskripsi").innerHTML = "<strong>"+deskripsi_jawa+"</strong>";
+				  document.getElementById("deskripsikata").innerHTML = "<strong>"+deskripsi_jawa+"</strong>";
 				}
 				}
 			},"text");
 	}
-	  </script>
+	
+	function tambah(){
+		var kata=document.getElementById("kata_kunci").value;
+		alert(kata);
+		document.getElementById("hasil").style.display = "none";
+		document.getElementById("notFound").style.display = "none";
+		document.getElementById("tambah").style.display = "block";
+		document.getElementById("katatambah").innerHTML = kata;
+	}
+	
+	function tambah_pepak()
+	{
+		var jawa=document.getElementById("jawa2").value;
+		var indonesia=document.getElementById("indoensia2").value;
+		var deskripsi=document.getElementById("deskripsi2").value;
+		alert(jawa,indonesia,deskripsi);
+			$.ajax({
+				url: 'Welcome/tambah_pepak',
+				type: 'POST',
+				data: {jawa:jawa,indonesia:indonesia,deskripsi:deskripsi},
+				success: function(){
+							alert('Pepak berhasil ditambahkan');
+							location.reload();
+						},
+				error: function(){
+							alert('Pepak gagal ditambahkan');
+						}
+			});
+		
+		
+	}
+	
+</script>

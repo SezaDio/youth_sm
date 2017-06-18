@@ -21,4 +21,16 @@ class Welcome extends CI_Controller {
 		$data['listSlider'] = $this->YouthModels->get_data_slider();
 		$this->load->view('skin/front_end/welcome',$data);
 	}
+	
+	public function tambah_pepak()//$id_produk
+	{
+		$data_pepak=array(
+			'jawa'=>$_POST['jawa'],
+			'indonesia'=>$_POST['indonesia'],
+			'deskripsi_jawa'=>$_POST['deskripsi'],
+			'status'=>2
+		);
+		$this->db->insert('pepak', $data_pepak);
+
+	}
 }

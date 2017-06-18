@@ -109,17 +109,6 @@
          </div>
       </section>
 
-      <!--Big Logo-->
-      <section class="logo-row logo-center">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12 col-sm-12 col-xs-12">
-                  <div class="logo"> <a href="#"><img alt="" src="<?php echo base_url('asset/img/logo1.png'); ?>"></a> </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
       <!--Navigation Bar-->
       <section class="menu-container-section">
          <nav id="menu-3" class="megaMenu">
@@ -148,7 +137,7 @@
 
                      <!--Menu Wong Kongkow Home-->
                      <li class="active">
-                        <a href="<?php echo site_url('FrontControl_Home'); ?>">
+                        <a href="javascript:void (0)">
                            <span class="text">  Home </span>
                         </a>
                      </li>
@@ -589,7 +578,7 @@
 
                      <!--Menu Wong Kongkow Wow-->
                      <li>
-                        <a href="<?php echo site_url('FrontControl_Wow/index'); ?>"><span class="text">  Wow </span> </a>
+                        <a href="blog-grids.html"><span class="text">  Wow </span> </a>
                      </li>
 
                      <!--Menu Wong Kongkow Shopping-->

@@ -682,7 +682,7 @@
                            <span class="heading-ping"></span>
                         </div>
                         <div class="ad-div style-box">
-                           <a href="#">
+                           <a href="<?php echo base_url('asset/img/anforcom2.jpg'); ?>" class="tt-lightbox">
                               <img src="<?php echo base_url('asset/img/anforcom2.jpg'); ?>" class="img-responsive " alt="">
                            </a>
                         </div>
@@ -702,21 +702,33 @@
                            <h2 class="main-heading"><Strong>Update</Strong></h2>
                            <span class="heading-ping"></span> 
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12" style="text-align: center;">
                            <div class="insta-gallery">
-                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 100px;"> 
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
                                  <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
                               </a>
-                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 100px;"> 
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
                                  <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
                               </a>
-                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 100px;"> 
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
                                  <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
                               </a>
-                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox"> 
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
                                  <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
                               </a>
-                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox"> 
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
+                                 <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
+                              </a>
+                              <a href="<?php echo base_url('asset/img/12.jpg'); ?>" class="tt-lightbox" style="width: 90px;"> 
                                  <img class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/12.jpg'); ?>">
                               </a>
                            </div>

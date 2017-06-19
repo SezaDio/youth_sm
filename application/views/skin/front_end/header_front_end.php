@@ -148,7 +148,7 @@
 
                      <!--Menu Wong Kongkow Home-->
                      <li class="active">
-                        <a href="<?php echo site_url('FrontControl_Home'); ?>">
+                        <a href="<?php echo base_url(''); ?>">
                            <span class="text">  Home </span>
                         </a>
                      </li>

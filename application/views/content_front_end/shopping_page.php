@@ -1,5 +1,5 @@
 	  <!-- Color Switcher -->
-      <div class="color-switcher" id="choose_color"> <a href="#." class="picker_close"><i class="fa fa-angle-right"></i></a>
+      <div class="color-switcher" id="choose_color" style="width:300px;"> <a href="#." class="picker_close"><i class="fa fa-angle-right"></i></a>
         <h5>Kategori</h5>
         <div class="col-md-12">
         	<div class="span4" style="font-size: small;">

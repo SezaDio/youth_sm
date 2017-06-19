@@ -220,6 +220,28 @@
                      </div>
                   </div>
                </div>
+
+               <div class="pagination-holder">
+                  <nav>
+                     <ul class="pagination">
+                        <li>
+                           <a aria-label="Previous" href=" #"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a>
+                        </li>
+                        <li class="active">
+                           <a href=" #">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                           <a href=" #">2</a>
+                        </li>
+                        <li>
+                           <a href=" #">3</a>
+                        </li>
+                        <li>
+                           <a aria-label="Next" href=" #"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
             </div>
          </div>
       </section>

@@ -1,56 +1,56 @@
 	  <!-- Color Switcher -->
       <div class="color-switcher" id="choose_color"> <a href="#." class="picker_close"><i class="fa fa-angle-right"></i></a>
         <h5>Kategori</h5>
-        <div class="row-fluid">
-        	<div class="span4">
+        <div class="col-md-12">
+        	<div class="span4" style="font-size: small;">
 	            <ul>
 	                <li>
-	                    <a style="width: 205px;" href="#">Fashion Wanita</a>
+	                    <a style="width: 205px; height: 25px" href="#">Fashion Wanita</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Fashion Pria</a>
+	                    <a style="width: 205px; height: 25px" href="#">Fashion Pria</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Fashion Muslim</a>
+	                    <a style="width: 205px; height: 25px" href="#">Fashion Muslim</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Fashion Anak</a>
+	                    <a style="width: 205px; height: 25px" href="#">Fashion Anak</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Kecantikan</a>
+	                    <a style="width: 205px; height: 25px" href="#">Kecantikan</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Kesehatan</a>
+	                    <a style="width: 205px; height: 25px" href="#">Kesehatan</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Ibu & Bayi</a>
+	                    <a style="width: 205px; height: 25px" href="#">Ibu & Bayi</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Rumah Tangga</a>
+	                    <a style="width: 205px; height: 25px" href="#">Rumah Tangga</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Handphone & Tablet</a>
+	                    <a style="width: 205px; height: 25px" href="#">Handphone & Tablet</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Gaming</a>
+	                    <a style="width: 205px; height: 25px" href="#">Gaming</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Komputer & Aksesoris</a>
+	                    <a style="width: 205px; height: 25px" href="#">Komputer & Aksesoris</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Elektronik</a>
+	                    <a style="width: 205px; height: 25px" href="#">Elektronik</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Kamera, Foto & Video</a>
+	                    <a style="width: 205px; height: 25px" href="#">Kamera, Foto & Video</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Otomotif</a>
+	                    <a style="width: 205px; height: 25px" href="#">Otomotif</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Olahraga</a>
+	                    <a style="width: 205px; height: 25px" href="#">Olahraga</a>
 	                </li>
 	                <li>
-	                    <a style="width: 205px;" href="#">Film, Musik & Game</a>
+	                    <a style="width: 205px; height: 25px" href="#">Film, Musik & Game</a>
 	                </li>
 	            </ul>
 	        </div>

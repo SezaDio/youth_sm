@@ -180,9 +180,9 @@ class KelolaNews extends CI_Controller {
 						'kategori_news'=>$this->input->post('kategori'),
 						'isi_news'=>$this->input->post('deskripsi_news'),
 						'status'=>$edit,
-						'jenis_news'=>$jenis_berita,
+						'jenis_news'=>$jenis_berita
 						//'tanggal_posting'=>date("Y-m-d h:i:sa"),
-						'gambar_news'=> NULL
+						//'gambar_news'=> NULL
 					);
 					$data['dataNews'] = $data_news;
 			//value id_koridor berisi beberapa data, sehingga dilakukan split dengan explode

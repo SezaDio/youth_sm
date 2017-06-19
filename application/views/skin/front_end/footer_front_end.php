@@ -102,6 +102,9 @@
       <!-- Gallery Magnify  -->
       <script src="<?php echo base_url('asset/js/jquery.magnific-popup.min.js'); ?>" type="text/javascript"></script>
 
+      <!--Style Switcher -->
+      <script src="<?php echo base_url('asset/js/color-switcher.js'); ?>"></script>
+      
       <!-- Template Custom Js --> 
       <script src="<?php echo base_url('asset/js/custom.js'); ?>" type="text/javascript"></script> 
    </body>

@@ -589,27 +589,29 @@
 
                      <!--Menu Wong Kongkow Wow-->
                      <li>
-                        <a href="<?php echo site_url('FrontControl_Wow/index'); ?>"><span class="text">  Wow </span> </a>
+                        <a href="<?php echo base_url('FrontControl_Wow'); ?>">
+                           <span class="text">  Wow </span> 
+                        </a>
                      </li>
 
                      <!--Menu Wong Kongkow Shopping-->
                      <li>
-                        <a href="javascript:void (0)">
+                        <a href="<?php echo base_url('FrontControl_Shopping'); ?>">
                            <span class="text"> Shopping </span>
                         </a>
                      </li>
 
                      <!--Menu Wong Kongkow Comming Soon-->
                      <li>
-                        <a href="blog-grids.html">
+                        <a href="<?php echo base_url('FrontControl_CommingSoon'); ?>">
                         <span class="text"> Comming Soon</span>
                         </a>
                      </li>
 
                      <!--Menu Wong Kongkow Karepmu-->
                      <li>
-                        <a href="blog-grids.html">
-                        <span class="text"> Karepmu</span>
+                        <a href="#">
+                           <span class="text"> Karepmu</span>
                         </a>
                      </li>
 

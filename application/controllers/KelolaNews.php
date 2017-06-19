@@ -197,6 +197,7 @@ class KelolaNews extends CI_Controller {
 					{
 						//echo "Masuk";
 						$gbr = $this->upload->data();
+						$this->crop($gbr['full_path'],$gbr['file_name']);
 
 						$data_news['gambar_news'] = $gbr['file_name'];
 

@@ -290,6 +290,7 @@ class KelolaComing extends CI_Controller {
 					{
 						//echo "Masuk";
 						$gbr = $this->upload->data();
+						$this->crop($gbr['full_path'],$gbr['file_name']);
 						$data_coming['path_gambar'] = $gbr['file_name'];
 
 						

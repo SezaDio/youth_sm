@@ -852,7 +852,7 @@
 	function tambah_pepak()
 	{
 		var jawa=document.getElementById("jawa2").value;
-		var indonesia=document.getElementById("indoensia2").value;
+		var indonesia=document.getElementById("indonesia2").value;
 		var deskripsi=document.getElementById("deskripsi2").value;
 		alert(jawa,indonesia,deskripsi);
 			$.ajax({

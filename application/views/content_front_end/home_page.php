@@ -1,4 +1,5 @@
-      <section class="zerogrid-section">
+
+  <section class="zerogrid-section">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-12 col-xs-12 col-sm-12">
@@ -17,24 +18,27 @@
                               </div>
                            </div>
                         </div>
+						
                         <div class="col-1-4">
+						   <?php foreach($headNews->result() as $news){ ?>
                            <div class="wrap-col">
                               <div class="grid-item">
                                  <div class="post-content">
                                     <div class="catname">
                                        <a class="btn btn-green" href="#">
-                                          <div>Travel</div>
+                                          <div><?php echo $news->kategori_news?></div>
                                        </a>
                                     </div>
-                                    <h5> <a href="#">Attractive Photography in openly</a> </h5>
+                                    <h5> <a href="#"><?php echo $news->judul_news?></a> </h5>
                                     <ul class="post-tools">
-                                       <li>  Jan 10, 2017 </li>
+                                       <li>  <?php $splitTimeStamp = explode(" ",$news->waktu_posting); echo $splitTimeStamp[0]; ?> </li>
                                        <li> <a href=""><i class="ti-thought"></i> 49</a> </li>
                                     </ul>
                                  </div>
-                                 <div class="post-thumb thumb"> <img alt="" src="<?php echo base_url('asset/img/slide-11.jpg'); ?>"> </div>
+                                 <div class="post-thumb thumb"> <img alt="" src="<?php echo base_url('asset/upload_img_news/thumb_'.$news->gambar_news); ?>"> </div>
                               </div>
                            </div>
+						   <?php } ?> 
                            <div class="wrap-col">
                               <div class="grid-item">
                                  <div class="post-content">
@@ -54,23 +58,26 @@
                            </div>
                         </div>
                         <div class="col-1-4">
+						   <?php foreach($headComming->result() as $comming){ ?>
                            <div class="wrap-col">
                               <div class="grid-item">
                                  <div class="post-content">
                                     <div class="catname">
                                        <a class="btn btn-maroon" href="#">
-                                          <div>Sports</div>
+                                          <div><?php echo $comming->kategori_coming?></div>
                                        </a>
                                     </div>
-                                    <h5> <a href="#">Country wants to pay people to ...</a> </h5>
+                                    <h5> <a href="#"><?php echo $comming->nama_coming?></a> </h5>
                                     <ul class="post-tools">
-                                       <li>  Feb 19, 2016 </li>
+                                       <li>  <?php $splitTimeStamp = explode(" ",$comming->tanggal_posting); echo $splitTimeStamp[0]; ?> </li>
                                        <li> <a href=""><i class="ti-thought"></i> 67 </a></li>
                                     </ul>
                                  </div>
-                                 <div class="post-thumb thumb"> <img alt="" src="<?php echo base_url('asset/img/slide-16.jpg'); ?>"> </div>
+                                 <div class="post-thumb thumb"> <img alt="" src="<?php echo base_url('asset/upload_img_coming/thumb_'.$comming->path_gambar); ?>"> </div>
                               </div>
                            </div>
+							 <?php } ?>
+							 <?php foreach($headShopping->result() as $shopping){ ?>
                            <div class="wrap-col">
                               <div class="grid-item">
                                  <div class="post-content">
@@ -79,15 +86,16 @@
                                           <div>Food and Health</div>
                                        </a>
                                     </div>
-                                    <h5> <a href="#">sushi all of our cravings wrapped into ...</a> </h5>
+                                    <h5> <a href="#"><?php echo $shopping->nama_produk?></a> </h5>
                                     <ul class="post-tools">
-                                       <li>  April 20, 2017 </li>
+                                       <li>  <?php $splitTimeStamp = explode(" ",$shopping->tanggal_posting); echo $splitTimeStamp[0]; ?> </li>
                                        <li><a href=""> <i class="ti-thought"></i> 16</a> </li>
                                     </ul>
                                  </div>
-                                 <div class="post-thumb thumb"> <img alt="" src="<?php echo base_url('asset/img/slide-15.jpg'); ?>"> </div>
+                                 <div class="post-thumb thumb"> <img alt="" src="<?php echo base_url('asset/upload_img_shopping/thumb_'.$shopping->path_gambar); ?>"> </div>
                               </div>
                            </div>
+						   <?php } ?>
                         </div>
                      </div>
                   </div>
@@ -113,16 +121,17 @@
                         </div>
                      </div>
                      <div class="row">
+						<?php foreach($newsSM->result() as $SM){ ?>
                         <article class="col-md-6 col-sm-6 col-xs-12">
                            <div class="grid-1">
                               <div class="picture">
                                  <div class="category-image">
                                     <a href="standard-post.html">
-                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/40.jpg'); ?>">
+                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/upload_img_news/thumb_'.$SM->gambar_news); ?>">
                                     </a>
                                     <div class="catname">
                                        <a class="btn btn-green" href="#">
-                                          <div>Travel</div>
+                                          <div>SM</div>
                                        </a>
                                     </div>
                                     <div class="hover-show-div">
@@ -135,27 +144,29 @@
                               <div class="detail">
                                  <div class="caption">
                                     <h5>
-                                       <a href="standard-post.html">Computer issue for United Airlines in the U.S.</a>
+                                       <a href="standard-post.html"><?php echo $SM->judul_news;?></a>
                                     </h5>
                                  </div>
                                  <ul class="post-tools">
-                                    <li> by <a href=""> <strong> Arsoo</strong> </a></li>
+                                    <li> by <a href=""> <strong> <?php echo $SM->posted_by;?></strong> </a></li>
                                     <li>  5 Hours Ago </li>
                                     <li><a href=""> <i class="ti-thought"></i> 57</a> </li>
                                  </ul>
                               </div>
                            </div>
                         </article>
+						<?php } ?>
+						<?php foreach($newsRecommend->result() as $recommend){ ?>
                         <article class="col-md-6 col-sm-6 col-xs-12">
                            <div class="grid-1">
                               <div class="picture">
                                  <div class="category-image">
                                     <a href="standard-post.html">
-                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/41.jpg'); ?>">
+                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/upload_img_news/thumb_'.$recommend->gambar_news); ?>">
                                     </a>
                                     <div class="catname">
                                        <a class="btn btn-pink" href="#">
-                                          <div>Life Style</div>
+                                          <div>Recommended</div>
                                        </a>
                                     </div>
                                     <div class="hover-show-div">
@@ -168,27 +179,29 @@
                               <div class="detail">
                                  <div class="caption">
                                     <h5>
-                                       <a href="standard-post.html">Super Bowl battles a domain for being John</a>
+                                       <a href="standard-post.html"><?php echo $recommend->judul_news ?></a>
                                     </h5>
                                  </div>
                                  <ul class="post-tools">
-                                    <li> by <a href=""> <strong> Arsoo</strong> </a></li>
+                                    <li> by <a href=""> <strong> <?php echo $recommend->posted_by?></strong> </a></li>
                                     <li>  3 Hours ago </li>
                                     <li><a href=""> <i class="ti-thought"></i> 57</a> </li>
                                  </ul>
                               </div>
                            </div>
                         </article>
+						<?php } ?>
+						<?php foreach($newsYouther->result() as $youther){ ?>
                         <article class="col-md-6 col-sm-6 col-xs-12">
                            <div class="grid-1">
                               <div class="picture">
                                  <div class="category-image">
                                     <a href="standard-post.html">
-                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/42.jpg'); ?>">
+                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/43.jpg'); ?>">
                                     </a>
                                     <div class="catname">
                                        <a class="btn btn-lightblue" href="#">
-                                          <div>technology</div>
+                                          <div>Youther</div>
                                        </a>
                                     </div>
                                     <div class="hover-show-div">
@@ -201,17 +214,19 @@
                               <div class="detail">
                                  <div class="caption">
                                     <h5>
-                                       <a href="standard-post.html">Charity is buying a search engine for research papers</a>
+                                       <a href="standard-post.html"><?php echo $youther->judul_news ?></a>
                                     </h5>
                                  </div>
                                  <ul class="post-tools">
-                                    <li> by <a href=""> <strong> Arsoo</strong> </a></li>
+                                    <li> by <a href=""> <strong> <?php echo $youther->posted_by ?></strong> </a></li>
                                     <li>  5 mins Ago </li>
                                     <li><a href=""> <i class="ti-thought"></i> 57</a> </li>
                                  </ul>
                               </div>
                            </div>
                         </article>
+						<?php } ?>
+						<?php foreach($newsCommunity->result() as $community){ ?>
                         <article class="col-md-6 col-sm-6 col-xs-12">
                            <div class="grid-1">
                               <div class="picture">
@@ -221,7 +236,7 @@
                                     </a>
                                     <div class="catname">
                                        <a class="btn btn-maroon" href="#">
-                                          <div>Sports</div>
+                                          <div>Community</div>
                                        </a>
                                     </div>
                                     <div class="hover-show-div">
@@ -234,17 +249,18 @@
                               <div class="detail">
                                  <div class="caption">
                                     <h5>
-                                       <a href="standard-post.html">Footbal Player steps forward to lead the National Park</a>
+                                       <a href="standard-post.html"><?php echo $community->judul_news?></a>
                                     </h5>
                                  </div>
                                  <ul class="post-tools">
-                                    <li> by <a href=""> <strong> Arsoo</strong> </a></li>
+                                    <li> by <a href=""> <strong> <?php echo $community->posted_by?></strong> </a></li>
                                     <li>  1 Month Ago </li>
                                     <li><a href=""> <i class="ti-thought"></i> 57</a> </li>
                                  </ul>
                               </div>
                            </div>
                         </article>
+						<?php } ?>
                      </div>
                   </div>
 
@@ -842,7 +858,6 @@
 	
 	function tambah(){
 		var kata=document.getElementById("kata_kunci").value;
-		alert(kata);
 		document.getElementById("hasil").style.display = "none";
 		document.getElementById("notFound").style.display = "none";
 		document.getElementById("tambah").style.display = "block";
@@ -854,7 +869,6 @@
 		var jawa=document.getElementById("jawa2").value;
 		var indonesia=document.getElementById("indonesia2").value;
 		var deskripsi=document.getElementById("deskripsi2").value;
-		alert(jawa,indonesia,deskripsi);
 			$.ajax({
 				url: 'Welcome/tambah_pepak',
 				type: 'POST',

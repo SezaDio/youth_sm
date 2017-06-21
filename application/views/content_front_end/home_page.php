@@ -197,7 +197,7 @@
                               <div class="picture">
                                  <div class="category-image">
                                     <a href="standard-post.html">
-                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/43.jpg'); ?>">
+                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/upload_img_news/thumb_'.$youther->gambar_news); ?>">
                                     </a>
                                     <div class="catname">
                                        <a class="btn btn-lightblue" href="#">
@@ -232,7 +232,7 @@
                               <div class="picture">
                                  <div class="category-image">
                                     <a href="standard-post.html">
-                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/img/43.jpg'); ?>">
+                                    <img alt="" class="img-responsive" src="<?php echo base_url('asset/upload_img_news/thumb_'.$community->gambar_news); ?>">
                                     </a>
                                     <div class="catname">
                                        <a class="btn btn-maroon" href="#">

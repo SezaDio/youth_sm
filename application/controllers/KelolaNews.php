@@ -335,17 +335,48 @@ class KelolaNews extends CI_Controller {
     }
 	
 	function crop($img,$filename){
+		
 		$name = $img;
 		$myImage = imagecreatefromjpeg($name);
 		list($width, $height) = getimagesize($name);
-		//Create the zoom_out and cropped image
-		$myImageCrop =  imagecreatetruecolor(900, 550);
-		 
-		// Fill the two images
-		$b=imagecopyresampled($myImageCrop,$myImage,0,0,0,0 ,$width,$height,$width,$height);	
+		//get percent to resize to 900x550
+		if($width<=$height){
+			$percent = 900/$width;
+			$newwidth = $width * $percent;
+			$newheight = $height * $percent;
+			if($newheight<550){
+				$percent2 = 550/$newwidth;
+				$newwidth = $newwidth * $percent2;
+				$newheight = $newheight * $percent2;
+			}
+		} else {
+			$percent = 550/$height;
+			$newwidth = $width * $percent;
+			$newheight = $height * $percent;
+			if($newwidth<900){
+				$percent2 = 550/$newwidth;
+				$newwidth = $newwidth * $percent2;
+				$newheight = $newheight * $percent2;
+			}
+		}
+		
+		
+		// resize image
+		$thumb = imagecreatetruecolor($newwidth, $newheight);
+		imagecopyresized($thumb, $myImage, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
+		imagejpeg($thumb,"./asset/upload_img_news/resize_".$filename);
+		
+		// crop thumb
+		$imgThumb = './asset/upload_img_news/resize_'.$filename;
+		$myThumb = imagecreatefromjpeg($imgThumb);
+		list($width, $height) = getimagesize($imgThumb);
+		$myThumbCrop =  imagecreatetruecolor(900, 550);
+		imagecopyresampled($myThumbCrop,$myThumb,0,0,0,0 ,$width,$height,$width,$height);
+		unlink('./asset/upload_img_news/resize_'.$filename);
 		 
 		// Save the two images created
 		$fileName="thumb_".$filename;
-		imagejpeg( $myImageCrop,"./asset/upload_img_news/".$fileName );
+		imagejpeg( $myThumbCrop,"./asset/upload_img_news/".$fileName );
+		
 	}
 }

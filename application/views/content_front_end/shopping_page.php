@@ -58,6 +58,7 @@
         <div class="clr"> </div>
       </div>
 
+      <!--Banner Menu-->
 	  <section class="my-breadcrumb">
          <div class="container page-banner">
             <div class="row">
@@ -66,4 +67,143 @@
                </div>
             </div>
          </div>
+      </section>
+
+      <!--Fitur cari barang-->
+      <div class="container">
+        <div class="row">
+        	<div class="col-md-8">
+        	</div>
+
+		      <div class="widget widget-bg" style="background-color: white;">
+		        <div class="search-widget">
+	              <div class="form-group">
+	                 <input placeholder="Cari Barang" name="search" class="form-control" type="text" id="kata_kunci">
+	                 <a href="#"><button onclick="#"> <i class="fa fa-search"></i></button></a>
+	              </div>
+		        </div>
+		      </div>
+	     </div>
+	  </div>
+
+      <!--Main Content-->
+      <section class="main-content" style="padding-top: 0px">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-xs-12 col-sm-12" style="padding-bottom: 20px;">
+             
+                  <!--<div class="col-md-1"></div>-->
+                  <div class="item col-md-2" style="padding-bottom: 20px;">
+                  	<div style="padding: 10px; box-shadow: 0 1px 5px gray; height: 360px;">
+	                 	<div class="latest-news-grid grid-1">
+		                     <img style="height: 150px;" class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+		                     <div class="detail">
+		                        <div class="caption" style="text-align: center;">
+		                           <strong>
+		                              <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+		                           </strong>
+		                        </div>
+		                        <p style="text-align: center; font-size: inherit;">
+		                           Lorem ipsum dolor sit amet.
+		                        </p>
+		                     </div>
+	                  	</div>
+	                </div> 
+                  </div>
+                  
+                  <div class="item col-md-2" style="padding-bottom: 20px;">
+                  	<div style="padding: 10px; box-shadow: 0 1px 5px gray; height: 360px;">
+	                 	<div class="latest-news-grid grid-1">
+		                     <img style="height: 150px;" class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+		                     <div class="detail">
+		                        <div class="caption" style="text-align: center;">
+		                           <strong>
+		                              <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+		                           </strong>
+		                        </div>
+		                        <p style="text-align: center; font-size: inherit;">
+		                           Lorem ipsum dolor sit amet.
+		                        </p>
+		                     </div>
+	                  	</div>
+	                </div> 
+                  </div> 
+
+                  <div class="item col-md-2" style="padding-bottom: 20px;">
+                  	<div style="padding: 10px; box-shadow: 0 1px 5px gray; height: 360px;">
+	                 	<div class="latest-news-grid grid-1">
+		                     <img style="height: 150px;" class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+		                     <div class="detail">
+		                        <div class="caption" style="text-align: center;">
+		                           <strong>
+		                              <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+		                           </strong>
+		                        </div>
+		                        <p style="text-align: center; font-size: inherit;">
+		                           Lorem ipsum dolor sit amet.
+		                        </p>
+		                     </div>
+	                  	</div>
+	                </div> 
+                  </div>
+
+                  <div class="item col-md-2" style="padding-bottom: 20px;">
+                  	<div style="padding: 10px; box-shadow: 0 1px 5px gray; height: 360px;">
+	                 	<div class="latest-news-grid grid-1">
+		                     <img style="height: 150px;" class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+		                     <div class="detail">
+		                        <div class="caption" style="text-align: center;">
+		                           <strong>
+		                              <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+		                           </strong>
+		                        </div>
+		                        <p style="text-align: center; font-size: inherit;">
+		                           Lorem ipsum dolor sit amet.
+		                        </p>
+		                     </div>
+	                  	</div>
+	                </div> 
+                  </div>
+
+                  <div class="item col-md-2" style="padding-bottom: 20px;">
+                  	<div style="padding: 10px; box-shadow: 0 1px 5px gray; height: 360px;">
+	                 	<div class="latest-news-grid grid-1">
+		                     <img style="height: 150px;" class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+		                     <div class="detail">
+		                        <div class="caption" style="text-align: center;">
+		                           <strong>
+		                              <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+		                           </strong>
+		                        </div>
+		                        <p style="text-align: center; font-size: inherit;">
+		                           Lorem ipsum dolor sit amet.
+		                        </p>
+		                     </div>
+	                  	</div>
+	                </div> 
+                  </div>
+
+                  <div class="item col-md-2" style="padding-bottom: 20px;">
+                  	<div style="padding: 10px; box-shadow: 0 1px 5px gray; height: 360px;">
+	                 	<div class="latest-news-grid grid-1">
+		                     <img style="height: 150px;" class="img-responsive center-block" alt="" src="<?php echo base_url('asset/img/1.jpg'); ?>"> 
+		                     <div class="detail">
+		                        <div class="caption" style="text-align: center;">
+		                           <strong>
+		                              <a href="#">Computer issue forces ground-stop for United Airlines in the U.S.</a>
+		                           </strong>
+		                        </div>
+		                        <p style="text-align: center; font-size: inherit;">
+		                           Lorem ipsum dolor sit amet.
+		                        </p>
+		                     </div>
+	                  	</div>
+	                </div> 
+                  </div>
+
+                  <!--<div class="col-md-1"></div>-->
+       
+               </div>
+            </div>
+        </div>
       </section>

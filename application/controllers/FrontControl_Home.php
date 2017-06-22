@@ -26,6 +26,7 @@ class FrontControl_Home extends CI_Controller {
 		$data['newsRecommend'] = $this->HomeModels->get_news_recommend();
 		$data['newsCommunity'] = $this->HomeModels->get_news_community();
 		$data['newsSM'] = $this->HomeModels->get_news_SM();
+		//$data['wow'] = $this->HomeModels->get_wow();
 		$this->load->view('skin/front_end/welcome',$data);
 	}
 	

@@ -1,4 +1,6 @@
-
+ <?php //foreach($wow as $wowitem){ ?>
+                                      <!--<h1 class="thumb"><?php echo $wowitem['judul_wow']?></h1>-->
+									  <?php //} ?>
   <section class="zerogrid-section">
          <div class="container-fluid">
             <div class="row">

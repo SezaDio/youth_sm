@@ -71,4 +71,17 @@
 			
 			return $query;
 		}
+		/*function get_wow(){
+			$query = $this->db->query("SELECT * FROM `wow` WHERE id_wow IN (SELECT MAX(num1+num2) FROM `wow`) ORDER BY id DESC limit 2");
+		
+			$indeks = 0;
+			$result = array();
+			
+			foreach ($query->result_array() as $row)
+			{
+				$result[$indeks++] = $row;
+			}
+		
+			return $result;
+		}*/
 	}
